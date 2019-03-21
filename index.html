@@ -1,0 +1,3418 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Banksia Court App Murdoch with Flowers and Slides Fixed</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans%3A400%2C400italic%2C600%2C700%2C700italic%7COswald%3A400%2C300%7CVollkorn%3A400%2C400italic'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:700,300'>
+<link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+<link rel='stylesheet' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.24/themes/smoothness/jquery-ui.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <!-- START OF BANKSIA COURT APP HTML SOURCE CODE -->
+
+
+
+  <!-- viewport HTML (for responsive design, major to mobile users) START -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- viewport HTML (for responsive design, major to mobile users) END -->
+
+
+
+  <!-- Link in order to see the Visitor Info Icons in the VISITOR INFO section START  -->
+  <link rel="stylesheet"  
+        href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" 
+        crossorigin="anonymous"> 
+  <!-- Link in order to see the Visitor Info Icons in the VISITOR INFO section END  -->
+
+
+
+  <!-- ScrollDown Arrow Action START -->
+  <div class="downArrow bounce"> 
+       scroll down!
+       <i class="fas fa-chevron-down"></i>
+  </div> 
+  <!-- ScrollDown Arrow Action END -->
+
+
+
+  <!-- ====================================================================================================
+                                          Navigation Bar Section START 
+       
+       Function : This is the Navigation Bar that will bring the user to the different sections of the 
+                  webpage. The sections are : Homepage, Flowers, Walkthrough, News&Events, Visitor Info,
+                  About Us.
+        Returns : Brings User to the designated section that they have chosen/clicked/ tapped on.
+       ==================================================================================================== -->
+  
+  <div class = "navigation__btn" > <!-- Navigation Button START -->
+      
+        <div class = "NavigationSlideOut"> <!-- Navigation SlideOut START -->
+   
+          
+          <div class = "Murdoch_logo"> <!-- Murdoch Logo On Navigation Bar START -->
+            <img src = "https://gdurl.com/QX7Y"/>
+          </div> <!-- Murdoch Logo On Navigation Bar END -->
+  
+
+          
+          <ul class="navbar"> <!-- Navigation Bar Menu Tabs START -->
+            <li class="NavigationTab"><a href="#Home"><p>Home</p></a></li> 
+            <li class="NavigationTab"><a href="#Flowers"><p>Flowers</p></a></li>
+            <li class="NavigationTab"><a href="#Walkthrough"><p>Walkthrough</p></a></li>
+            <li class="NavigationTab"><a href="#News_Events"><p>News&Events</p></a></li>
+            <li class="NavigationTab"><a href="#VisitorInfo"><p>Visitor Info</p></a></li>  
+            <li class="NavigationTab"><a href="#AboutUs"><p>About Us</p></a></li>
+          </ul> <!-- Navigation Bar Menu Tabs END --> 
+          
+
+          <p> <!-- Enlarge Text and Play Background Music Button Section START-->
+            
+            <!--  Enlarge Text Button START -->
+            <button type="button" class="btn btn-primary btn-lg btn3d">
+              <span class="glyphicon glyphicon-text-size"></span>
+            </button>
+            <!--  Enlarge Text Button END -->
+            
+            
+            <!--  PLay Background Music Button START -->
+            <button id = "musica" type="button" class="btn btn-danger btn-lg btn3d" onclick="javascript:toggleSound();">
+              <span class="glyphicon glyphicon-music"></span>
+            </button>
+            <!-- Background Music File is placed here ! -->
+            <audio id="testAudio" src="ChillMill2.mpeg" loop="true" type="audio/mpeg" style="display:none"  autoplay loop></audio> 
+            <!--  PLay Background Music Button END -->
+            
+            </p> <!-- Enlarge Text and Play Background Music Button Section END-->
+
+          
+        </div> <!-- Navigation SlideOut END -->
+  
+      
+        <div class="menuIcon"> <!-- Hamburger Menu 3 lines START -->
+          <div class="line_one"></div>
+          <div class="line_two"></div>
+          <div class="line_three"></div>
+        </div> <!-- Hamburger Menu 3 lines END -->
+
+      
+    </div> <!-- Navigation Button END -->
+  <!-- ====================================================================================================
+                                          Navigation Bar Section END
+       ==================================================================================================== -->
+
+
+
+
+
+
+  <!-- ====================================================================================================
+                                     Homepage Tab SLIDESHOW Section START 
+       
+       Function : This is the Homepage tab that has a slideshow feature, of which shows majectic, eye-catching
+                  banksia species to be showcasted and bring out interest of the users when they have entered
+                  the website.
+        Returns : Displays automatically each banksia species after a few seconds and after the user clicks
+        on the learn more button, a dialog box will appear showing the flower information about the plant.
+       ==================================================================================================== -->
+    <main id="Home" class="main-content">  <!-- Homepage main slideshow content START --> 
+      
+      
+      <section class="slideshow">  <!-- slideshow START -->
+        <div class="slideshow-inner">  <!-- Slideshow-inner START -->
+          <div class="slides">  <!-- Slides START -->
+            
+            <!-- SLIDE 1 -->
+            <div class="slide is-active"> <!-- Slide 1 slideshow (ACTIVE and FIRST SLIDE) START -->
+              <div class="slide-content"> <!-- Slide 1 slideshow content START -->
+                <div class="caption"> <!-- Slide 1 slideshow caption START -->     
+                  
+                  
+                  <div class="title"> <!-- Slide 1 title START -->
+                    Banksia Menziesii 
+                  </div> <!-- Slide 1 title END -->
+                    
+                  <div class="text"> <!-- Slide 1 text START -->
+                    <p> Our school's emblem right there.  </p>
+                  </div> <!-- Slide 1 text END-->
+                  
+                  <a href="#" class="btn_HomepageSec"> <!-- Slide 1 Learn More START -->  
+                    <span class="btn-inner_HomepageSec" data-toggle="modal" data-target="#myModal-22">Learn More</span> 
+                  </a> <!-- Slide 1 Learn More END --> 
+               
+                </div> <!-- Slide 1 slideshow caption END -->     
+              </div> <!-- Slide 1 slideshow content END -->
+              
+              <div class="image-container"> <!-- Slide 1 art START -->
+                <img src="https://i.etsystatic.com/5319345/r/il/4af0dc/1392324861/il_fullxfull.1392324861_59g3.jpg" alt="" class="image" />
+              </div> <!-- Slide 1 art END -->
+              
+            </div> <!-- Slide 1 slideshow (ACTIVE and FIRST SLIDE) END-->
+            
+            
+            
+            
+            
+            
+            
+            <!-- SLIDE 2 -->    
+            <div class="slide"> <!-- Slide 2 slideshow START -->
+              <div class="slide-content">  <!-- Slide 2 slideshow content START -->
+                <div class="caption">  <!-- Slide 2 slideshow caption START --> 
+                
+                  
+                 <div class="title">  <!-- Slide 2 title START -->
+                  Banksia Victoriae 
+                 </div>  <!-- Slide 2 title END -->
+                 
+                 <div class="text">  <!-- Slide 2 text START -->
+                  <p>Named in Royalty!</p>
+                 </div>   <!-- Slide 2 text END -->
+                  
+                 <a href="#" class="btn_HomepageSec">  <!-- Slide 2 Learn More START -->  
+                    <span class="btn-inner_HomepageSec" data-toggle="modal" data-target="#myModal-30">Learn More</span>
+                 </a>  <!-- Slide 2 Learn More END -->  
+                  
+               </div>  <!-- Slide 2 slideshow caption END --> 
+              </div>  <!-- Slide 2 slideshow content END -->
+              
+              <div class="image-container">  <!-- Slide 2 art START -->
+                <img src="https://images.bluethumb.com.au/uploads/listing/135977/lydie-paton-banksia-cone-etching-unique-state-bluethumb-a74d.JPG?w=800&auto=compress&cs=tinysrgb&q=70&s=3feaba5f1bf92bdea2f955bc3a5bce42" alt="" class="image" />
+              </div>  <!-- Slide 2 art END -->
+              
+        
+            </div>  <!-- Slide 2 slideshow END -->
+            
+            
+            
+            
+            <!-- SLIDE 3 -->     
+            <div class="slide">  <!-- Slide 3 slideshow START -->
+              <div class="slide-content">  <!-- Slide 3 slideshow content START -->
+                <div class="caption">  <!-- Slide 2 slideshow caption START --> 
+
+                  <div class="title">  <!-- Slide 3 title START -->
+                    Banksia Repens
+                  </div>  <!-- Slide 3 title END -->
+
+                  <div class="text">  <!-- Slide 3 text START -->
+                    <p>Known for being a creeper.</p>
+                  </div>  <!-- Slide 3 text END -->
+
+                  <a href="#" class="btn_HomepageSec">  <!-- Slide 3 Learn More START --> 
+                     <span class="btn-inner_HomepageSec" data-toggle="modal" data-target="#myModal-27">Learn More</span>
+                  </a>  <!-- Slide 3 Learn More END -->
+                  
+                </div>  <!-- Slide 2 slideshow caption END --> 
+              </div>  <!-- Slide 3 slideshow content END -->
+              
+              <div class="image-container">  <!-- Slide 3 art START -->
+                <img src="https://www.gallery247.com.au/img.php?img=profile/152190/286f9536e7c53bfe020d3e28564bec8d.JPG" alt="" class="image" />
+              </div>  <!-- Slide 3 art END  -->
+        
+            </div>  <!-- Slide 3 slideshow END -->
+            
+            
+            
+            
+            <!-- Slide 4 -->
+            <div class="slide">  <!-- Slide 4 slideshow START -->
+              <div class="slide-content">  <!-- Slide 4 slideshow content START -->
+                <div class="caption"> <!-- Slide 4 slideshow caption START --> 
+                  
+                  <div class="title">  <!-- Slide 4 title START -->
+                    Banksia Spectrum
+                  </div>  <!-- Slide 4 title END -->
+                  
+                  <div class="text">  <!-- Slide 4 text START -->
+                    <p>Does its spikes resemble a sceptre?</p>
+                  </div>  <!-- Slide 4 text END -->
+                  
+                  <a href="#" class="btn_HomepageSec">  <!-- Slide 4 Learn More START --> 
+                     <span class="btn-inner_HomepageSec" data-toggle="modal" data-target="#myModal-28">Learn More</span>
+                  </a>  <!-- Slide 4 Learn More END -->
+                  
+                </div>  <!-- Slide 4 slideshow caption END --> 
+              </div>  <!-- Slide 4 slideshow content END -->
+              
+              <div class="image-container">  <!-- Slide 4 art START -->
+                <img src="https://blog.qagoma.qld.gov.au/wp-content/media/digital-blog-feature_MargaretPreston-NSW-and-West-Australian-banksia-1929.jpg" alt="" class="image" />
+              </div><!-- Slide 4 art END -->
+              
+            </div>  <!-- Slide 4 slideshow END -->
+      
+          </div>  <!-- Slides END -->
+          
+
+ 
+          <div class="pagination">  <!-- Sequence of Slides Indicator START -->
+            <div class="item is-active">  <!-- Slide 1 comes first ! -->
+              <span class="icon">1</span>
+            </div>
+            <div class="item">  <!-- Slide 2 comes subsequently! -->
+              <span class="icon">2</span>
+            </div>
+            <div class="item">  <!-- Slide 3 comes right after -->
+              <span class="icon">3</span>
+            </div>
+            <div class="item">  <!-- Slide 4 comes right after -->
+              <span class="icon">4</span>
+            </div>
+          </div>  <!-- Sequence of Slides Indicator END -->
+
+          
+          
+          <div class="arrows">  <!-- Slideshow Arrows START -->
+            
+            <!-- LEFT ARROW  -->
+            <div class="arrow prev">  <!-- Arrow Going Previously Section START-->
+              <span class="svg svg-arrow-left">  <!-- Arrow Left START --> 
+
+                
+                <svg version="1.1" id="svg4-Layer_1" xmlns="http://www.w3.org/2000/svg" 
+                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px" 
+                     height="26px" viewBox="0 0 14 26" enable-background="new 0 0 14 26" xml:space="preserve">  <!-- Arrow Left arrow icon START -->
+                  <path d="M13,26c-0.256,0-0.512-0.098-0.707-0.293l-12-12c-0.391-0.391-0.391-1.023,0-1.414l12-12c0.391-0.391,1.023-0.391,1.414,0s0.391,1.023,0,1.414L2.414,13l11.293,11.293c0.391,0.391,0.391,1.023,0,1.414C13.512,25.902,13.256,26,13,26z"/> 
+                </svg> <!-- Arrow Left arrow icon END --> 
+                
+                <span class="alt sr-only"></span> <!-- Alterative source for Arrow Left --> 
+              
+              </span>  <!-- Arrow Left END --> 
+            </div>  <!-- Arrow Going Previously Section END -->
+            
+            
+            <!-- RIGHT ARROW  -->
+            <div class="arrow next">  <!-- Arrow Going Subsequently Section START-->
+              <span class="svg svg-arrow-right">  <!-- Arrow Right START --> 
+                
+                
+                <svg version="1.1" id="svg5-Layer_1" xmlns="http://www.w3.org/2000/svg" 
+                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px" 
+                     height="26px" viewBox="0 0 14 26" enable-background="new 0 0 14 26" xml:space="preserve">  <!-- Arrow Right arrow icon START -->
+                  <path d="M1,0c0.256,0,0.512,0.098,0.707,0.293l12,12c0.391,0.391,0.391,1.023,0,1.414l-12,12c-0.391,0.391-1.023,0.391-1.414,0s-0.391-1.023,0-1.414L11.586,13L0.293,1.707c-0.391-0.391-0.391-1.023,0-1.414C0.488,0.098,0.744,0,1,0z"/> 
+                </svg> <!-- Arrow Right arrow icon END --> 
+                
+                <span class="alt sr-only"></span>  <!-- Alterative source for Arrow Right --> 
+              
+              </span> <!-- Arrow Right END -->
+            </div>  <!-- Arrow Going Subsequently Section START-->
+            
+            
+          </div>  <!-- Slideshow Arrows END -->
+
+        </div>  <!-- Slideshow-inner END -->  
+      </section>  <!-- slideshow END -->
+   </main>  <!-- Homepage main slideshow content END --> 
+  <!-- ====================================================================================================
+                                     Homepage Tab SLIDESHOW Section END 
+       ==================================================================================================== -->
+
+
+
+  <!-- ====================================================================================================
+                                                Miscellaneous START
+       ==================================================================================================== -->
+    <header class="header"> <!-- START HEADER -->
+      <a class="arrow arrow-right"></a>
+      <a  class="arrow arrow-left"></a> 
+        <div class="header__back"> </div>
+    </header> <!-- END HEADER --> 
+   <!-- ====================================================================================================
+                                                Miscellaneous END 
+       ==================================================================================================== -->
+
+
+
+
+
+
+
+  <!-- ====================================================================================================
+                                     Flowers Tab FILTERBOXES Section START 
+       
+       Function : The Flowers Tab contains the banksia species' flower information, which includes; 
+                  scientific flower name, flower descriptions and quality photographs of those plants.
+                  The feature utilized was using a filtering menu to filter out eitehr the type of banksia 
+                  as their are different types of banksia species and as well as filtering by flowering
+                  period by the flowering season. 
+
+        Returns : The filtering menu will take out the banksia species that are within the associated 
+                  category that the user chose, and when a banksia plant container (appears as an  
+                  image of that banksia plant, with the associated name when hovered) is clicked/tapped
+                  on, a dialog box will appear and show the flower information about the plant. 
+       ==================================================================================================== -->
+  <section class="about"> <!-- Flowers Tab START-->
+    
+    <h2 id="Flowers" class="heading-secondary">Flowers</h2>  <!-- Flowers Tab Header -->  
+    
+    <div class="about__content"> <!-- Flowers Content START -->
+ 
+      <div style = "text-align:center; font-family: Courier"> <!-- Flowers Filtering Menu Styling START -->
+      <div id="myBtnContainer">  <!-- Flowers Filtering Menu START -->
+        <b>Types of Banksias</b> 
+        <br>
+        <br>
+        <button class="filterbtn active" onclick="filterSelection('all')"> Show All Banksias </button> 
+        <button class="filterbtn" onclick="filterSelection('Flower')">     Flower            </button>  
+        <button class="filterbtn" onclick="filterSelection('Tree_Leaf')">  Tree / Leaf       </button>   
+        <button class="filterbtn" onclick="filterSelection('Cone_Fruit')"> Cone / Fruit      </button>   
+        <br>
+        <br>
+        <b>Flowering Period/Seasons</b> 
+        </br>
+        <br>
+        <button class="filterbtn" onclick="filterSelection('Summer')"> Summer </button> 
+        <button class="filterbtn" onclick="filterSelection('Spring')"> Spring </button>      
+        <button class="filterbtn" onclick="filterSelection('Autumn')"> Autumn </button>     
+        <button class="filterbtn" onclick="filterSelection('Winter')"> Winter </button>       
+      </div>
+             
+</div> <!-- Flowers Filtering Menu Styling END -->
+    
+    
+    
+    
+<div class="container"> <!-- Elements To Filter START-->
+<!-- The filterable elements. Note that some have multiple class names/ or category types (this can be used if they belong to multiple categories) -->
+
+
+  
+  
+      <!-- ELEMENT ID NO 1  : BANKSIA AEMULA -->
+      <div class="filterDiv Flower Cone_Fruit Tree_Leaf Autumn Winter"> <!-- FILTER Banksia Aemula IDNo1 : Cone Flower Tree START --> 
+
+        <label class = "textOverImage" 
+               style = "background-image: url('../Flowers_By_Name/Banksia Aemula_IDNo_1/banksia aemula f.jpg')"> <!-- Background Image of ID NO 1 : Banksia Aemula START -->
+
+          <input type  = "checkbox">	<!-- Mini Box Appears After Hover For ID NO 1 : Banksia Aemula -->  
+          <h2>Banksia Aemula</h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div> <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 1]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-1"> <!-- Click Here Button For Flower Information Dialog Box START -->
+              Click Here!
+              </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 1 : Banksia Aemula END -->
+      </div> <!-- FILTER Banksia Aemula IDNo1 : Cone Flower Tree END --> 
+  
+      <!-- DIALOG BOX - BANKSIA AEMULA contents section START -->
+       <div class="modal fade" id="myModal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2">Banksia Aemula</h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia aemula 
+                  <br> 
+                   (the name means to emulate as this species is very similar to Banksia serrata)
+                </i>
+                <br>
+                <br>
+
+                <b>Common Name:</b> 
+                <i>Wallum Banksia</i>
+                <br>
+                <br>
+
+                <b>Description:</b> 
+                <i> A small, spreading tree with dark grey, rough bark. 
+                    The leaves are obovate with evenly serrated margins and green on both sides. 
+                    The upper surface is glossy green and the underside is pale green and glabrous. 
+                    The new leaves are rusty brown.
+                </i>
+                <br>
+                <br>
+
+                <b>Flowers:</b> 
+                <i> The flower spikes are silvery yellow and about 8-15cm high and 5-10cm in diameter
+                    and are ovoid to cylindrical. It flowers in later winter and autumn.
+                </i>
+                <br>
+                <br>
+
+                <b>Habitat:</b> 
+                <i> Banksia aemula occurs on sandy dunes from southern Queensland to the Sydney region.</i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+
+
+              <img src="../Flowers_By_Name/Banksia Aemula_IDNo_1/banksia aemula c.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Aemula Cone </p>
+              <img src="../Flowers_By_Name/Banksia Aemula_IDNo_1/banksia aemula f.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Aemula Flower </p>
+              <img src="../Flowers_By_Name/Banksia Aemula_IDNo_1/Banksia aemula t.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Aemula Tree </p>
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+       </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA AEMULA contents section END -->
+
+
+
+      <!-- ELEMENT ID NO 2 : BANKSIA ASHBYI -->
+      <div class="filterDiv Flower Cone_Fruit Tree_Leaf Spring Summer Winter "> <!-- FILTER Banksia Ashbyi IDNo 2 : Cone Flower Tree START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Ashbyi_IDNo_2/banksia ashbyi c.jpg')">  <!-- Background Image of ID NO 2 : Banksia Ashbyi START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 2 : Banksia Ashbyi--> 
+            <h2>Banksia Ashbyi</h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 2]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-2"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 2 : Banksia Ashbyi END -->
+      </div> <!-- FILTER Banksia Ashbyi IDNo2 : Cone Flower Tree END --> 
+
+     <!-- DIALOG BOX - BANKSIA ASHBYI contents section START -->
+      <div class="modal fade" id="myModal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2">Banksia Ashbyi</h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia Ashbyi
+                  <br> 
+                   (named after Edwin Ashby, a South Australian plant collector) 
+                </i>
+                <br>
+                <br>
+
+                <b>Common Name:</b> 
+                <i>Ashby’s banksia</i>
+                <br>
+                <br>
+
+                <b>Description:</b> 
+                <i> This species is usually a medium sized shrub 2-4 metres high, with long, narrow, 
+                    sharply serrated leaves (15-20cm long and up to 3cm wide), with a prominent yellow mid-rib. 
+                </i>
+                <br>
+                <br>
+
+                <b>Flowers:</b> 
+                <i> The flowers are large and upright and orange in colour and cylindrical or ovoid in shape. 
+                    It flowers between August and November.
+                </i>
+                <br>
+                <br>
+
+                <b>Habitat:</b> 
+                <i> This species is from the mid-west coast of WA and is found on the coastal sandplain from Geraldton to Carnarvon. 
+                    It is an attractive garden specimen and is widely planted on the Murdoch campus. </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+
+
+              <img src="../Flowers_By_Name/Banksia Ashbyi_IDNo_2/banksia ashbyi c.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Ashbyi Cone </p>
+              <img src="../Flowers_By_Name/Banksia Ashbyi_IDNo_2/banksia ashbyi mu f.JPG" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Ashbyi Flower </p>
+              <img src="../Flowers_By_Name/Banksia Ashbyi_IDNo_2/banksia ashbyi shrub mu t.JPG" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Ashbyi Tree </p>
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA ASHBYI contents section END --> 
+
+      
+  
+      <!-- ELEMENT ID NO 3 : BANKSIA ATTENUATA -->
+      <div class="filterDiv Flower Cone_Fruit Tree_Leaf Spring Summer"> <!-- FILTER Banksia Attenuata IDNo 3 : Cone Flower Tree START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Attenuata_IDNo_3/banksia attenuata f.jpg')">  <!-- Background Image of ID NO 3 : Banksia Attenuata START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 3 : Banksia Attenuata --> 
+            <h2>Banksia Attenuata</h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 3]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-3"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 3 : Banksia Attenuata END -->
+      </div> <!-- FILTER Banksia Attenuata IDNo3 : Cone Flower Tree END --> 
+
+     <!-- DIALOG BOX - BANKSIA ATTENUATA contents section START -->
+      <div class="modal fade" id="myModal-3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2">Banksia Attenuata</h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia attenuata 
+                  <br> 
+                   (this name was chosen to describe the way in which the leaves of this species taper towards the base); 
+                </i>
+                <br>
+                <br>
+                <b>Noongar name:</b> 
+                <i>Biara</i>
+                <br>
+                <br>
+                <b>Common Name:</b> 
+                <i>coastal banksia or candlestick banksia</i>
+                <br>
+                <br>
+                <b>Description:</b> 
+                <i> This species is usually a small tree with rough grey bark and long narrow leaves (8 – 15 cm long and less than 1cm wide). 
+                    The leaves are flat and slightly serrated. 
+                </i>
+                <br>
+                <br>
+                <b>Flowers:</b> 
+                <i> The most striking feature of this species is the tall, cylindrical flower spikes, up to 25 cm long.
+                    They have a strong light yellow colour and appear between October and March.
+                </i>
+                <br>
+                <br>
+                <b>Habitat:</b> 
+                <i> This species is found along the southwest coast of Australia from Geraldton to Albany. 
+                    It thrives in deep, moist, sandy soils.  
+                </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+
+
+              <img src="../Flowers_By_Name/Banksia Attenuata_IDNo_3/banksia attenuata c.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Attenuata Cone </p>
+              <img src="../Flowers_By_Name/Banksia Attenuata_IDNo_3/banksia attenuata f.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Attenuata Flower </p>
+              <img src="../Flowers_By_Name/Banksia Attenuata_IDNo_3/Banksia attenuata t.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Attenuata Tree </p>
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA ATTENUATA contents section END --> 
+
+      
+      
+      <!-- ELEMENT ID NO 4 : BANKSIA BAXTERI -->
+      <div class="filterDiv Flower Cone_Fruit Tree_Leaf Summer"> <!-- FILTER Banksia Baxteri IDNo 4 : Cone Flower Tree START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Baxteri_IDNo_4/banksia baxteri c.jpg')">  <!-- Background Image of ID NO 4 : Banksia Baxteri START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 4 : Banksia Baxteri --> 
+            <h2>Banksia Baxteri</h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 4]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-4"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 4 : Banksia BAXTERI END -->
+      </div> <!-- FILTER Banksia Baxteri IDNo4 : Cone Flower Tree END --> 
+
+      <!-- DIALOG BOX - BANKSIA BAXTERI contents section START -->
+      <div class="modal fade" id="myModal-4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2">Banksia  Baxteri</h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia baxteri
+                  <br> 
+                   (named after William Baxter, a 19th century English gardener)
+                </i>
+                <br>
+                <br>
+                <b>Common Name:</b> 
+                <i>Bird’s nest banksia</i>
+                <br>
+                <br>
+                <b>Description:</b> 
+                <i> A tall, single-stemmed shrub up to 3 metres high. The leaves are deeply divided and form triangular lobes. 
+                    The leaves are prickly and up to 15cm long and 4 cm wide. 
+                </i>
+                <br>
+                <br>
+                <b>Flowers:</b> 
+                <i> Pale yellow flowers which sit in a rosette of leaves. 
+                    The flowers are large (3-12 cm diameter) and dome shaped. It flowers from late Spring to early autumn.
+                </i>
+                <br>
+                <br>
+                <b>Habitat:</b> 
+                <i> It occurs on sandy heathlands along the south coast of WA from Albany to Esperance. 
+                </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+
+
+              <img src="../Flowers_By_Name/Banksia Baxteri_IDNo_4/banksia baxteri c.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Baxteri Cone </p>
+              <img src="../Flowers_By_Name/Banksia Baxteri_IDNo_4/Banksia baxteri f.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Baxteri Flower </p>
+              <img src="../Flowers_By_Name/Banksia Baxteri_IDNo_4/banksia baxteri t.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Baxteri Tree </p>
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA BAXTERI contents section END --> 
+ 
+    
+      <!-- ELEMENT ID NO 5 : BANKSIA BENTHAMIANA -->
+      <div class="filterDiv Flower Cone_Fruit Tree_Leaf Summer"> <!-- FILTER Banksia Benthamiana IDNo 5 : Cone Flower Tree START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Benthamiana_IDNo_5/banksia benthamiana f.jpg')">  <!-- Background Image of ID NO 5 : Banksia  Benthamiana START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 5 : Banksia Benthamiana --> 
+            <h2 style ="font-size: 25px;">Banksia Benthamiana</h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 5]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-5"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 5 :Banksia BENTHAMIANA END -->
+      </div> <!-- FILTER Banksia Benthamiana IDNo5 : Cone Flower Tree END --> 
+
+      <!-- DIALOG BOX - BANKSIA BENTHAMIANA contents section START -->
+      <div class="modal fade" id="myModal-5" tabindex="-1" role="dialog" 
+           aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2">Banksia Benthamiana</h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia Benthamiana
+                  <br> 
+                      (named in honour of the 19th C British botanist George Bentham)
+                </i>
+                <br>
+                <br>
+                <b>Description:</b> 
+                <i> A large shrub up to 4 metres high with long narrow leaves (15-20cm long, 1cm wide). The leaves have a few small teeth that are widely spaced.
+                </i>
+                <br>
+                <br>
+                <b>Flowers:</b> 
+                <i> This shrub has numerous golden flower spikes that are cylindrical to ovoid in shape and up to 12cm long. It flowers in summer.
+                </i>
+                <br>
+                <br>
+                <b>Habitat:</b> 
+                <i> Banksia benthamiana is found on sandy heathland near Mullewa and Dalwallinu in WA.
+                </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+
+
+              <img src="../Flowers_By_Name/Banksia Benthamiana_IDNo_5/banksia benthamiana c.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Benthamiana Cone </p>
+              <img src="../Flowers_By_Name/Banksia Benthamiana_IDNo_5/banksia benthamiana f.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Benthamiana Flower </p>
+              <img src="../Flowers_By_Name/Banksia Benthamiana_IDNo_5/banksia benthamiana t.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Benthamiana Tree </p>
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA BENTHAMIANA contents section END --> 
+
+  
+      <!-- ELEMENT ID NO 6 : BANKSIA BLECHNIFOLIA -->
+      <div class="filterDiv Flower Cone_Fruit Spring"> <!-- FILTER Banksia Blechnifolia IDNo6 : Cone Flower START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Blechnifolia_IDNo_6/banksia blechnifolia f.jpg')">  <!-- Background Image of ID NO 6 : Banksia Blechnifolia START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 6 : Banksia Blechnifolia --> 
+            <h2 style ="font-size: 25px;">Banksia Blechnifolia</h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 6]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-6"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 6 :Banksia BLECHNIFOLIA END -->
+      </div> <!-- FILTER Banksia Blechnifolia IDNO 6 : Cone Flower END --> 
+
+      <!-- DIALOG BOX - BANKSIA BLECHNIFOLIA contents section START -->
+      <div class="modal fade" id="myModal-6" tabindex="-1" role="dialog" 
+           aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2">Banksia Blechnifolia </h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia blechnifolia
+                  <br> 
+                      (the name indicates that it has fern-like foliage)
+                </i>
+                <br>
+                <br>
+                <b>Description:</b> 
+                <i> This is a colourful prostrate banksia. The leaves are very attractive and can be up to 45cm long and 10cm wide. 
+                    They are deeply divided and bluish green in colour. The new foliage appears in summer and is reddish brown and hairy.
+                </i>
+                <br>
+                <br>
+                <b>Flowers:</b> 
+                <i> This species produces large reddish pink flower spikes that are sometimes white towards the base. It flowers in spring from September to November.
+                </i>
+                <br>
+                <br>
+                <b>Habitat:</b> 
+                <i> B blechnifolia comes from the south coast of WA from sandy heathlands between Albany and Esperance.
+                </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+
+
+              <img src="../Flowers_By_Name/Banksia Blechnifolia_IDNo_6/banksia blechnifolia c.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Blechnifolia Cone </p>
+              <img src="../Flowers_By_Name/Banksia Blechnifolia_IDNo_6/banksia blechnifolia f.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Blechnifolia Flower </p>
+             
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA BLECHNIFOLIA contents section END --> 
+
+
+  
+      <!-- ELEMENT ID NO 7 : BANKSIA BURDETTII -->
+      <div class="filterDiv Flower Cone_Fruit Tree_Leaf Summer"> <!-- FILTER Banksia Burdettii IDNo 7 : Cone Flower Tree START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Burdettii_IDNo_7/banksia burdettii f.jpg')">  <!-- Background Image of ID NO 7 : Banksia  Burdettii START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 7 : Banksia Burdettii --> 
+            <h2 style ="font-size: 25px;">Banksia Burdettii</h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 7]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-7"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 7 : Banksia BURDETTII END -->
+      </div> <!-- FILTER Banksia Burdettii IDNo 7  : Cone Flower Tree END --> 
+
+      <!-- DIALOG BOX - BANKSIA BURDETTII contents section START -->
+      <div class="modal fade" id="myModal-7" tabindex="-1" role="dialog" 
+           aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2">Banksia Burdettii</h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia burdettii 
+                  <br> 
+                      (named after the Burdett family who were pioneer native plant collectors in SA)
+                </i>
+                <br>
+                <br>
+                <b>Description:</b> 
+                <i> A large shrub with tapered leaves up to 25cm long with many small sharp teeth.
+                </i>
+                <br>
+                <br>
+                <b>Flowers:</b> 
+                <i> The flower spikes are initially woolly white and they gradually open from the base upwards to reveal bright orange styles. 
+                    Eventually the entire flower spike becomes bright orange. It flowers throughout the year, especially in the late spring and summer.
+                </i>
+                <br>
+                <br>
+                <b>Habitat:</b> 
+                <i> B burdettii grows on sandy soils in the mid-west of WA from the Moore River to the Hill River.
+                </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+
+
+              <img src="../Flowers_By_Name/Banksia Burdettii_IDNo_7/banksia burdettii c.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Burdettii Cone </p>
+              <img src="../Flowers_By_Name/Banksia Burdettii_IDNo_7/banksia burdettii f.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Burdettii Flower </p>
+              <img src="../Flowers_By_Name/Banksia Burdettii_IDNo_7/Banksia burdettii t.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Burdettii Tree </p>
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA BURDETTII contents section END --> 
+
+  
+    
+      <!-- ELEMENT ID NO 8 : BANKSIA CADOLLEANA -->
+      <div class="filterDiv Flower Cone_Fruit Tree_Leaf"> <!-- FILTER Banksia Cadolleana IDNo 8 : Cone Flower Tree START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Candolleana_IDNo_8/banksia candolleana f1.jpeg')">  <!-- Background Image of ID NO 8 : Banksia  Cadolleana START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 8 : Banksia Cadolleana --> 
+            <h2 style ="font-size: 25px;">Banksia Cadolleana</h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 8]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-8"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 8 : Banksia CADOLLEANA END -->
+      </div> <!-- FILTER Banksia Cadolleana IDNo 8 : Cone Flower Tree END --> 
+
+      <!-- DIALOG BOX - BANKSIA CADOLLEANA  contents section START -->
+      <div class="modal fade" id="myModal-8" tabindex="-1" role="dialog" 
+           aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2">Banksia Cadolleana</h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia cadolleana 
+                  <br> 
+                      (this species is named in honour of a Swiss family of botanists called de Candolle)
+                </i>
+                <br>
+                <br>
+                <b>Common name:</b>    
+                <i>
+                   Propeller Banksia (the fruits resemble a ship’s propeller)
+                </i>
+                <br>
+                <br>
+                <b>Description:</b> 
+                <i> A semi-prostrate banksia up to 1 metre high with long, narrow, heavily divided leaves. 
+                    The leaves are bright green and the mid rib is prominent.
+                </i>
+                <br>
+                <br>
+                <b>Flowers:</b> 
+                <i> Small almost globular golden coloured flowers which appear in autumn and winter.
+                </i>
+                <br>
+                <br>
+                <b>Fruit:</b> 
+                <i> These are very distinctive with huge seed follicles set in a small globular cone.
+                <br>
+                <br>
+                <b>Habitat:</b> 
+                <i> Banksia candolleana is found on sandy heaths in the Irwin district of WA
+                </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+
+
+              <img src="../Flowers_By_Name/Banksia Candolleana_IDNo_8/banksia candolleana c.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Candolleana Cone </p>
+              <img src="../Flowers_By_Name/Banksia Candolleana_IDNo_8/banksia candolleana f1.jpeg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Candolleana Flower </p>
+              <img src="../Flowers_By_Name/Banksia Candolleana_IDNo_8/banksia candolleana t.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Candolleana Tree </p>
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA CADOLLEANA contents section END --> 
+  
+  
+
+      <!-- ELEMENT ID NO 9 : BANKSIA CHAMAEPHYTON -->
+      <div class="filterDiv Flower Tree_Leaf Spring" style = "font-style:normal;"> <!-- FILTER Banksia Chamaephyton IDNo 9 :Flower Tree START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Chamaephyton_IDNo_9/banksia chamaephyton f.jpg')">  <!-- Background Image of ID NO 9 : Banksia Chamaephyton  START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 9 : Banksia Chamaephyton --> 
+            <h2 style ="font-size: 20px;">Banksia Chamaephyton</h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 9]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-9"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 9 : Banksia CHAMAEPHYTON END -->
+      </div> <!-- FILTER Banksia Chamaephyton IDNo 9: Flower Tree END --> 
+
+      <!-- DIALOG BOX - BANKSIA CHAMAEPHYTON contents section START -->
+      <div class="modal fade" id="myModal-9" tabindex="-1" role="dialog" 
+           aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2"> Banksia Chamaephyton </h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia chamaephyton 
+                  <br> 
+                      (the name means low-growing or prostrate)
+                </i>
+                <br>
+                <br>
+                <b>Common name:</b>    
+                <i>
+                   Fishbone banksia
+                </i>
+                <br>
+                <br>
+                <b>Description:</b> 
+                <i> This is a prostrate banksia with fern-like foliage. 
+                    It has long green leaves that are deeply divided to form a fishbone pattern.
+                </i>
+                <br>
+                <br>
+                <b>Flowers:</b> 
+                <i> It has orange-brown and cream flower spikes that appear in late spring (October – December)
+                </i>
+                <br>
+                <br>
+                <b>Habitat:</b> 
+                <i> A native to the south west of WA from inland areas from Geraldton to the Avon district.
+                </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+
+
+              <img src="../Flowers_By_Name/Banksia Chamaephyton_IDNo_9/banksia chamaephyton f.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Chamaephyton Flower </p>
+              <img src="../Flowers_By_Name/Banksia Chamaephyton_IDNo_9/banksia chamaephyton mu l.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Chamaephyton Prostrate (Leaf Species, no stem or trunk)</p>
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA CHAMAEPHYTON contents section END --> 
+  
+
+  
+  
+      <!-- ELEMENT ID NO 10 : BANKSIA EPICA -->
+      <div class="filterDiv Flower Cone_Fruit Tree_Leaf Winter" style = "font-style:normal;"> <!-- FILTER Banksia Epica IDNo 10 :Flower Cone Tree START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Epica_IDNo_10_2/banksia epica f.jpg')">  <!-- Background Image of ID NO 10 : Banksia Epica START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 10 : Banksia Epica --> 
+            <h2>Banksia Epica</h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 10]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-10"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 10 : Banksia EPICA END -->
+      </div> <!-- FILTER Banksia Epica IDNo 10: Flower Cone Tree END --> 
+
+      <!-- DIALOG BOX - BANKSIA EPICA contents section START -->
+      <div class="modal fade" id="myModal-10" tabindex="-1" role="dialog" 
+           aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2"> Banksia Epica </h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia epica 
+                  <br> 
+                      (name after Edward John Eyre who made the epic journey on foot from Adelaide to Albany in 1846?)
+                </i>
+                <br>
+                <br>
+                <b>Description:</b> 
+                <i> A medium size shrub up to 3 metres high with wedge-shaped green leaves (1-5cm long, 0.5-1.5cm wide). 
+                </i>
+                <br>
+                <br>
+                <b>Flowers:</b> 
+                <i> Cylindrical pale yellow flower spikes (9-17cm tall and up to 6cm in diameter) in winter.
+                </i>
+                <br>
+                <br>
+                <b>Habitat:</b> 
+                <i> B epica is found on the south coast of WA in coastal heathlands near the western edge of the Great Australian Bight.
+                </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+
+              
+              <img src="../Flowers_By_Name/Banksia Epica_IDNo_10_2/banksia epica c .jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Epica Cone </p>              
+              <img src="../Flowers_By_Name/Banksia Epica_IDNo_10_2/banksia epica f.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Epica Flower </p>
+              <img src="../Flowers_By_Name/Banksia Epica_IDNo_10_2/banksia epica l.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Epica Leaf </p>
+              <img src="../Flowers_By_Name/Banksia Epica_IDNo_10_2/banksia epica t.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Epica Shrub/Tree </p>
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA EPICA contents section END --> 
+   
+
+ 
+      <!-- ELEMENT ID NO 11 : BANKSIA ERICIFOLIA -->
+      <div class="filterDiv Flower Tree_Leaf Winter" style = "font-style:normal;"> <!-- FILTER Banksia Ericifolia IDNo 11 :Flower Tree START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Ericifolia_IDNo_11/banksia ericifolia f.jpg')">  <!-- Background Image of ID NO 11 : Banksia Ericifolia START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 11 : Banksia Ericifolia --> 
+            <h2 style ="font-size: 20px;">Banksia Ericifolia</h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 11]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-11"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 11: Banksia ERICIFOLIA END -->
+      </div> <!-- FILTER Banksia Ericifolia IDNo 11: Flower Tree END --> 
+
+      <!-- DIALOG BOX - BANKSIA  ERICIFOLIA  contents section START -->
+      <div class="modal fade" id="myModal-11" tabindex="-1" role="dialog" 
+           aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2"> Banksia Ericifolia </h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia ericifolia
+                  <br> 
+                      the name means heath like)
+                </i>
+                <br>
+                <br>
+                <b>Common Name:</b>    
+                <i>
+                   Heath-leaf banksia
+                </i>
+                <br>
+                <br>
+                <b>Description:</b> 
+                <i> A tall compact shrub up to 7 metres high with small dark green needle-like leaves.
+                </i>
+                <br>
+                <br>
+                <b>Flowers:</b> 
+                <i> Large cylindrical flower spikes which are a strong orange-red colour and up to 30cm high and 5cm in diameter. It flowers from late autumn to early spring.
+                </i>
+                <br>
+                <br>
+                <b>Habitat:</b> 
+                <i> B ericifolia is found on coastal sands in the Sydney region of NSW. 
+                    It was one of the first specimens of Australia flora collected by Sir Joseph Banksia at Botany Bay in 1770.
+                </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+
+              
+              <img src="../Flowers_By_Name/Banksia Ericifolia_IDNo_11/banksia ericifolia f.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Ericifolia Flower </p>              
+              <img src="../Flowers_By_Name/Banksia Ericifolia_IDNo_11/banksia ericifolia f2.JPG" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Ericifolia Flower Cluster </p>
+              <img src="../Flowers_By_Name/Banksia Ericifolia_IDNo_11/banksia ericifolia t.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Ericifolia Tree </p>
+
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA ERICIFOLIA contents section END --> 
+       
+
+ 
+      <!-- ELEMENT ID NO 12 : BANKSIA GARDNERI  -->
+      <div class="filterDiv Flower Cone_Fruit Spring Winter" style = "font-style:normal;"> <!-- FILTER Banksia Gardneri IDNo 12 :Flower Cone START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Gardneri Gardneri_IDNo_12/banksia gardneri gardneri f.jpg')">  <!-- Background Image of ID NO 12 : Banksia Gardneri  START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 12 : Banksia Gardneri  --> 
+            <h2>Banksia Gardneri </h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 12]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-12"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 12: Banksia GARDNERI END -->
+      </div> <!-- FILTER Banksia Gardneri IDNo 12: Flower Cone END --> 
+      
+            <!-- ELEMENT ID NO 13 : BANKSIA G HIEMALIS   -->
+      <div class="filterDiv Flower Cone_Fruit" style = "font-style:normal;"> <!-- FILTER Banksia G Hiemalis IDNo 13 :Flower Cone START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia G hiemalis_IDNo_13/Banksia gardneri var. hiemalis flower.jpg')">  <!-- Background Image of ID NO 13 : Banksia Gardneri  START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 12 : Banksia G Hiemalis --> 
+            <h2>Banksia G Hiemalis</h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 13]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-12"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 13: Banksia G HIEMALIS END -->
+      </div> <!-- FILTER Banksia G Hiemalis IDNo 13: Flower Cone END --> 
+
+      <!-- DIALOG BOX - BANKSIA  GARDNERI  contents section START -->
+      <div class="modal fade" id="myModal-12" tabindex="-1" role="dialog" 
+           aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2"> Banksia Gardneri / Gardneri Gardneri / G hiemalis / G brevidentata </h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia gardneri 
+                  <br> 
+                     (named after Charles Gardner, a former Government botanist of WA)
+                </i>
+                <br>
+                <br>
+                <b>Description:</b> 
+                <i> A prostrate form which has three different varieties (var gardneri, var hiemalis, var brevidentata). 
+                    Variety gardneri has deep green leaves with deep lobes. It flowers in Spring with rusty brown conical spikes. 
+                    Variety brevidentata has large green leaves with toothed margins. 
+                    It flowers in winter with rusty brown flower spikes. 
+                    Variety hiemalis has pale green leaves with deep lobes and pink flower spikes in winter.
+                </i>
+                <br>
+                <br>
+                <b>Habitat:</b> 
+                <i> B gardneri occurs on heathland along the south coast of WA from Albany to Hopetoun.
+                </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+             
+              <img src="../Flowers_By_Name/Banksia Gardneri Gardneri_IDNo_12/banksia gardneri gardneri c.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Gardneri Cone </p>             
+              <img src="../Flowers_By_Name/Banksia Gardneri Gardneri_IDNo_12/banksia gardneri gardneri f.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Gardneri Flower </p>
+              <img src="../Flowers_By_Name/Banksia G hiemalis_IDNo_13/Banksia gardneri var. hiemalis flower.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Gardneri Var. Hiemalis Flower </p> 
+              <img src="../Flowers_By_Name/Banksia G hiemalis_IDNo_13/Banksia gardneri var. hiemalis fruit and leaves.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Gardneri var. hiemalis Fruit and Leaves </p>               
+
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA GARDNERI contents section END --> 
+       
+  
+      
+
+      <!-- ELEMENT ID NO 14 : BANKSIA GRANDIS   -->
+      <div class="filterDiv Flower Cone_Fruit Tree_Leaf Spring" style = "font-style:normal;"> <!-- FILTER Banksia Grandis IDNo 14 :Flower Cone Tree START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Grandis_IDNo_14/banksia grandis f 2.jpg')">  <!-- Background Image of ID NO 14 : Banksia Grandis  START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 14 : Banksia Grandis  --> 
+            <h2>Banksia Grandis </h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 14]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-14"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 14: Banksia GRANDIS END -->
+      </div> <!-- FILTER Banksia Grandis IDNo 14: Flower Cone Tree END --> 
+
+      <!-- DIALOG BOX - BANKSIA  GRANDIS  contents section START -->
+      <div class="modal fade" id="myModal-14" tabindex="-1" role="dialog" 
+           aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2"> Banksia Grandis </h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia grandis 
+                  <br> 
+                     (the name means large or tall)
+                </i>
+                <br>
+                <br>
+                <b>Common Name:</b>    
+                <i>
+                   Bull banksia  
+                </i>
+                <br>
+                <br>
+                <b>Description:</b> 
+                <i> A small tree up to 8 metres high with rough grey bark and spreading branches. 
+                    It has large, dark green leaves 20-50cm long that are deeply divided forming triangular lobes. 
+                    The new leaves are soft and woolly and brown or red coloured.
+                </i>
+                <br>
+                <br>
+                <b>Flowers:</b> 
+                <i> Banksia grandis has huge golden-yellow flower spikes that are roughly cylindrical and up to 40cm in length. 
+                    It flowers in spring.
+                </i>
+                <br>
+                <br>
+                <b>Habitat:</b> 
+                <i> Banksia grandis is commonly found as an understorey plant in the jarrah and karri forests of WA and on limestone soils near the coast.
+                </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+             
+              <img src="../Flowers_By_Name/Banksia Grandis_IDNo_14/banksia grandis c.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Grandis Cone </p>             
+              <img src="../Flowers_By_Name/Banksia Grandis_IDNo_14/banksia grandis f 2.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Grandis Flower </p>              
+              <img src="../Flowers_By_Name/Banksia Grandis_IDNo_14/banksia grandis t mu.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Grandis Tree </p>              
+
+
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA GRANDIS contents section END --> 
+       
+    
+
+       <!-- ELEMENT ID NO 15 : BANKSIA HOOKERIANA  -->
+      <div class="filterDiv Flower Cone_Fruit Tree_Leaf Spring" style = "font-style:normal;"> <!-- FILTER Banksia Hookeriana IDNo 15 :Flower Cone Tree START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Hookeriana_ID_No_15/banksia hookeriana f.jpg')">  <!-- Background Image of ID NO 15 : Banksia Hookeriana  START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 15 : Banksia Hookeriana  --> 
+            <h2 style ="font-size: 20px;">Banksia Hookeriana </h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 15]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-15"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 15: Banksia HOOKERIANA END -->
+      </div> <!-- FILTER Banksia Hookeriana IDNo 15: Flower Cone Tree END --> 
+
+      <!-- DIALOG BOX - BANKSIA HOOKERIANA contents section START -->
+      <div class="modal fade" id="myModal-15" tabindex="-1" role="dialog" 
+           aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2"> Banksia Hookeriana </h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia hookeriana
+                  <br> 
+                     (named after the 19th century British botanist, Sir James Hooker)
+                </i>
+                <br>
+                <br>
+                <b>Description:</b> 
+                <i> A dense, compact shrub up to 3 metres high and 3 metres wide. The leaves are long and narrow and heavily serrated.
+                </i>
+                <br>
+                <br>
+                <b>Flowers:</b> 
+                <i> Short, wide oblong-cylindrical flower spikes on the ends of branches. 
+                    They are initially white and turn orange from the bottom up until the whole spike is orange. It flowers from winter to summer.
+                </i>
+                <br>
+                <br>
+                <b>Habitat:</b> 
+                <i> B hookeriana occurs in the Irwin district of WA on light sandy soils.
+                </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+             
+              <img src="../Flowers_By_Name/Banksia Hookeriana_ID_No_15/banksia hookeriana c.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Hookeriana Cone </p>             
+              <img src="../Flowers_By_Name/Banksia Hookeriana_ID_No_15/banksia hookeriana f.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Hookeriana Flower </p>              
+              <img src="../Flowers_By_Name/Banksia Hookeriana_ID_No_15/banksia hookeriana t.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Hookeriana Tree </p>              
+
+
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA HOOKERIANA contents section END --> 
+       
+    
+
+  
+       <!-- ELEMENT ID NO 16 : BANKSIA ILICIFOLIA  -->
+      <div class="filterDiv Flower Cone_Fruit Tree_Leaf Spring Autumn" style = "font-style:normal;"> <!-- FILTER Banksia Ilicifolia IDNo 16 :Flower Cone Tree START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Ilicifolia_ID_No_16/banksia ilicifolia f.jpg')">  <!-- Background Image of ID NO 16 : Banksia Ilicifolia  START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 16 : Banksia Ilicifolia  --> 
+            <h2 style ="font-size: 20px;">Banksia Ilicifolia </h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 16]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-16"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 16: Banksia ILICIFOLIA END -->
+      </div> <!-- FILTER Banksia Ilicifolia IDNo 16: Flower Cone Tree END --> 
+
+      <!-- DIALOG BOX - BANKSIA ILICIFOLIA contents section START -->
+      <div class="modal fade" id="myModal-16" tabindex="-1" role="dialog" 
+           aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2"> Banksia Ilicifolia </h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia ilicifolia
+                  <br> 
+                     (the name means holly like foliage)
+                </i>
+                <br>
+                <br>
+                <b>Common Name:</b>    
+                <i>
+                   Holly-leaf banksia
+                </i>
+                <br>
+                <br>
+                <b>Description:</b> 
+                <i> A medium-sized tree up to 10 metres high. 
+                    The leaves are broad and dark green and glossy, with irregular small teeth.
+                </i>
+                <br>
+                <br>
+                <b>Flowers:</b> 
+                <i> This species does not form a flower spike. 
+                    The flowers form a rosette which is encircled by the leaves. 
+                    They are initially light yellow in colour, turning red as they age. 
+                    Flowers occur throughout the year but especially in spring and autumn.
+                </i>
+                <br>
+                <br>
+                <b>Habitat:</b> 
+                <i> B ilicifolia occurs on sandy soils along the south west coast from the Moore River to Albany, including the Perth area.
+                </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+             
+              <img src="../Flowers_By_Name/Banksia Ilicifolia_ID_No_16/banksia ilicifolia c.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Ilicifolia Cone </p>             
+              <img src="../Flowers_By_Name/Banksia Ilicifolia_ID_No_16/banksia ilicifolia f.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Ilicifolia Flower </p>
+              <img src="../Flowers_By_Name/Banksia Ilicifolia_ID_No_16/banksia ilicifolia new.JPG" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Ilicifolia Flower (New) </p>
+              <img src="../Flowers_By_Name/Banksia Ilicifolia_ID_No_16/banksia ilicifolia t.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Ilicifolia Tree </p>              
+
+
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA ILICIFOLIA contents section END --> 
+  
+
+  
+       <!-- ELEMENT ID NO 17 : BANKSIA INTEGRIFOLIA  -->
+      <div class="filterDiv Flower Cone_Fruit Tree_Leaf Autumn Winter" style = "font-style:normal;"> <!-- FILTER Banksia Integrifolia IDNo 17 :Flower Cone Tree START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Integrifolia_ID_No_17/banksia integrifolia f.jpg')">  <!-- Background Image of ID NO 17 : Banksia Integrifolia  START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 17 : Banksia Integrifolia --> 
+            <h2 style ="font-size: 20px;">Banksia Integrifolia </h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 17]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-17"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 17: Banksia INTEGRIFOLIA END -->
+      </div> <!-- FILTER Banksia Integrifolia IDNo 17: Flower Cone Tree END --> 
+
+      <!-- DIALOG BOX - BANKSIA INTEGRIFOLIA contents section START -->
+      <div class="modal fade" id="myModal-17" tabindex="-1" role="dialog" 
+           aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2"> Banksia Integrifolia </h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia integrifolia
+                  <br> 
+                     (the name refers to the smooth or unbroken leaf margins)
+                </i>
+                <br>
+                <br>
+                <b>Common Name:</b>    
+                <i>
+                   Coastal banksia
+                </i>
+                <br>
+                <br>
+                <b>Description:</b> 
+                <i> A small tree up to 10 metres high. 
+                    The leaves are dark green and glossy on the top side and silver and tomentose on the underside. 
+                    They resemble olive leaves, being elliptical in shape and tapering at each end. 
+                    The margins are generally smooth and unserrated.
+                </i>
+                <br>
+                <br>
+                <b>Flowers:</b> 
+                <i> Oblong-cylindrical terminal flower spikes up to 10cm high and 1.5cm wide. 
+                    They are pale yellow to bronze coloured and occur throughout the year.
+                </i>
+                <br>
+                <br>
+                <b>Habitat:</b> 
+                <i> B integrifolia occurs along the east coast of Australia from Cairns to Melbourne.
+                </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+             
+              <img src="../Flowers_By_Name/Banksia Integrifolia_ID_No_17/banksia integrifolia c.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Integrifolia Cone </p>             
+              <img src="../Flowers_By_Name/Banksia Integrifolia_ID_No_17/banksia integrifolia f.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Integrifolia Flower </p>
+              <img src="../Flowers_By_Name/Banksia Integrifolia_ID_No_17/banksia integrifolia t.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Integrifolia Tree </p>              
+
+
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA INTEGRIFOLIA contents section END --> 
+    
+  
+  
+        <!-- ELEMENT ID NO 18 : BANKSIA LANATA  --> 
+      <div class="filterDiv Flower Cone_Fruit Tree_Leaf Spring Summer" style = "font-style:normal;"> <!-- FILTER Banksia Lanata IDNo 18 :Flower Cone Tree START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Lanata_ID_No_18/banksia lanata f.jpg')">  <!-- Background Image of ID NO 18 : Banksia Lanata START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 18 : Banksia Lanata --> 
+            <h2>Banksia Lanata</h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 18]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-18"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 18: Banksia LANATA END -->
+      </div> <!-- FILTER Banksia Lanata IDNo 18: Flower Cone Tree END --> 
+
+      <!-- DIALOG BOX - BANKSIA LANATA contents section START -->
+      <div class="modal fade" id="myModal-18" tabindex="-1" role="dialog" 
+           aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2"> Banksia Lanata </h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia lanata
+                  <br> 
+                     (the name refers to the smooth or unbroken leaf margins)
+                </i>
+                <br>
+                <br>
+                <b>Common Name:</b>    
+                <i>
+                   Coomallo banksia
+                </i>
+                <br>
+                <br>
+                <b>Description:</b> 
+                <i> A low spreading shrub with long linear blue-green leaves. 
+                    The new foliage is pink/brown.
+                </i>
+                <br>
+                <br>
+                <b>Flowers:</b> 
+                <i> The flower spikes are orange/brown to cream in colour and appear in late Spring to early summer.
+                </i>
+                <br>
+                <br>
+                <b>Habitat:</b> 
+                <i> Banksia lanata occurs over a limited range near Leseur National Park in the mid-west of WA.
+                </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+             
+              <img src="../Flowers_By_Name/Banksia Lanata_ID_No_18/banksia lanata c.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Lanata Cone </p>             
+              <img src="../Flowers_By_Name/Banksia Lanata_ID_No_18/banksia lanata f.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Lanata Flower </p>
+              <img src="../Flowers_By_Name/Banksia Lanata_ID_No_18/banksia lanata t.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Lanata Tree </p>              
+
+
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA LANATA contents section END --> 
+    
+       
+
+          <!-- ELEMENT ID NO 19 : BANKSIA LEPTOPHYLLA  --> 
+      <div class="filterDiv Flower Cone_Fruit Tree_Leaf Summer" style = "font-style:normal;"> <!-- FILTER Banksia Leptophylla IDNo 19 : Flower Cone Tree START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Leptophylla_ID_No_19/banksia leptophylla f.jpg')">  <!-- Background Image of ID NO 19 : Banksia  Leptophylla START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 19 : Banksia Leptophylla --> 
+            <h2 style ="font-size: 20px;">Banksia Leptophylla</h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 19]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-19"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 19: Banksia LEPTOPHYLLA END -->
+      </div> <!-- FILTER Banksia Leptophylla IDNo 19: Flower Cone Tree END --> 
+
+      <!-- DIALOG BOX - BANKSIA LEPTOPHYLLA contents section START -->
+      <div class="modal fade" id="myModal-19" tabindex="-1" role="dialog" 
+           aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2"> Banksia Leptophylla </h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia leptophylla
+                  <br> 
+                     (the name means thin leaf banksia)
+                </i>
+                <br>
+                <br>
+                <b>Common Name:</b>    
+                <i>
+                   Slender leaf banksia
+                </i>
+                <br>
+                <br>
+                <b>Description:</b> 
+                <i> A low spreading shrub with long linear needle-like foliage. 
+                    Similar in appearance to Banksia lanata, however the new foliage of Banksia leptophylla is green.
+                </i>
+                <br>
+                <br>
+                <b>Flowers:</b> 
+                <i> The flower spikes are yellow and almost spherical in shape ( less than 10cm diameter) and appear from spring to early autumn.
+                </i>
+                <br>
+                <br>
+                <b>Habitat:</b> 
+                <i> Banksia leptophylla is a native of WA which grows on the coastal sandplain from the Moore River to Kalbarri.
+                </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+             
+              <img src="../Flowers_By_Name/Banksia Leptophylla_ID_No_19/banksia leptophylla c.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Leptophylla Cone </p>             
+              <img src="../Flowers_By_Name/Banksia Leptophylla_ID_No_19/banksia leptophylla f.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Leptophylla Flower </p>
+              <img src="../Flowers_By_Name/Banksia Leptophylla_ID_No_19/banksia leptophylla t.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Leptophylla Tree </p>              
+
+
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA LEPTOPHYLLA contents section END --> 
+    
+  
+  
+          <!-- ELEMENT ID NO 20 : BANKSIA LITTORALIS  --> 
+      <div class="filterDiv Flower Cone_Fruit Tree_Leaf Autumn Winter" style = "font-style:normal;"> <!-- FILTER Banksia Littoralis IDNo 20 : Flower Cone Tree START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Littoralis_ID_No_20/banksia littoralis f.jpg')">  <!-- Background Image of ID NO 20 : Banksia Littoralis START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 20 : Banksia Littoralis --> 
+            <h2>Banksia Littoralis</h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 20]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-20"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 20: Banksia LITTORALIS END -->
+      </div> <!-- FILTER Banksia Littoralis IDNo 20: Flower Cone Tree END --> 
+
+      <!-- DIALOG BOX - BANKSIA LITTORALIS contents section START -->
+      <div class="modal fade" id="myModal-20" tabindex="-1" role="dialog" 
+           aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2"> Banksia Littoralis</h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia littoralis
+                  <br> 
+                     (the name littoralis means close to the water)
+                </i>
+                <br>
+                <br>
+                <b>Common Name:</b>    
+                <i>
+                   Swamp banksia
+                </i>
+                <br>
+                <br>
+                <b>Description:</b> 
+                <i> a medium sized tree up to 8 metres high with a spreading canopy and a thick trunk covered with rough grey bark. 
+                    The leaves are long and thin and weakly serrated. The leaves are dark green on the upper side and white and tomentose on the underside.
+                </i>
+                <br>
+                <br>
+                <b>Flowers:</b> 
+                <i> Medium sized yellow cylindrical flower spikes ( less than 15cm high and 4-7cm diameter). 
+                    It flowers in autumn and winter.
+                </i>
+                <br>
+                <br>
+                <b>Habitat:</b> 
+                <i> Banksia littoralis grows on the coastal sand plain close to wetlands from Perth to Albany.
+                </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+             
+              <img src="../Flowers_By_Name/Banksia Littoralis_ID_No_20/banksia littoralis c.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Littoralis Cone </p>             
+              <img src="../Flowers_By_Name/Banksia Littoralis_ID_No_20/banksia littoralis f.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Littoralis Flower </p>
+              <img src="../Flowers_By_Name/Banksia Littoralis_ID_No_20/banksia littoralis t.JPG" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Littoralis Tree </p>              
+
+
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA LITTORALIS contents section END --> 
+  
+  
+ 
+          <!-- ELEMENT ID NO 21 : BANKSIA MEDIA  --> 
+      <div class="filterDiv Flower Cone_Fruit Tree_Leaf Summer Autumn Winter" style = "font-style:normal;"> <!-- FILTER Banksia Media IDNo 21 : Flower Cone Tree START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Media_ID_No_21/banksia media f.jpg')">  <!-- Background Image of ID NO 21 : Banksia Media START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 21 : Banksia Media --> 
+            <h2>Banksia Media</h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 21]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-21"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 21: Banksia MEDIA END -->
+      </div> <!-- FILTER Banksia Media IDNo 21: Flower Cone Tree END --> 
+
+      <!-- DIALOG BOX - BANKSIA MEDIA contents section START -->
+      <div class="modal fade" id="myModal-21" tabindex="-1" role="dialog" 
+           aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2"> Banksia Media</h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia media
+                  <br> 
+                     (the name means medium sized)
+                </i>
+                <br>
+                <br>
+                <b>Description:</b> 
+                <i> A medium size shrub up to 3 metres high. 
+                    The leaves are medium size (6-15cm) and cuneate and evenly serrated. 
+                    They are green on the upper side and white underneath.
+                </i>
+                <br>
+                <br>
+                <b>Flowers:</b> 
+                <i> Large oblong-cylindrical flower spikes which are creamy yellow at first and darken with age. 
+                    It flowers from February to September.
+                </i>
+                <br>
+                <br>
+                <b>Habitat:</b> 
+                <i> This species is from the coastal sandplain in the Eyre district of WA.
+                </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+             
+              <img src="../Flowers_By_Name/Banksia Media_ID_No_21/banksia media c.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Media Cone </p>             
+              <img src="../Flowers_By_Name/Banksia Media_ID_No_21/banksia media f.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Media Flower </p>
+              <img src="../Flowers_By_Name/Banksia Media_ID_No_21/banksia media t.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Media Tree </p>              
+
+
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA MEDIA contents section END --> 
+  
+  
+
+  
+          <!-- ELEMENT ID NO 22 : BANKSIA MENZIESII  --> 
+      <div class="filterDiv Flower Cone_Fruit Tree_Leaf Autumn Winter" style = "font-style:normal;"> <!-- FILTER Banksia Menziesii IDNo 22 : Flower Cone Tree START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Menziesii_ID_No_22/banksia menziesii f.jpg')">  <!-- Background Image of ID NO 22 : Banksia Menziesii START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 22 : Banksia Menziesii --> 
+            <h2>Banksia Menziesii</h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 22]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-22"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 22: Banksia MENZIESII END -->
+      </div> <!-- FILTER Banksia Menziesii IDNo 22: Flower Cone Tree END --> 
+
+      <!-- DIALOG BOX - BANKSIA MENZIESII contents section START -->
+      <div class="modal fade" id="myModal-22" tabindex="-1" role="dialog" 
+           aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2"> Banksia Menziesii</h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia menziesii
+                  <br> 
+                     (named after Archibald Menzies and 18th century botanist)
+                </i>
+                <br>
+                <br>
+                <b>Common Name:</b>    
+                <i>
+                    Firewood banksia
+                </i>
+                <br>
+                <br>
+                <b>Description:</b> 
+                <i> A small tree up to 15 metres high with a rough grey bark. 
+                    The leaves are grey-green and regularly serrated. 
+                    They are long and moderately wide. 
+                    The underside is tomentose.
+                </i>
+                <br>
+                <br>
+                <b>Flowers:</b> 
+                <i> Medium size cylindrical flower spikes that are silver grey at first and then open from the bottom to produce golden styles with red styles above them. 
+                    It flowers in autumn and winter.
+                </i>
+                <br>
+                <br>
+                <b>Habitat:</b> 
+                <i> Banksia menziesii is a native of the mid-west coast of WA from the Swan River to Shark Bay.
+                </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+             
+              <img src="../Flowers_By_Name/Banksia Menziesii_ID_No_22/banksia menziesii c.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Menziesii Cone </p>             
+              <img src="../Flowers_By_Name/Banksia Menziesii_ID_No_22/banksia menziesii f.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Menziesii Flower </p>
+              <img src="../Flowers_By_Name/Banksia Menziesii_ID_No_22/banksia menziesii mubw f.JPG" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Menziesii Flower 2 </p>
+              <img src="../Flowers_By_Name/Banksia Menziesii_ID_No_22/banksia menziesii t.JPG" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Menziesii Tree </p>              
+
+
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA MENZIESII contents section END --> 
+  
+
+  
+          <!-- ELEMENT ID NO 23 : BANKSIA PETIOLARIS  --> 
+      <div class="filterDiv Flower Cone_Fruit Spring" style = "font-style:normal;"> <!-- FILTER Banksia Petiolaris IDNo 23 : Flower Cone  START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Petiolaris_ID_No_23/banksia petiolaris f.jpg')">  <!-- Background Image of ID NO 23 : Banksia Petiolaris START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 23 : Banksia Petiolaris --> 
+            <h2>Banksia Petiolaris </h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 23]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-23"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 23: Banksia PETIOLARIS END -->
+      </div> <!-- FILTER Banksia Petiolaris IDNo 23: Flower Cone END --> 
+
+      <!-- DIALOG BOX - BANKSIA PETIOLARIS contents section START -->
+      <div class="modal fade" id="myModal-23" tabindex="-1" role="dialog" 
+           aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2"> Banksia Petiolaris </h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia petiolaris 
+                  <br> 
+                     (the name petiolaris refers to the leaf stalk which is quite long)
+                </i>
+                <br>
+                <br>
+                <b>Description:</b> 
+                <i> A prostrate species with spreading horizontal branches underneath the soil surface. 
+                    The leaves are long and moderately wide with regular teeth. 
+                    The new growth is soft and brown and hairy.
+                </i>
+                <br>
+                <br>
+                <b>Flowers:</b> 
+                <i> Large pale yellow flower spikes are produced in the Spring.
+                </i>
+                <br>
+                <br>
+                <b>Habitat:</b> 
+                <i> A native of the south coast of WA from the Stirling Ranges to Esperance.
+                </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+             
+              <img src="../Flowers_By_Name/Banksia Petiolaris_ID_No_23/banksia petolaris c.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Petiolaris Cone </p>             
+              <img src="../Flowers_By_Name/Banksia Petiolaris_ID_No_23/banksia petiolaris f.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Petiolaris Flower </p>
+              <img src="../Flowers_By_Name/Banksia Petiolaris_ID_No_23/banksia petiolaris f mu.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Petiolaris Flower 2 </p>      
+
+
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA PETIOLARIS contents section END --> 
+    
+  
+  
+      <!-- ELEMENT ID NO 24 : BANKSIA PILOSTYLIS  --> 
+      <div class="filterDiv Cone_Fruit Tree_Leaf Summer" style = "font-style:normal;"> <!-- FILTER Banksia Pilostylis IDNo 24 : Cone Tree  START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Pilostylis_ID_No_24/banksia pilostylis c.jpg')">  <!-- Background Image of ID NO 24 : Banksia Pilostylis START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 24 : Banksia Pilostylis --> 
+            <h2> Banksia Pilostylis </h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 24]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-24"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 24: Banksia PILOSTYLIS END -->
+      </div> <!-- FILTER Banksia Pilostylis IDNo 24: Cone Tree END --> 
+
+      <!-- DIALOG BOX - BANKSIA PILOSTYLIS contents section START -->
+      <div class="modal fade" id="myModal-24" tabindex="-1" role="dialog" 
+           aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2"> Banksia Pilostylis </h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia pilostylis
+                  <br> 
+                       .... 
+                </i>
+                <br>
+                <br>
+                <b>Description:</b> 
+                <i> no description yet.
+                </i>
+                <br>
+                <br>
+                <b>Flowers:</b> 
+                <i> no flower description yet.
+                </i>
+                <br>
+                <br>
+                <b>Habitat:</b> 
+                <i> no habitat description yet. 
+                </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+             
+              <img src="../Flowers_By_Name/Banksia Pilostylis_ID_No_24/banksia pilostylis c.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Pilostylis Cone </p>             
+              <img src="../Flowers_By_Name/Banksia Pilostylis_ID_No_24/banksia pilostylis t.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Pilostylis Tree </p>
+              <img src="../Flowers_By_Name/Banksia Pilostylis_ID_No_24/banksia pilostylis t2.JPG" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Pilostylis Tree 2 </p>      
+
+
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA PILOSTYLIS contents section END --> 
+    
+   
+  
+      <!-- ELEMENT ID NO 25 : BANKSIA PRAEMORSA  --> 
+      <div class="filterDiv Flower Cone_Fruit Tree_Leaf Spring Winter" style = "font-style:normal;"> <!-- FILTER Banksia Praemorsa IDNo 25 : Flower Cone Tree START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Praemorsa_ID_No_25/banksia praemorsa f.jpg')">  <!-- Background Image of ID NO 25 : Banksia Praemorsa START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 25 : Banksia Praemorsa  --> 
+            <h2> Banksia Praemorsa </h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 25]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-25"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 25: Banksia PRAEMORSA END -->
+      </div> <!-- FILTER Banksia Praemorsa IDNo 25: Flower Cone Tree END --> 
+
+      <!-- DIALOG BOX - BANKSIA PRAEMORSA contents section START -->
+      <div class="modal fade" id="myModal-25" tabindex="-1" role="dialog" 
+           aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2"> Banksia Praemorsa </h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia Praemorsa 
+                  <br> 
+                      (the name means cut off or truncated and refers to the leaves)
+                </i>
+                <br>
+                <br>
+                <b>Common Name:</b>    
+                <i>
+                   Cut-leaf banksia
+                </i>
+                <br>
+                <br>
+                <b>Description:</b> 
+                <i> A medium sized shrub up to 4 metres high. The leaves are short and truncated with regular small teeth. The new leaves are soft and golden brown.
+                </i>
+                <br>
+                <br>
+                <b>Flowers:</b> 
+                <i> Long, cylindrical flower spikes are produced in winter and spring. They are yellow with touches of red.
+                </i>
+                <br>
+                <br>
+                <b>Habitat:</b> 
+                <i> Banksia praemorsa occurs naturally only in the Albany area of WA. 
+                </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+             
+              <img src="../Flowers_By_Name/Banksia Praemorsa_ID_No_25/banksia praemorsa c2.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Praemorsa Cone </p>             
+              <img src="../Flowers_By_Name/Banksia Praemorsa_ID_No_25/banksia praemorsa f.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Praemorsa Flower </p>
+              <img src="../Flowers_By_Name/Banksia Praemorsa_ID_No_25/banksia praemorsa t.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Praemorsa Tree </p>      
+
+
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA PRAEMORSA contents section END --> 
+  
+  
+  
+      <!-- ELEMENT ID NO 26 : BANKSIA PRIONOTES  --> 
+      <div class="filterDiv Flower Cone_Fruit Tree_Leaf Autumn" style = "font-style:normal;"> <!-- FILTER Banksia Prionotes IDNo 26 : Flower Cone Tree START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Prionotes_ID_No_26/banksia prionotes flower.jpg')">  <!-- Background Image of ID NO 26 : Banksia Prionotes START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 26 : Banksia Prionotes  --> 
+            <h2> Banksia Prionotes </h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 26]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-26"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 26: Banksia PRIONOTES END -->
+      </div> <!-- FILTER Banksia Prionotes IDNo 26: Flower Cone Tree END --> 
+
+      <!-- DIALOG BOX - BANKSIA PRIONOTES contents section START -->
+      <div class="modal fade" id="myModal-26" tabindex="-1" role="dialog" 
+           aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2"> Banksia Prionotes </h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia prionotes 
+                  <br> 
+                      (the name refers to the saw-toothed leaves)
+                </i>
+                <br>
+                <br>
+                <b>Common Name:</b>    
+                <i>
+                   Acorn Banksia
+                </i>
+                <br>
+                <br>
+                <b>Description:</b> 
+                <i> A small tree up to 10 metres high with soft grey-white bark. 
+                    The leaves are glabrous on both sides. 
+                    The upper side is grey-green and the underside is white.
+                    The leaves are moderately long and quite thin with regular serrations.
+                </i>
+                <br>
+                <br>
+                <b>Flowers:</b> 
+                <i> Terminal flower spikes which are white at first and turn orange from the base up. It flowers in autumn.
+                </i>
+                <br>
+                <br>
+                <b>Habitat:</b> 
+                <i> Banksia prionotes occurs on sandy coastal soils over a wide range from Kalbarri to Albany.
+                </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+             
+              <img src="../Flowers_By_Name/Banksia Prionotes_ID_No_26/banksia prionotes c.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Prionotes Cone </p>             
+              <img src="../Flowers_By_Name/Banksia Prionotes_ID_No_26/banksia prionotes flower.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Prionotes Flower </p>
+              <img src="../Flowers_By_Name/Banksia Prionotes_ID_No_26/banksia prionotes t.JPG" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Prionotes Tree </p>      
+
+
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA PRIONOTES contents section END --> 
+  
+  
+    
+       <!-- ELEMENT ID NO 27 : BANKSIA REPENS   --> 
+      <div class="filterDiv Flower Cone_Fruit Tree_Leaf Repens" style = "font-style:normal;"> <!-- FILTER Banksia Repens IDNo 27 : Flower Cone Tree START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Repens_ID_No_27/banksia repens f.jpg')">  <!-- Background Image of ID NO 27 : Banksia Repens START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 27 : Banksia Repens  --> 
+            <h2> Banksia Repens </h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 27]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-27"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 27: Banksia REPENS END -->
+      </div> <!-- FILTER Banksia Repens IDNo 27: Flower Cone Tree END --> 
+
+      <!-- DIALOG BOX - BANKSIA REPENS contents section START -->
+      <div class="modal fade" id="myModal-27" tabindex="-1" role="dialog" 
+           aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2"> Banksia Repens </h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia Repens
+                  <br> 
+                      (the name means creeping banksia)
+                </i>
+                <br>
+                <br>
+                <b>Description:</b> 
+                <i> A prostrate form with branches just below the ground. The leaves are large and have deep irregular lobes.
+                </i>
+                <br>
+                <br>
+                <b>Flowers:</b> 
+                <i>  The flower spikes are cream to yellow coloured and appear in the spring.
+                </i>
+                <br>
+                <br>
+                <b>Habitat:</b> 
+                <i> Banksia repens is widely distributed on the south coast of WA from Albany to Esperance.
+                </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+             
+              <img src="../Flowers_By_Name/Banksia Repens_ID_No_27/banksia repens c.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Repens Cone </p>             
+              <img src="../Flowers_By_Name/Banksia Repens_ID_No_27/banksia repens f.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Repens Flower </p>
+              <img src="../Flowers_By_Name/Banksia Repens_ID_No_27/banksia repens l.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Repens Tree/Leaves </p>      
+
+
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA REPENS contents section END --> 
+  
+  
+
+      <!-- ELEMENT ID NO 28 : BANKSIA SCEPTRUM  --> 
+      <div class="filterDiv Flower Cone_Fruit Tree_Leaf Spring Summer" style = "font-style:normal;"> <!-- FILTER Banksia Sceptrum IDNo 28 : Flower Cone Tree START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Sceptrum_ID_No_28/banksia sceptrum c.jpg')">  <!-- Background Image of ID NO 28 : Banksia Sceptrum START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 28 : Banksia Sceptrum   --> 
+            <h2> Banksia Sceptrum </h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 28]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-28"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 28: Banksia SCEPTRUM END -->
+      </div> <!-- FILTER Banksia Sceptrum IDNo 28: Flower Cone Tree END --> 
+
+      <!-- DIALOG BOX - BANKSIA SCEPTRUM contents section START -->
+      <div class="modal fade" id="myModal-28" tabindex="-1" role="dialog" 
+           aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2"> Banksia Sceptrum </h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia Sceptrum 
+                  <br> 
+                      (the name refers to the sceptre-like flower spikes on long branches)
+                </i>
+                <br>
+                <br>
+                <b>Description:</b> 
+                <i> A medium size shrub up to 5metres high. 
+                    The leaves are small (3-6cm long and 2cm wide) and glaucous and have regularly spaced small teeth. 
+                    The tops are truncated.
+                </i>
+                <br>
+                <br>
+                <b>Flowers:</b> 
+                <i>  The flower spikes are arranged obliquely to the branches and are large and cylindrical and pale yellow coloured. 
+                     It flowers in spring.
+                </i>
+                <br>
+                <br>
+                <b>Habitat:</b> 
+                <i> A native of the inland sandplains in the Murchison and Mullewa districts.
+                </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+             
+              <img src="../Flowers_By_Name/Banksia Sceptrum_ID_No_28/banksia sceptrum c.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Sceptrum Cone </p>             
+              <img src="../Flowers_By_Name/Banksia Sceptrum_ID_No_28/banksia sceptrum f2.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Sceptrum Flower </p>
+              <img src="../Flowers_By_Name/Banksia Sceptrum_ID_No_28/banksia sceptrum t.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Sceptrum Tree </p>      
+
+
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA SCEPTRUM contents section END --> 
+
+  
+  
+      <!-- ELEMENT ID NO 29 : BANKSIA SPECIOSA --> 
+      <div class="filterDiv Flower Cone_Fruit Tree_Leaf Summer Autumn" style = "font-style:normal;"> <!-- FILTER Banksia Speciosa  IDNo 29 : Flower Cone Tree START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Speciosa_IDNo_29/banksia speciosa f.jpg')">  <!-- Background Image of ID NO 29 : Banksia Speciosa START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 29 : Banksia Speciosa   --> 
+            <h2> Banksia Speciosa </h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 29]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-29"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 29: Banksia SPECIOSA END -->
+      </div> <!-- FILTER Banksia Speciosa IDNo 29: Flower Cone Tree END --> 
+
+      <!-- DIALOG BOX - BANKSIA SPECIOSA contents section START -->
+      <div class="modal fade" id="myModal-29" tabindex="-1" role="dialog" 
+           aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2"> Banksia Speciosa </h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia Speciosa
+                  <br> 
+                      (the name means showy or handsome and refers to the shrub itself)
+                </i>
+                <br>
+                <br>
+                <b>Common Name:</b>    
+                <i>
+                   Showy banksia
+                </i>
+                <br>
+                <br>
+                <b>Description:</b> 
+                <i> A large multi-stemmed shrub up to 5 metres high. 
+                    The leaves are large and deeply divided to the mid-rib to form triangular shaped lobes.
+                    The leaves are dark green on the upper side and white on the underside.
+                </i>
+                <br>
+                <br>
+                <b>Flowers:</b> 
+                <i> Large conical flower spikes which are white at first and gradually turn lemon-yellow from the base up. 
+                    They are terminal on the branches and surrounded by a rosette of leaves. 
+                    It flowers from late spring to autumn.
+                </i>
+                <br>
+                <br>
+                <b>Habitat:</b> 
+                <i> A native of the south coast of WA from Hopetoun to Israelite Bay.
+                </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+             
+              <img src="../Flowers_By_Name/Banksia Speciosa_IDNo_29/banksia speciosa c.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Speciosa Cone </p>             
+              <img src="../Flowers_By_Name/Banksia Speciosa_IDNo_29/banksia speciosa f.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Speciosa Flower </p>
+              <img src="../Flowers_By_Name/Banksia Speciosa_IDNo_29/banksia speciosa t.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Speciosa Tree </p>      
+
+
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA SPECIOSA contents section END --> 
+  
+  
+
+      <!-- ELEMENT ID NO 30 : BANKSIA VICTORIAE --> 
+      <div class="filterDiv Flower Cone_Fruit Tree_Leaf Summer Autumn" style = "font-style:normal;"> <!-- FILTER Banksia Victoriae IDNo 30 : Flower Cone Tree START-->
+
+        <label class="textOverImage" style="background-image: url('../Flowers_By_Name/Banksia Victoriae_IDNo_30/banksia victoriae f.jpg')">  <!-- Background Image of ID NO 30 : Banksia Victoriae START -->
+          <input type="checkbox">  <!-- Mini Box Appears After Hover For ID NO 30 : Banksia Victoriae   --> 
+            <h2> Banksia Victoriae </h2>  <!-- Title of the Mini Box That User Sees After Hovering -->
+
+
+          <div>  <!-- Mini Box after title and then after being clicked/tapped on by the user START -->
+            [ID No. 30]
+            <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal-30"> <!-- Click Here Button For Flower Information Dialog Box START -->
+            Click Here!       
+          </div>  <!-- Mini Box after title and then after being clicked/tapped on by the user END -->
+            </button> <!-- Click Here Button For Flower Information Dialog Box END-->
+        </label>  <!-- Background Image of ID NO 30: Banksia VICTORIAE END -->
+      </div> <!-- FILTER Banksia Victoriae IDNo 30: Flower Cone Tree END --> 
+
+      <!-- DIALOG BOX - BANKSIA VICTORIAE contents section START -->
+      <div class="modal fade" id="myModal-30" tabindex="-1" role="dialog" 
+           aria-labelledby="myModalLabel-2">  <!-- Modal START-->
+        <div class="modal-dialog" role="document">  <!-- Dialog Box START -->
+          <div class="modal-content">  <!-- Modal Content START -->
+            <div class="modal-header">  <!-- Modal Header START -->
+              <h4 class="modal-title" id="myModalLabel-2"> Banksia Victoriae </h4> <!-- Dialog Box Title -->
+            </div>  <!-- Modal Header END -->
+
+            <div class="modal-body"> <!-- Modal Body START -->
+              <p class="lead"> <!-- Modal Body Paragraph Content START -->
+
+                <b>Name:</b>    
+                <i>
+                   Banksia victoriae
+                  <br> 
+                      (named in honour of Queen Victoria)
+                </i>
+                <br>
+                <br>
+                <b>Description:</b> 
+                <i> A medium sized shrub up to 3 metres high with long narrow leaves which are deeply divided into regular triangular lobes. 
+                    The new foliage is soft and greenish.
+                </i>
+                <br>
+                <br>
+                <b>Flowers:</b> 
+                <i> The flower spikes are conical and initially are white but they turn orange from the base upwards as they age. It flowers in summer and autumn.
+                </i>
+                <br>
+                <br>
+                <b>Habitat:</b> 
+                <i> Banksia victoriae is found in the sandy heathlands of the Irwin and Murchison districts of WA.
+                </i>
+                <br>
+                <br>
+              </p> <!-- Modal Body Paragraph Content END --> 
+             
+              <img src="../Flowers_By_Name/Banksia Victoriae_IDNo_30/banksia victoriae c.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Victoriae Cone </p>             
+              <img src="../Flowers_By_Name/Banksia Victoriae_IDNo_30/banksia victoriae f.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Victoriae Flower </p>
+              <img src="../Flowers_By_Name/Banksia Victoriae_IDNo_30/banksia victoriae mu f.JPG" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Victoriae Flower 2 </p>
+              <img src="../Flowers_By_Name/Banksia Victoriae_IDNo_30/banksia victoriae t.jpg" alt="" class="image" /> <!-- Photographs of the Associated Banksia Species -->
+              <p> Banksia Victoriae Tree </p>      
+
+
+            </div>  <!-- Modal Body END -->
+
+            <div class="modal-footer"> <!-- Modal Footer START -->
+              <button type="button" class="btn btn-dialog" data-dismiss="modal">  <!-- closes the dialog box! :D -->
+                Close
+              </button> 
+            </div>  <!-- Modal Footer END -->
+
+          </div>  <!-- Modal Content END -->	 
+        </div>  <!-- Dialog Box END -->
+      </div>  <!-- Modal END -->
+      <!-- DIALOG BOX - BANKSIA VICTORIAE contents section END --> 
+   
+  
+  
+  
+ </div> <!-- Elements To Filter END -->
+</section> <!-- Flowers Tab END -->
+
+
+
+      <!-- START WALKTHROUGH -->
+      <section class="tours" id="Walkthrough">
+       <h2 class="heading-secondary heading-secondary--tours tours__heading"> Walkthrough </h2>
+       Mr do raising article general norland my hastily. Its companions say uncommonly pianoforte favourable. Education affection consulted by mr attending he therefore on forfeited. High way more far feet kind evil play led. Sometimes furnished collected add for resources attention. Norland an by minuter enquire it general on towards forming. Adapted mrs totally company two yet conduct men. 
+
+Merry alone do it burst me songs. Sorry equal charm joy her those folly ham. In they no is many both. Recommend new contented intention improving bed performed age. Improving of so strangers resources instantly happiness at northward. Danger nearer length oppose really add now either. But ask regret eat branch fat garden. Become am he except wishes. Past so at door we walk want such sang. Feeling colonel get her garrets own. 
+
+Conveying or northward offending admitting perfectly my. Colonel gravity get thought fat smiling add but. Wonder twenty hunted and put income set desire expect. Am cottage calling my is mistake cousins talking up. Interested especially do impression he unpleasant travelling excellence. All few our knew time done draw ask. 
+
+Behaviour we improving at something to. Evil true high lady roof men had open. To projection considered it precaution an melancholy or. Wound young you thing worse along being ham. Dissimilar of favourable solicitude if sympathize middletons at. Forfeited up if disposing perfectly in an eagerness perceived necessary. Belonging sir curiosity discovery extremity yet forfeited prevailed own off. Travelling by introduced of mr terminated. Knew as miss my high h
+         <div class="relative"> <!-- Relative Class START-->
+           <img src="https://i.ibb.co/NWCyFnW/map-base.jpg" class="imageWKTH"> 
+        
+           <!--  Banksia species signages placements on the map -->
+            <div class = "ID_2_Position_1">
+              <button type="button" class="btn-circle" data-toggle="modal" data-target="#myModal-2"> 2 
+              </button>  
+            </div>
+            
+            <div class = "ID_2_Position_2">
+              <button type="button" class="btn-circle" data-toggle="modal" data-target="#myModal-2"> 2 
+              </button>  
+            </div>
+           
+           <div class = "ID_2_Position_3">
+              <button type="button" class="btn-circle" data-toggle="modal" data-target="#myModal-2"> 2 
+              </button>  
+            </div>
+           
+           <div class = "ID_2_Position_4">
+              <button type="button" class="btn-circle" data-toggle="modal" data-target="#myModal-2"> 2 
+              </button>  
+            </div>
+           
+           <div class = "ID_2_Position_5">
+              <button type="button" class="btn-circle" data-toggle="modal" data-target="#myModal-2"> 2 
+              </button>  
+            </div>
+
+           <div class = "ID_3_Position_1">
+              <button type="button" class="btn-circle" data-toggle="modal" data-target="#myModal-3"> 3 
+              </button>  
+            </div>           
+           
+           
+           
+        </div> <!-- Relative Class END -->
+  </div>       
+        
+      </section>
+      <!-- END WALKTHROUGH -->
+
+
+
+
+
+
+
+
+
+      <!-- START WINE SHOP -->
+      <section class = "shops" id="News_Events">
+        <div style = "text-align:center; font-family: Courier">
+        <h2 class="heading-secondary heading-secondary--shop">Shop</h2> </div>
+
+        <div class="shops__offers">
+          <div class="shops__box">
+            <img src="https://i.postimg.cc/Dy8ryrx1/reds.jpg" alt="red wine" class="shops__img" />
+            <h3 class="heading-tertiary">Red Wines</h3>
+            <p class="shops__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates consequatur aspernatur quaerat quos fugit, doloribus
+              praesentium quasi neque exercitationem quisquam dicta, iure eaque
+              at possimus iusto. Quia doloremque dolor minus.
+            </p>
+            <button class="btn btn--shop">Buy</button>
+          </div>
+          <div class="shops__box">
+            <img src="https://i.postimg.cc/tCT5nQ4Z/white.jpg" alt="white wine" class="shops__img" />
+            <h3 class="heading-tertiary">White Wines</h3>
+            <p class="shops__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates consequatur aspernatur quaerat quos fugit, doloribus
+              praesentium quasi neque exercitationem quisquam dicta, iure eaque
+              at possimus iusto. Quia doloremque dolor minus.
+            </p>
+            <button class="btn btn--shop">Buy</button>
+          </div>
+          <div class="shops__box">
+            <img src="https://i.postimg.cc/vZxtXr9G/champagne.jpg" alt="champagne" class="shops__img" />
+            <h3 class="heading-tertiary">Champagne</h3>
+            <p class="shops__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates consequatur aspernatur quaerat quos fugit, doloribus
+              praesentium quasi neque exercitationem quisquam dicta, iure eaque
+              at possimus iusto. Quia doloremque dolor minus.
+            </p>
+            <button class="btn btn--shop">Buy</button>
+          </div>
+
+          <div class="shops__box " id="lifestyle">
+            <img src="https://i.postimg.cc/QCMp71hG/soap.jpgg" alt="soap" class="shops__img" />
+            <h3 class="heading-tertiary">Hand-made wine soap</h3>
+            <p class="shops__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates consequatur aspernatur quaerat quos fugit, doloribus
+              praesentium quasi neque exercitationem quisquam dicta, iure eaque
+              at possimus iusto. Quia doloremque dolor minus.
+            </p>
+            <button class="btn btn--shop">Buy</button>
+          </div>
+          <div class="shops__box ">
+            <img src="https://i.postimg.cc/D0fccRQN/candles.jpg" alt="candles" class="shops__img" />
+            <h3 class="heading-tertiary">Wine Candles</h3>
+            <p class="shops__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates consequatur aspernatur quaerat quos fugit, doloribus
+              praesentium quasi neque exercitationem quisquam dicta, iure eaque
+              at possimus iusto. Quia doloremque dolor minus.
+            </p>
+            <button class="btn btn--shop">Buy</button>
+          </div>
+          <div class="shops__box ">
+            <img src="https://i.postimg.cc/B645qRzv/cookie.jpg" alt="cookies" class="shops__img" />
+            <h3 class="heading-tertiary">Grape Cookies</h3>
+            <p class="shops__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates consequatur aspernatur quaerat quos fugit, doloribus
+              praesentium quasi neque exercitationem quisquam dicta, iure eaque
+              at possimus iusto. Quia doloremque dolor minus.  
+            </p>
+            <button class="btn btn--shop">Buy</button>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- INSERTED RESPONSIVE FLEX CARDS FOR DOs and DONTs for Visitor Info AND MAP OF LOCATION OF BANKSIA COURT START --> <section>
+<div style = "text-align:center; font-family: Courier">
+  <h1  id = "VisitorInfo"> Where is the Banksia Court ? </h1>
+ Click on the Red Arrow below to find out where the garden is... 
+</div>
+
+<div class= "frame_placement">
+<div class="frame">
+ 
+ <!-- <div class="center"> --> 
+		<div class="map">
+			<svg class="circle" width="400px" height="400px" viewBox="0 0 400 400">
+			<circle cx="200" cy="200" r="160" ></circle>
+				
+        <linearGradient id="my-cool-gradient" x2="1" y2="1">
+    <stop offset="0%" stop-color="#447799" />
+    <stop offset="50%" stop-color="#224488" />
+    <stop offset="100%" stop-color="#112266" />
+  </linearGradient>
+        
+		</svg>
+		</div>
+ 
+ <div class = "marker_placement">
+		<div id="marker">
+   			<svg class="pointer" width="64" height="64" viewBox="0 0 24 24">
+  <path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12 ,2Z"></path>
+      </svg> 	 
+    <div class="shadow"></div></div> 
+ 
+   </div> <!-- end of marker_placement class!-->
+
+  <div class = "card_placement">
+		<div id="card">
+			<img src='https://upload.wikimedia.org/wikipedia/commons/4/4c/Murdoch_Banksia_Court_sign.jpg' alt='cafe' id="card-banner">
+			<b><p class="name">Banksia Court</p></b>
+			<p class="address">
+				<u>Address</u>
+				<br>
+				Student Amenities Building, Murdoch WA 6150, Australia
+			</p>
+			<div class="action">
+				<a href="https://www.murdoch.edu.au/">Murdoch<br> University Official </a>
+				<span class="divider">&vert;</span>
+				<a href="https://goo.gl/maps/VoGGmEmyr152">Directions</a>
+			</div> <!-- end of action class --> 
+    </div> <!-- end of card class--> 
+    </div>
+  <!-- </div> <!-- end of center -->
+  </div> <!-- end of frame -->
+</div>
+
+      <div class="wrapper">
+         <div style = "text-align:center; font-family: Courier">
+  <h1>Visitor Guidelines</h1>
+  <h3> <b style = "color: green">DOs</b> and <b style = "color: red ">DONTs</b> in the Banksia Court </h3> <br>
+        </div>
+        
+        
+  <div class="container"> <!-- https://www.nparks.gov.sg/gardens-parks-and-nature/dos-and-donts (learn from this website) --> 
+    
+    <a class="container__item">
+      <div class="container__item--categorygreen"> HAVE A PICNIC ! </div>
+      <div class="container__item--img"><div class = "container__item--greenDos_icon"><i class="fas fa-drumstick-bite"></i></div></div>
+      <div class="container__item--desc"> Picnic/food and drink is allowed in the Banksia Court. There are several seats that are provided in the garden.</div>
+    </a>
+    
+    
+    <a class="container__item">
+      <div class="container__item--categorygreen">PARK WHERE YOU SHOULD </div>
+      <div class="container__item--img"><div class = "container__item--greenDos_icon"><i class="fas fa-car"></i></div></div>
+      <div class="container__item--desc"> Follow parking directions within the school campus, park your vehicles where designated lots are located. </div>
+    </a>
+     
+    
+    <a class="container__item">
+      <div class="container__item--categorygreen">MOBILITY AIDS IN THE GARDENS</div>
+      <div class="container__item--img"><div class = "container__item--greenDos_icon"><i class="fab fa-accessible-icon"></i></div></div>
+      <div class="container__item--desc"> Wheelchairs / motorised wheelchairs and seated mobility scooters are allowed at the court. </div>
+    </a>
+    
+    
+    <a class="container__item">
+      <div class="container__item--categorygreen"> RESPECT OUR FLORA AND FAUNA </div>
+      <div class="container__item--img"><div class = "container__item--greenDos_icon"><i class="fas fa-leaf"></i></div></div>
+      <div class="container__item--desc"> As simple as that. No plucking, stomping on, damaging any of the Banksias or climb trees. If you spot any inappropriate behaviour, approach our staff immediately.</div>
+    </a> 
+    
+     
+    <a class="container__item">
+      <div class="container__item--categorygreen"> TAKE A PLENTY </div>
+      <div class="container__item--img"><div class = "container__item--greenDos_icon"><i class="fas fa-camera"></i></div></div>
+      <div class="container__item--desc"> Film and photography is much welcome. However if you wish to do so for commercial filming and photography, prior approval from the university is then required. </div>
+    </a> 
+
+        
+    
+    <a class="container__item">
+      <div class="container__item--categoryred">NO PEDESTRIAN CONVEYANCES</div>
+      <div class="container__item--img">
+      <div class ="container__item--redDonts_icon"><i class="fas fa-skating"></i></div></div>
+      <div class="container__item--desc">
+        Bicycles/tricycles, roller skates, skateboards and scooters are prohibited in the court. 
+        Only wheelchairs and gophers for the disabled.</div>
+    </a>
+    
+    
+    <a class="container__item">
+      <div class="container__item--categoryred">NO PETS</div>
+      <div class="container__item--img">
+      <div class ="container__item--redDonts_icon">
+      <i class="fas fa-paw"></i></div></div>
+      <div class="container__item--desc">Pets are not allowed in the Banksia Court.
+      </div>
+    </a>
+    
+      
+    <a class="container__item">
+      <div class="container__item--categoryred">NO LITTERING</div>
+      <div class="container__item--img">
+      <div class ="container__item--redDonts_icon"><i class="far fa-trash-alt"></i></div></div>
+      <div class="container__item--desc">Look for the designated bins in the school to dispose the litter.           </div>
+    </a>
+    
+    
+    <a class="container__item">
+      <div class="container__item--categoryred">KEEP NOISE LEVELS LOW</div>
+      <div class="container__item--img">
+      <div class ="container__item--redDonts_icon">
+      <i class="far fa-tired"></i>
+      </div></div>
+      <div class="container__item--desc"> By keeping noise levels low, shows respect to other park goers, 
+       that the peaceful sounds of nature be fully enjoyed and appreciated by everyone. Refrain from having partys in the court. </div>
+    </a>
+    
+     <a class="container__item">
+      <div class="container__item--categoryred">NO VANDALISM</div>
+      <div class="container__item--img">
+      <div class ="container__item--redDonts_icon">
+      <i class="fas fa-spray-can"></i>
+      </div></div>
+      <div class="container__item--desc"> This is strictly prohibited and will have judicial consequences. 
+        Please dont not vandalize the signages or any part of the Banksia Court.</div>
+    </a>
+
+      <a class="container__item">
+      <div class="container__item--categoryred">NO OPEN FIRES</div>
+      <div class="container__item--img">
+      <div class ="container__item--redDonts_icon">
+      <i class="fas fa-fire"></i>
+      </div></div>
+      <div class="container__item--desc"> Such open fire are: BBQs or lighted candles, are prohibited in the Banksia Court.</div>
+    </a>
+    
+    
+      <a class="container__item">
+      <div class="container__item--categoryred">NO SMOKING</div>
+      <div class="container__item--img">
+      <div class ="container__item--redDonts_icon">
+      <i class="fas fa-smoking-ban"></i>
+      </div></div>
+      <div class="container__item--desc"> The Banksia Court is smoke-free. </div>
+    </a>
+     
+  </div>
+</div>
+  </section>
+      <!--<i class="fas fa-ghost"></i> my fav icon! :3 ~Robie and for hosting into the server instructions 
+       https://www.youtube.com/watch?v=tq7dqdHCc7U -->
+     <!-- info of the Dos and Donts came from as well : https://www.nparks.gov.sg/gardens-parks-and-nature/dos-and-donts-->
+
+      <!-- INSERTED RESPONSIVE FLEX CARDS FOR DOs and DONTs for Visitor Info  END --> 
+      
+      <!-- END TOURS -->
+
+      <!-- 
+    START WINE SHOP -->
+      <section class="shops">
+        <h2 class="heading-secondary heading-secondary--shop">Shop</h2>
+
+        <div class="shops__offers">
+          <div class="shops__box">
+            <img src="https://i.postimg.cc/Dy8ryrx1/reds.jpg" alt="red wine" class="shops__img" />
+            <h3 class="heading-tertiary">Red Wines</h3>
+            <p class="shops__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates consequatur aspernatur quaerat quos fugit, doloribus
+              praesentium quasi neque exercitationem quisquam dicta, iure eaque
+              at possimus iusto. Quia doloremque dolor minus.
+            </p>
+            <button class="btn btn--shop">Buy</button>
+          </div>
+          <div class="shops__box">
+            <img src="https://i.postimg.cc/tCT5nQ4Z/white.jpg" alt="white wine" class="shops__img" />
+            <h3 class="heading-tertiary">White Wines</h3>
+            <p class="shops__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates consequatur aspernatur quaerat quos fugit, doloribus
+              praesentium quasi neque exercitationem quisquam dicta, iure eaque
+              at possimus iusto. Quia doloremque dolor minus.
+            </p>
+            <button class="btn btn--shop">Buy</button>
+          </div>
+          <div class="shops__box">
+            <img src="https://i.postimg.cc/vZxtXr9G/champagne.jpg" alt="champagne" class="shops__img" />
+            <h3 class="heading-tertiary">Champagne</h3>
+            <p class="shops__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates consequatur aspernatur quaerat quos fugit, doloribus
+              praesentium quasi neque exercitationem quisquam dicta, iure eaque
+              at possimus iusto. Quia doloremque dolor minus.
+            </p>
+            <button class="btn btn--shop">Buy</button>
+          </div>
+
+          <div class="shops__box " id="lifestyle">
+            <img src="https://i.postimg.cc/QCMp71hG/soap.jpgg" alt="soap" class="shops__img" />
+            <h3 class="heading-tertiary">Hand-made wine soap</h3>
+            <p class="shops__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates consequatur aspernatur quaerat quos fugit, doloribus
+              praesentium quasi neque exercitationem quisquam dicta, iure eaque
+              at possimus iusto. Quia doloremque dolor minus.
+            </p>
+            <button class="btn btn--shop">Buy</button>
+          </div>
+          <div class="shops__box ">
+            <img src="https://i.postimg.cc/D0fccRQN/candles.jpg" alt="candles" class="shops__img" />
+            <h3 class="heading-tertiary">Wine Candles</h3>
+            <p class="shops__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates consequatur aspernatur quaerat quos fugit, doloribus
+              praesentium quasi neque exercitationem quisquam dicta, iure eaque
+              at possimus iusto. Quia doloremque dolor minus.
+            </p>
+            <button class="btn btn--shop">Buy</button>
+          </div>
+          <div class="shops__box ">
+            <img src="https://i.postimg.cc/B645qRzv/cookie.jpg" alt="cookies" class="shops__img" />
+            <h3 class="heading-tertiary">Grape Cookies</h3>
+            <p class="shops__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates consequatur aspernatur quaerat quos fugit, doloribus
+              praesentium quasi neque exercitationem quisquam dicta, iure eaque
+              at possimus iusto. Quia doloremque dolor minus.  
+            </p>
+            <button class="btn btn--shop">Buy</button>
+          </div>
+        </div>
+      </section>
+     <!-- END WINE SHOP -->
+
+
+
+
+      <section class="feeds" id="AboutUs">
+      <h2 class="heading-secondary">About Us : Team Menziesii</h2>
+        
+          
+         <!-- removed wrapper to mke it middle ! -->
+         <div style = "text-align:center; font-family: Courier">
+  <br><h1>The BANKSIA COURT APP Project</h1>
+           <h3> BANKSIA COURT, this specialised banksia arboretum was established in 1995 to mark the 20th anniversary of the opening of the University.<br><br>
+             
+             <p>It holds a vibrant diversity of banksias and is a rich food source for honeyeaters and black cockatoos, while the dense undergrowth provides vital habitat for ‘Conservation Dependent’ Southern Brown Bandicoots (Quendas), native lizards and invertebrates. 
+ Murdoch’s Banksia Court is the only other dedicated Banksia Garden in WA apart from the one in King’s Park.</p><br>
+             
+...The Banksia Court's interpretation assets are limited, which makes under-utilized with regards to its educational potential, and its regional importance is greatly unknown. </h3> 
+        </div>
+    
+          <div class="feeds__content">
+          <div class="feeds__box">
+            <img src= "https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/49210820_10218635460626628_5028763768486625280_n.jpg?_nc_cat=105&_nc_ht=scontent-sin6-2.xx&oh=9ee17874621c9f7210320a6b08ea8f48&oe=5CDC3D43" alt="robie" class="feeds__img" />
+            <span class="feeds__name">Robileen Espanol </span>
+            <p class="feeds__text">
+               <b>Team Manager</b> of the team ! I ensure we  make progress weekly and are always ready for drastic changes.
+              Trust me anytime! ^_^
+            </p>
+          </div>
+          
+          <div class="feeds__box">
+            <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-1/c0.0.959.959a/46391164_2562699897103493_4231087753485352960_n.jpg?_nc_cat=106&_nc_ht=scontent-sin6-2.xx&oh=e9fe7b22daaa9f7183f172c66bd9daed&oe=5D23FD94" alt="sam" class="feeds__img" />
+            <span class="feeds__name">Aung Khine San</span>
+            <p class="feeds__text">
+             <b>System Analyst!</b> I plan for organizational and human impacts and ensure new technical requirements are properly integrated with appropriate measures.
+            </p>
+          </div>
+          <div class="feeds__box">
+            <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/51677731_1521450791323763_8406632328473870336_o.jpg?_nc_cat=107&_nc_ht=scontent-sin6-2.xx&oh=465ca716ccdddcb14a9df6e15cf585fa&oe=5D1BDDF8" alt="layla" class="feeds__img" />
+            <span class="feeds__name">Layla Mira</span>
+            <p class="feeds__text">
+            <b>Computer Systems Analyst!</b> I am responsible for the system's analysis, design and implementation to make sure it operates properly and efficiently.
+            </p>
+          </div>
+          
+            <div class="feeds__box">
+            <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/27973645_2256883534337377_1638251128404286738_n.jpg?_nc_cat=107&_nc_ht=scontent-sin6-2.xx&oh=5c91e5e1a8e02aef6aee5f79eef87ee8&oe=5CDB7D95" alt="doug" class="feeds__img" />
+            <span class="feeds__name">JiSheng Ong</span>
+            <p class="feeds__text">
+            <b>Programmer!</b> I develop new computer programming methods from basic methods to more-in-depth methods.              
+            </p>
+          </div>
+          
+           <div class="feeds__box">
+            <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/50084487_10216199859602845_6976471561083551744_n.jpg?_nc_cat=104&_nc_ht=scontent-sin6-2.xx&oh=86c963bed78141708a07eaa67c341c93&oe=5D1E5093" alt="Royroymoymoy" class="feeds__img" />
+            <span class="feeds__name">Royette Villamor</span>
+            <p class="feeds__text">
+            <b>Programmer Analyst!</b> I design technology solutions for the system and put the components into place.
+             </p>
+          </div>
+          
+            <div class="feeds__box">
+            <img src="https://d3pz1jifuab5zg.cloudfront.net/2016/08/16153058/hamster-health-center-2.jpg" alt="Qiyamarsh" class="feeds__img" />
+            <span class="feeds__name">Qiya Soo</span>
+            <p class="feeds__text">
+            <b>Technical Consultant!</b> I provide technical support, perform trouble-shooting functions and make resolution for any related issues. 
+            </p>
+          </div>
+          
+          
+    
+      </section>
+ 
+
+      <!-- START BLOG POST -->
+      <section class="blog" id="blog">
+        <h2 class="heading-secondary heading-secondary--blog">Blog</h2>
+        <div class="blog__posts">
+          <article class="blog__post">
+            <h2 class="heading-tertiary blog__title">Red Wine Today</h2>
+            <span class="blog__author">Paul Roux</span>
+            <span class="blog__date">Tue Mar 12 2019 15:43:01</span>
+            <p class="blog__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+              praesentium sit enim odio. Dolorum laborum tempora, nostrum
+              consectetur molestias, aperiam ex accusamus nobis rem earum
+              temporibus dignissimos excepturi cum ratione!
+            </p>
+            <a href="#" class="blog__link">Read article</a>
+          </article>
+          <article class="blog__post">
+            <h2 class="heading-tertiary blog__title">Chateaux Roux centenary</h2>
+            <span class="blog__author">Marie Roux</span>
+            <span class="blog__date">Fri Nov 29 2019 11:01:59</span>
+            <p class="blog__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+              ipsam, delectus sapiente minus adipisci numquam minima mollitia
+              impedit, quaerat at commodi odio sunt exercitationem eaque
+              voluptates, expedita aliquam ex. Quod at placeat ipsam
+              exercitationem nesciunt consectetur rem impedit, maxime officiis.
+            </p>
+            <a href="#" class="blog__link">Read article</a>
+          </article>
+          <article class="blog__post">
+            <h2 class="heading-tertiary blog__title">Wine Delivery</h2>
+            <span class="blog__author">Chantal Roux</span>
+            <span class="blog__date">Tue Nov 26 2019 01:53:02</span>
+            <p class="blog__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+              ipsam, delectus sapiente minus adipisci numquam minima mollitia
+              impedit, quaerat at commodi odio sunt exercitationem eaque
+              voluptates, expedita aliquam ex. Quod at placeat ipsam
+              exercitationem nesciunt consectetur rem impedit, maxime officiis.
+            </p>
+            <a href="#" class="blog__link">Read article</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- END BLOG POST -->
+    </main>
+
+    <!-- START FOOTER -->
+    <footer>
+      <div class="contacts" id="contacts">
+        <div class="contacts__box">
+          <h3 class="heading-tertiary contacts__title">Chateau Roux</h3>
+          <address class="contacts__address">
+            Rebelle Glens 188 Normandy France
+          </address>
+          <a href="#" class="contacts__link">Phone: 1-268-869-8551</a>
+          <form action="#" class="contacts__form">
+            <label for="email">Your Email:</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="youremail@email.com"
+              class="contacts__input"
+            />
+            <input
+              type="submit"
+              class="contacts__input contacts__input--submit"
+            />
+          </form>
+        </div>
+        <div class="contacts__box">
+          <ul> <i><b><u>Site Map</u></b></i>
+            <li>
+              <a href="#Home" class="contacts__link">Home</a>
+            </li>
+            <li>
+              <a href="#Flowers" class="contacts__link">Flowers</a>
+            </li>
+            <li>
+              <a href="#Walkthrough" class="contacts__link">Walkthrough</a>
+            </li>
+            <li>
+              <a href="#News&Events" class="contacts__link">News & Events</a>
+            </li>
+            <li>
+              <a href="#VisitorInfo" class="contacts__link">Visitor Info</a>
+            </li>
+            <li>
+              <a href="#AboutUs" class="contacts__link">About Us</a>
+            </li>
+            
+          </ul>
+        </div>
+        <div class="contacts__box">
+          <h3 class="heading-tertiary contacts__title">Follow Us!</h3>
+          <div class="contacts__social">
+            <a
+              href="#"
+              class="contacts__link contacts__link--icon"
+              aria-label="twitter"
+              ><i class="fab fa-twitter-square"></i
+            ></a>
+            <a
+              href="#"
+              aria-label="facebook"
+              class="contacts__link contacts__link--icon"
+              ><i class="fab fa-facebook-square"></i
+            ></a>
+            <a
+              href="#"
+              aria-label="instagram"
+              class="contacts__link contacts__link--icon"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="credits">
+        Chateau Roux Template by
+        <a
+          href="https://github.com/starskynder"
+          target="_blank"
+          class="credits__link"
+          >starskynder</a
+        >. Photo by
+        <a href="https://unsplash.com/" target="_blank" class="credits__link"
+          >Unsplah</a
+        >
+      </div>
+    </footer>
+    <!-- END FOOTER -->
+  
+
+<!-- END OF BANKSIA COURT APP HTML SOURCE CODE -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
+<script src='https://code.jquery.com/jquery-1.10.1.min.js'></script>
+<script src='https://100dayscss.com/codepen/js/jquery.min.js'></script>
+<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

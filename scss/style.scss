@@ -1,0 +1,2960 @@
+
+/* ...When selecting a text ...*/
+::selection {
+  background:	#FFB6C1; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background:	#FFB6C1; /* Gecko Browsers */
+}
+
+
+// Responsive FIXED side menu ----------------------------------------------------------------------------------------
+
+
+
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+
+
+
+/* ******************************************************
+	Responsive Slide Out Menu
+*********************************************************/
+
+/* WEB ADMIN Magic Button, Enlarge Text button, Music Audio Button */
+
+// GENERAL BUTTON 
+.btn3d {
+  
+  width: 50px; /*width and height is the length and height and the box*/
+  height: 50px; 
+	position: relative;
+	top: -6px;
+	border: 0;
+	transition: all 40ms linear;
+	margin-top: 50px; 
+  /* moved the buttons down! */
+	margin-bottom: 10px;
+	margin-left: 60px;
+	margin-right: 2px;
+}
+
+
+.Murdoch_logo 
+{
+  top: -6px;
+   width: 70px; /*width and height is the length and height and the box*/
+  height: 70px; 
+  margin-top: 0px;
+  margin-bottom: -20px;
+	margin-left: 215px;
+	margin-right: 0px;
+}
+
+// BUTTON FOR Enlarge Text Button 
+.btn3d.btn-primary {
+  
+
+	box-shadow: 0 0 0 1px #232323 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #232323 , 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+	background-color: #232323 ;
+  
+  
+}
+
+.btn3d.btn-primary:active,
+.btn3d.btn-primary.active {
+	box-shadow: 0 0 0 1px #232323  inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+	background-color: #232323;
+}
+
+.muted_music
+{ 
+
+	box-shadow: 0 0 0 1px #232323 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #232323 , 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+	background-color: #fff ;
+
+}
+
+.muted_music:active,
+.btn3d.btn-danger.active {
+	box-shadow: 0 0 0 1px #232323 inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px,  rgba(0, 0, 0, 0.3);
+	background-color: #232323;
+}
+
+
+
+// BUTTON FOR Music ! 
+.btn3d.btn-danger {
+	box-shadow: 0 0 0 1px #232323 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #232323, 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+	background-color: #232323;
+}
+
+.btn3d.btn-danger:active,
+.btn3d.btn-danger.active {
+	box-shadow: 0 0 0 1px #232323 inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px,  rgba(0, 0, 0, 0.3);
+	background-color: #232323;
+}
+
+
+.btn3d.btn-magick {
+   margin-top: 25px;
+   margin-left: 200px;
+   width: 60px; /*width and height is the length and height and the box*/
+   height: 60px; 
+	 color: #fff;
+	 box-shadow: 0 0 0 1px #DD052C inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #DD052C, 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+	background-color: #DD052C;
+}
+
+.btn3d.btn-magick:active,
+.btn3d.btn-magick.active {
+	box-shadow: 0 0 0 1px #DD052C inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+	background-color: #DD052C;
+}
+
+
+
+.NavigationSlideOut {
+  font-family: 'Lato', Arial, sans-serif;
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  background-color: #DD052C;
+  float: left;
+  z-index: 1000;
+  transition-timing-function: ease;
+}
+.navbar {
+  width: 300px;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 50px 0 0 0;
+}
+.NavigationTab {
+  width: 300px;
+  height: 3em;
+  display: block;
+  font-size: 22px;
+
+}
+.NavigationTab a {
+  text-decoration: none;
+}
+.NavigationTab a p {
+  color: rgba(255,255,255,0.65);
+  margin: 0 auto;
+  padding: 0;
+  vertical-align: middle;
+  font-size: 0.9em;
+  line-height: 3;
+  width: 80%;
+  border-bottom: 1px solid rgba(255,255,255,0.65);
+  transition: all ease 0.35s;
+}
+.NavigationTab:hover p {
+  width: 110px;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  transition: all ease 0.35s;
+  text-align:center;
+}
+.NavigationTab:hover {
+  transition: ease 0.35s;
+}
+.menuIcon {
+  background:#232323;
+  position: fixed;
+  top: 0;
+  left: 0px;
+  margin: 10px;
+  padding: 10px;
+  z-index: 1002;
+  cursor:pointer;
+}
+.menuIcon div {
+  width: 30px;
+  height: 5px;
+  background: #fff;
+  margin: 5px;
+  transition: 0.35s ease-in-out;
+  border-radius: 3px;
+}
+.on .line_one {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+.on .line_two {
+  opacity: 0;
+}
+.on .line_three {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+
+
+/*demo css*/
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700|Raleway:400,300,700);
+
+
+body {
+	font-family: 'Raleway', sans-serif;
+  background-color: #232323;
+  
+}
+
+.container {
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/*@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}*/
+
+
+
+.container > header,
+.codecon-top {
+	font-family: 'Lato', Arial, sans-serif;
+}
+
+.container > header {
+	margin: 0 auto;
+	padding: 2em;
+	text-align: center;
+	color: #89867e;
+}
+
+.container > header h1 {
+	font-size: 2.625em;
+	line-height: 1.3;
+	margin: 0;
+	font-weight: 300;
+}
+
+.container > header span {
+	display: block;
+	font-size: 60%;
+	color: #ceccc6;
+	padding: 0 0 0.6em 0.1em;
+}
+.container > header p{
+	line-height:30px;
+	text-align:left;	
+}
+/* To Navigation Style */
+.codecon-top {
+    font-size: 0.69em;
+    line-height: 2.2;
+    padding: 10px;
+    text-transform: uppercase;
+    width: 100%;
+}
+.codecon-top ul{
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+.codecon-top li{
+	display:inline-block;
+	list-style:none;	
+}
+.codecon-top a {
+    background: #d33257 none repeat scroll 0 0;
+    color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    padding: 1em 2em;
+    text-decoration: none;
+}
+
+.codecon-top a:hover {
+	background: #eb6361
+
+}
+
+.codecon-top span.right {
+	float: right;
+}
+
+.codecon-top span.right a {
+	float: left;
+	display: block;
+}
+
+.container > section {
+	margin: 0 auto;
+	padding: 10em 3em;
+	text-align: center;
+}
+
+.color-1 {
+	background: #435a6b;
+}
+
+
+
+@media screen and (max-width: 25em) {
+
+	
+
+}
+
+//Scroll down arrow indicator
+
+.downArrow{
+	position: absolute;
+  z-index: 100;
+	bottom: 1%;
+	left: 65%;
+  color: white;
+}
+.bounce {
+	-moz-animation: bounce 3s infinite;
+	-webkit-animation: bounce 3s infinite;
+	animation: bounce 3s infinite;
+}
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+/* Demo Purpose Only*/
+.demo {
+  font-family: 'Raleway', sans-serif;
+	color:#fff;
+    display: block;
+    margin: 0 auto;
+    padding: 15px 0;
+    text-align: center;
+}
+.demo a{
+  font-family: 'Raleway', sans-serif;
+color: #2ecc71;		
+}
+// NAV FIXED Bar code ends here ----------------------------------------------
+
+
+// slideshow of homepage i believe starts here ------------------------------------
+.btn_HomepageSec {
+  display: inline-block;
+  padding: 13px 20px;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  background: transparent; 
+  border: 1px solid #e1e1e1;
+  font: 12px/1.2 "Oswald", sans-serif;
+  letter-spacing: 0.4em;
+  text-align: center;
+  text-indent: 2px;
+  text-transform: uppercase;
+  transition: color 0.1s linear 0.05s;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #e1e1e1;
+    z-index: 1;
+    opacity: 0;
+    transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0.2s;
+  }
+
+  &::after {
+    transition:border 0.1s linear 0.05s;
+  }
+
+  .btn-inner_HomepageSec {
+    position: relative;
+    z-index: 2;
+  }
+
+  &:hover {
+    color: #373737;
+    transition: color 0.1s linear 0s;
+
+    &::before {
+      top: 0;
+      height: 100%;
+      opacity: 1;
+      transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0s;
+    }
+
+    &::after {
+      border-color: #373737;
+      transition:border 0.1s linear 0s;
+    }
+  }
+}
+
+.slideshow { 
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+
+  .slideshow-inner { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .slides { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .slide { 
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    &.is-active {
+      display: block;
+    }
+
+    &.is-loaded{
+      opacity: 1;
+    }
+
+    .caption { 
+      padding: 0 100px;
+    }
+
+    .image-container { 
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      z-index: 1;
+      background-size: cover;
+      image-rendering: optimizeQuality;
+
+      &::before { 
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+      }
+    }
+
+    .image {
+      width: 100%;
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+    }
+
+    &-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .title { 
+      margin: auto 15px;
+      padding : 20px;
+      max-width: 1000px;
+      font: 300 50px/1.2 "Oswald", sans-serif;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+    }
+
+    .text {
+      margin: 0 auto;
+      padding : 10px;
+      max-width: 1000px;
+      font-size: 18px;
+      line-height: 1.4;
+    }
+
+    .btn_HomepageSec {
+     margin: 50px 0 0; // spacing the button away from the slide description 
+     border-color: #fff;
+     
+      &::before {
+        background:#fff;
+      }
+    }
+  }
+
+  .pagination { 
+    position: absolute;
+    bottom: 35px;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    cursor: default;
+    z-index: 2;
+    text-align: center;
+
+    .item { 
+      display: inline-block;
+      padding: 15px 5px;
+      position: relative;
+      width: 46px;
+      height: 32px;
+      cursor: pointer;
+      text-indent: -999em;
+      z-index: 1;
+
+      + .page {
+        margin-left: -2px;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 15px;
+        left: 5px;
+        width: 36px;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.5);
+        transition: background 0.2s ease;
+      }
+
+      &::after {
+        width: 0;
+        background: #fff;
+        z-index: 2;
+        transition: width 0.2s ease;
+      }
+
+      &:hover::before,
+      &.is-active::before {
+        background-color: #fff;
+      }
+    }
+  }
+
+  .arrows {
+    
+    .arrow {
+      margin: -33px 0 0;
+      padding: 20px;
+      position: absolute;
+      top: 50%;
+      cursor: pointer;
+      z-index: 3;
+    }
+
+    .prev {
+      left: 30px;
+
+      &:hover .svg {
+        left: -10px;
+      }
+    }
+
+    .next {
+      right: 30px;
+
+      &:hover .svg {
+        left: 10px;
+      }
+    }
+
+    .svg {
+      position: relative;
+      left: 0;
+      width: 14px;
+      height: 26px;
+      fill: #fff;
+      transition: left 0.2s ease;
+    }
+  }
+}
+
+
+
+/* Scroll Bar Settings */ 
+::-webkit-scrollbar 
+{
+	width: 2px;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color : #FFFFFF;
+	border-radius: 0px ;
+}
+
+::-webkit-scrollbar-track
+{
+	border-radius: 1px; 
+	background-color: black; 
+}
+
+.imageWKTH { // our walkthrough image ! :) 
+      margin : 10px;
+      object-fit: scale-down; 
+    }
+
+// VARIABLES
+
+// Color variables
+$french-lilac: #e2a9e5;
+$bossanova: #632c65;
+$vodoo: #4b384c;
+$white: #fff;
+$black: #000;
+$orange: #f0a702;
+
+// Media queries
+$bp-smallest: 37.5em; //600px
+$bp-small: 56.25em; // 900px
+$bp-medium: 75em; // 1200px;
+$bp-large: 93.75em; // 1500px;
+
+// MIXINS
+
+//Flex mixins
+
+@mixin flex-row-wrap {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+// BASIC RULES
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  //This define 1 rem. And 1 rem = 10px
+  font-size: 62.5%; // 10px/16px = 62.5%
+}
+
+body {
+  font-family: "Montserrat";
+  font-size: 1.8rem;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+// HEADINGS
+.heading-primary {
+  font-size: 4rem;
+  color: $black;
+  font-family: "Special Elite", cursive;
+}
+
+.heading-secondary {
+  color: $black;
+  font-size: 3rem;
+  border-bottom: 4px dotted $black;
+  font-family: "Special Elite", cursive;
+
+  &--tours,
+  &--shop,
+  &--blog {
+    color: $white;
+    border-color: $white;
+  }
+}
+
+.heading-tertiary {
+  font-family: "Special Elite", cursive;
+  margin: 2rem 0;
+  padding: 2rem;
+  background-color: $bossanova;
+  text-align: center;
+  color: $white;
+}
+
+
+// ANIMATIONS
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100px);
+  }
+
+  to {
+    transform: translate(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100px);
+  }
+
+  to {
+    transform: translate(0);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.6;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+// BUTTONS
+.btn {
+  border: none;
+  padding: 1rem;
+  background-color: transparent;
+  font-size: inherit;
+  font-family: inherit;
+  transition: all 0.2s;
+
+  &--tours {
+    color: $white;
+    background-color: $bossanova;
+    margin-top: 2rem;
+
+    &:focus,
+    &:hover {
+      background-color: $orange;
+      box-shadow: 3px 3px 3px rgba($color: $black, $alpha: 0.6);
+      transform: translateY(3px);
+    }
+  }
+
+  &--shop {
+    border: 3px solid $bossanova;
+    color: $bossanova;
+    padding: 1rem 3rem;
+    display: block;
+    margin-top: auto;
+    font-size: 2.3rem;
+
+    &:focus,
+    &:hover {
+      background-color: $bossanova;
+      color: $white;
+    }
+  }
+}
+
+/*
+// NAVIGATION
+.navigation {
+  @include flex-row-wrap;
+
+  position: relative;
+  background-color: $bossanova;
+
+  &__menu {
+    position: relative;
+    margin: 1rem;
+    margin-left: auto;
+
+    @media screen and (min-width: $bp-small) {
+      display: none;
+    }
+  }
+
+  &__icon {
+    &,
+    &::before,
+    &::after {
+      display: inline-block;
+      height: 0.5rem;
+      width: 4rem;
+      background-color: $french-lilac;
+      border-radius: 1rem;
+      transition: all 0.2s;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      top: -1rem;
+    }
+
+    &::after {
+      top: 1rem;
+    }
+  }
+
+  &__btn {
+    border: none;
+    display: block;
+    background-color: transparent;
+    position: relative;
+    margin: 1.2rem;
+    padding: 0;
+  }
+
+  &__btn--active &__icon {
+    background-color: transparent;
+  }
+
+  &__btn--active &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__btn--active &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+
+  &__list {
+    @include flex-col;
+
+    list-style-type: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    z-index: 3;
+    height: 100vh;
+    background-color: $french-lilac;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+
+    &--active {
+      width: 70vw;
+    }
+
+    @media screen and (min-width: $bp-small) {
+      position: static;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      background-color: #632c65;
+      height: auto;
+      width: 100%;
+      padding: 5px;
+      z-index: 100;
+    }
+  }
+
+  &__item {
+    font-size: 3.3rem;
+    margin: 1rem;
+
+    @media screen and (min-width: $bp-small) {
+      margin: 1rem 2.5rem;
+    }
+  }
+
+  &__drop-btn {
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0;
+    color: $white;
+    display: block;
+
+    &:focus,
+    &:hover {
+      color: $bossanova;
+    }
+
+    &::after,
+    &.triangle::after {
+      font-size: 20px;
+      display: inline-block;
+      padding: 0 5px;
+      content: "▼";
+    }
+
+    &.triangle::after {
+      content: "▲";
+    }
+
+    @media screen and (min-width: $bp-small) {
+      &:focus,
+      &:hover {
+        color: $french-lilac;
+      }
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      display: block;
+      color: $white;
+      font-size: inherit;
+    }
+
+    &:focus,
+    &:hover {
+      color: $vodoo;
+    }
+
+    &--drop {
+      &:link,
+      &:visited {
+        padding-left: 1.5rem;
+        border-bottom: 1px dotted $bossanova;
+        color: $bossanova;
+      }
+
+      &:focus,
+      &:hover {
+        background-color: $white;
+      }
+    }
+
+    @media screen and (min-width: $bp-small) {
+      &:focus,
+      &:hover {
+        color: $french-lilac;
+      }
+    }
+  }
+
+  &__dropdown {
+    display: none;
+    transition: all 2s ease;
+
+    &--active {
+      display: block;
+
+      @media screen and (min-width: $bp-small) {
+        position: absolute;
+        background-color: #fff;
+        padding: 5px 10px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+*/
+
+/*
+// HEADER
+.header {
+  height: 93vh;
+  position: relative;
+  overflow: hidden;
+
+  &__back {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: relative;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    animation: fade 1.5s ease forwards;
+
+    &:nth-of-type(1) {
+      background-image: url(https://i.postimg.cc/4ZGWpjKh/vino1.jpg);
+    }
+
+    &:nth-of-type(2) {
+      background-image: url(https://i.postimg.cc/Q8G04y0w/vino2.jpg);
+    }
+
+    &:nth-of-type(3) {
+      background-image: url(https://i.postimg.cc/SQmVqz0G/vino3.jpg);
+    }
+  }
+
+  &__content {
+    color: $black;
+    text-align: center;
+    font-size: 1.8rem;
+    width: 55%;
+    animation: slideDown 0.8s ease-in;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1rem;
+    font-family: "Special Elite", cursive;
+    max-width: 60rem;
+
+    @media screen and (min-width: $bp-small) {
+      font-size: 2.5rem;
+      padding: 2rem;
+    }
+  }
+
+  &__text {
+    font-size: 2rem;
+
+    @media screen and (min-width: $bp-small) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__btn {
+    border: none;
+    background-color: $bossanova;
+    color: $white;
+    font-size: 2.2rem;
+    padding: 1rem;
+    margin-top: 3rem;
+    animation: slideUp 0.8s ease-in forwards;
+    font-family: inherit;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+
+    @media screen and (min-width: $bp-small) {
+      font-size: 2.5rem;
+    }
+
+    &:focus,
+    &:hover {
+      background-color: $french-lilac;
+      color: $black;
+    }
+  }
+
+  &__link {
+    font-size: 20px;
+    text-decoration: none;
+    margin-top: 20px;
+    color: #4b384c;
+  }
+}
+
+ .arrow {
+  font-size: 2rem;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  background-color:#DD052C ;
+  text-align: center;
+  line-height: 2rem;
+
+  @media screen and (min-width: $bp-small) {
+    width: 6rem;
+    height: 6rem;
+    font-size: 2.6rem;
+    line-height: 4rem;
+  }
+
+  &:hover {
+    background-color: #DD052C;
+  }
+
+  &-left {
+    left: 10px;
+    z-index: 2;
+  }
+
+  &-right {
+    right: 10px;
+    z-index: 2;
+  }
+}
+
+*/ 
+
+
+
+// ABOUT
+.about {
+  @include flex-row-wrap;
+
+  justify-content: center;
+  padding: 9rem 2rem;
+  background-color: $white;
+  background-image: url(https://i.postimg.cc/MTS5nnnq/lined-paper.png);
+
+  &__content {
+    @include flex-row-wrap;
+
+    justify-content: center;
+    margin: 4rem 1rem;
+    flex: 100%;
+  }
+
+  &__text {
+    padding: 3rem;
+    font-size: 2.3rem;
+    flex: 0 1 60rem;
+  }
+
+  &__img {
+    display: block;
+    border: 6px solid $white;
+  }
+}
+
+
+// TOURS
+.tours {
+  @include flex-row-wrap;
+
+  justify-content: center;
+  background-color: $bossanova;
+  padding: 9rem 1.5rem;
+
+  @media screen and(min-width: $bp-medium) {
+    padding: 15rem 1.5rem;
+  }
+
+  &__offers {
+    @include flex-row-wrap;
+
+    justify-content: center;
+  }
+
+  &__box {
+    margin-top: 3rem;
+    max-width: 30rem;
+    max-height: 30rem;
+    overflow: hidden;
+    position: relative;
+    border: 3px solid $white;
+    text-align: center;
+
+    &:hover img {
+      transform: scale(1.5);
+    }
+
+    @media screen and (min-width: $bp-smallest) {
+      margin: 4rem;
+    }
+
+    @media screen and (min-width: $bp-large) {
+      max-width: 40rem;
+      max-height: 40rem;
+    }
+  }
+
+  &__content {
+    @include flex-col;
+
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+
+  &__text {
+    background-color: rgba($white, 0.5);
+    color: $black;
+    text-align: center;
+    padding: 0.5rem;
+    width: 100%;
+  }
+
+  &__img {
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+
+  &__subtitle,
+  &__price {
+    display: block;
+  }
+}
+
+
+// SHOP (WINE SECTION)
+.shops {
+  @include flex-row-wrap;
+
+  justify-content: center;
+  background-color: $vodoo;
+  padding: 9rem 1.5rem;
+
+  @media screen and(min-width: $bp-medium) {
+    padding: 15rem 1.5rem;
+  }
+
+  &__offers {
+    @include flex-row-wrap;
+
+    justify-content: center;
+    margin-top: 7rem;
+  }
+
+  &__img {
+  }
+
+  &__box {
+    @include flex-col;
+
+    padding: 2rem;
+    margin: 2rem;
+    background-color: $white;
+    width: 35rem;
+    font-size: 2rem;
+
+    &--lifestyle {
+      background-color: $bossanova;
+      color: $white;
+    }
+
+    @media screen and (min-width: $bp-large) {
+      margin: 6rem;
+    }
+  }
+
+  &__text {
+    margin: 3rem 0;
+  }
+}
+
+// FEEDS
+.feeds {
+  @include flex-row-wrap;
+
+  justify-content: center;
+  background-color: $white;
+  padding: 9rem 1.5rem;
+
+  @media screen and(min-width: $bp-medium) {
+    padding: 15rem 1.5rem;
+  }
+
+  &__content {
+    @include flex-row-wrap;
+
+    justify-content: center;
+    margin-top: 7rem;
+  }
+
+  &__box {
+    @include flex-col;
+
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+    font-size: 2.1rem;
+    margin: 3rem 1rem;
+    border-radius: 5px;
+    position: relative;
+    flex: 0 1 300px;
+
+    &:hover {
+      box-shadow: 0 0 0 5px $bossanova;
+    }
+
+    &::before {
+      content: '"';
+      width: 6rem;
+      height: 6rem;
+      position: absolute;
+      color: $white;
+      font-size: 10rem;
+      line-height: 10rem;
+      text-align: center;
+      top: 0;
+      left: 3rem;
+      border-radius: 50%;
+      background-color: $bossanova;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    display: block;
+    box-shadow: 0 0 0 9px $bossanova;
+  }
+
+  &__name {
+    display: block;
+    font-weight: 700;
+    margin: 2rem;
+  }
+}
+
+
+// BLOG
+.blog {
+  @include flex-row-wrap;
+
+  justify-content: center;
+  background-color: $bossanova;
+  padding: 9rem 1.5rem;
+
+  &__posts {
+    @include flex-col;
+
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    flex: 100%;
+  }
+
+  &__post {
+    color: $white;
+    font-size: 2.1rem;
+    max-width: 60rem;
+    // border-bottom: 3px dotted $white;
+    margin: 5rem;
+    padding: 3rem 0;
+  }
+
+  &__text {
+    margin: 4rem 0;
+  }
+
+  &__title {
+    &::before,
+    &::after {
+      content: "";
+    }
+
+    font-family: "Economica", sans-serif;
+    text-align: left;
+  }
+
+  &__author,
+  &__date {
+    display: block;
+    margin: 1rem;
+    padding: 1rem;
+    font-weight: 700;
+    background-color: $white;
+    color: $vodoo;
+  }
+
+  &__author::before {
+    content: "by: ";
+  }
+
+  &__link {
+    text-decoration: none;
+    display: inline-block;
+    padding: 1rem;
+    border: 3px solid $white;
+    transition: all 0.2s ease-in-out;
+
+    &:link,
+    &:visited {
+      color: $white;
+    }
+
+    &:focus,
+    &:hover {
+      background-color: $white;
+      color: $vodoo;
+    }
+  }
+}
+
+
+// CONTACTS
+.contacts {
+  @include flex-row-wrap;
+
+  justify-content: center;
+  align-items: center;
+  background-color: $vodoo;
+  color: $white;
+  font-size: 2.1rem;
+
+  &__title {
+    background-color: transparent;
+    text-align: left;
+    padding: 0;
+  }
+
+  &__box {
+    width: 100%;
+    padding: 3rem;
+    margin: 3rem 0;
+
+    @media screen and (min-width: $bp-smallest) {
+      width: 45%;
+
+      @include flex-col;
+
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media screen and (min-width: $bp-medium) {
+      width: 25%;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+
+    &:link,
+    &:visited {
+      color: $white;
+    }
+
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &--icon {
+      font-size: 5rem;
+      display: inline-block;
+      margin: 1rem;
+      transition: all 0.2s ease-in-out;
+
+      &:focus,
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+
+  &__form {
+    @include flex-col;
+
+    margin: 2rem 0;
+  }
+
+  &__input {
+    border: none;
+    padding: 1rem;
+    margin: 1rem 0;
+    max-width: 30rem;
+
+    @media screen and (min-width: $bp-smallest) {
+      width: 30rem;
+    }
+
+    &--submit {
+      background-color: $bossanova;
+      color: $white;
+      font-family: inherit;
+      font-size: inherit;
+      transition: all 0.2s ease-in-out;
+      border: 1px solid $white;
+
+      &:focus,
+      &:hover {
+        background-color: $french-lilac;
+        color: $black;
+        border: 1px solid $white;
+      }
+    }
+  }
+
+  &__list {
+    padding: 2rem;
+  }
+}
+
+
+// CREDITS
+.credits {
+  padding: 2rem;
+  text-align: center;
+  background-color: $vodoo;
+  color: $white;
+  font-size: 2rem;
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $white;
+    }
+
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+
+
+// FOR FLOWERS TAB START ----------------------------------------------------
+
+.textOverImage{
+    width:150px;  // sizing of the boxes :))) #PBUG
+    height:150px;
+    display:inline-block;
+    background-size:cover;
+    border-radius:4px;
+    margin:4px;
+    position:relative;
+    cursor:pointer;
+    overflow:hidden;
+    font-size: 18px; // the font size of the box! :D
+    color : #000; // change the text color of the box ! :D
+  }
+  
+  .textOverImage > input{
+    display:none;
+  }
+  
+  .textOverImage > div,.textOverImage > h2{
+    position:absolute;
+    background-color:rgba(255,255,255,0.8);
+    bottom:20px;
+    left:4px;
+    right:4px;
+    border-radius:4px;
+    padding:8px;
+    overflow:hidden;
+    opacity:0;
+    transition:.3s;
+    
+  }
+  
+  .textOverImage:hover > h2,.textOverImage > input:checked + h2 + div{
+    bottom:4px;
+    opacity:1;
+  }
+  
+  .textOverImage > input:checked + h2{
+    bottom:-20px;
+    opacity:0;
+  }
+  
+  .textOverImage > h2{
+    margin:0;
+  }
+
+
+// POP UP Responsive Dialog box ! for each of the Banksias !!! :)) START ----------------------
+
+/* ----- IMPORT ROBOTO FONT FOR MD ----- */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,100);
+
+/* ----- DIALOG/MODAL ----- */
+/* FADE/SCALE EFFECT */
+	.modal.fade .modal-dialog {
+		opacity: 0;
+    width: -100px;
+		-webkit-transform: scale(0.1);
+			-ms-transform: scale(0.1);
+			 -o-transform: scale(0.1);
+				transform: scale(0.1);
+		-webkit-transition: all 0.3s ease;
+		   -moz-transition: all 0.3s ease;
+			 -o-transition: all 0.3s ease;
+				transition: all 0.3s ease;
+	}
+
+	.modal.fade.in .modal-dialog {
+		opacity: 1;
+		-webkit-transform: scale(1);
+			-ms-transform: scale(1);
+			 -o-transform: scale(1);
+				transform: scale(1);
+		-webkit-transform: translate3d(0%, 0, 0);
+			-ms-transform: translate3d(0%, 0, 0);
+			 -o-transform: translate3d(0%, 0, 0);
+				transform: translate3d(0%, 0, 0);
+	}
+
+/* DIALOG CONTENT */
+	.modal-content {
+		border: none;
+		border-radius: 2px;
+		-webkit-box-shadow: 0 40px 77px rgba(0, 0, 0, 0.22), 0 27px 24px rgba(0, 0, 0, 0.2);
+		   -moz-box-shadow: 0 40px 77px rgba(0, 0, 0, 0.22), 0 27px 24px rgba(0, 0, 0, 0.2);
+				box-shadow: 0 40px 77px rgba(0, 0, 0, 0.22), 0 27px 24px rgba(0, 0, 0, 0.2);
+	}
+
+/* DIALOG HEADER */
+	.modal-header {
+		min-height: 16px;
+		padding: 24px;
+		border-bottom: none;
+	}
+
+	.modal-title {
+		font-weight: 500;
+		font-size: 21px;
+	}
+
+	/* DIALOG BODY */
+	.modal-body {
+    
+		padding: 0 24px;
+	}
+
+	.modal-body p {
+		font-weight: 400;
+		font-size: 14px;
+		color: #212121;
+	}
+
+	.modal-body .lead {
+		font-weight: 300;
+		font-size: 16px;
+		color: #757575;
+	}
+
+	.modal-body p:last-child,
+	.modal-body .lead:last-child {
+		margin-bottom: 0;
+	}
+
+/* DIALOG FOOTER */
+	.modal-footer {
+		margin-top: 24px;
+		padding: 8px 0;
+		border-top: none;
+	}
+
+	.modal-footer .btn {
+		height: 36px;
+		margin-right: 8px;
+		padding: 8px 10px;
+		border: none;
+		border-radius: 0;
+		text-transform: uppercase;
+		font-weight: 500;
+		color: #009688;
+		background-color: #fff;
+	}
+
+	.modal-footer .btn:focus {
+		outline: none;
+		box-shadow: none;
+	}
+
+	.modal-footer .btn:focus,
+	.modal-footer .btn:hover {
+		color: #00796B;
+	}
+
+	.modal-footer .btn + .btn {
+		margin-left: 0;
+	}
+
+	.modal-footer .btn + .btn:last-child {
+		margin-left: -4px;
+	}
+
+/* This code below made the background red ! Be careful rob :D
+/* ----- v CAN BE DELETED v ----- 
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #EF5350;
+} */ 
+
+.demo {
+	padding-top: 60px;
+	padding-bottom: 110px;
+}
+
+.btn-demo {
+	margin: 15px;
+	padding: 10px 15px;
+	border-radius: 0;
+	font-size: 16px;
+	background-color: #FFFFFF;
+}
+
+.btn-demo:focus {
+	outline: none;
+}
+
+.demo-footer {
+	position: fixed;
+  z-index: 100;
+	bottom: 0;
+	width: 100%;
+	padding: 15px;
+	background-color: #212121;
+	text-align: center;
+}
+
+.demo-footer > a {
+  
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 16px;
+	color: #fff;
+}
+// POP UP Responsive Dialog box ! for each of the Banksias !!! :))  END ~~ --------
+
+
+// FILTHERING SYSTEM CODE START -----------------------------------------------
+.filterDiv { // the 30 flowers 
+  float: left;
+ // background-color: #2196F3;
+  color: #ffffff;
+//  width: 500px;
+ // line-height: 100px;
+  //text-align: center;
+  margin: 2px;
+  display: none; /* Hidden by default */
+}
+
+.container {
+  overflow: visible;
+}
+
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.filterbtn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Add a light grey background on mouse-over */
+.filterbtn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background to the active button */
+.filterbtn.active {
+  background-color: #666;
+  color: white;
+}
+
+// FITHERING SYSTEM END ---------------------------------------------------
+// FOR FLOWERS TAB END ----------------------------------------------------
+
+
+// WALKTHROUGH SECTION START ----------------------------------------------
+/*.btn-circle.btn-xl {
+
+    padding: 10px 16px;
+    border-radius: 35px;
+    font-size: 24px;
+    line-height: 1.33;
+    color : #FFFFFF;
+} */
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.20;
+    background-color: #DD052C;
+    color : #FFFFFF;
+    font-weight: bold;
+    
+}
+
+div.relative {
+  position: relative;
+} 
+
+div.ID_2_Position_1{   
+   position: absolute;
+   top : 200px;
+   left: 165px;
+  
+@media screen and (max-width: 1366px) // for tablet size : 1024 screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 200px;
+   left: 165px;
+  
+}
+
+@media screen and (max-width: 1024px) // for tablet size : 1024 screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+
+   top : 200px;
+   left: 165px;
+  
+}
+
+
+@media screen and (max-width: 812px) // for mobile size :812px screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 200px;
+   left: 165px;
+
+}
+
+@media screen and (max-width: 768px) // for tablet size : 768px screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+  top : 210px;
+  left: 170px;
+
+}
+  
+@media screen and (max-width: 640px) // for tablet size : 768px screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+  top : 190px;
+  left: 160px;
+
+}
+
+  @media screen and (max-width: 568px) // for mobile size : 414px screen size , and for 375 
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+  top : 175px;
+  left: 140px;
+}
+  
+  
+@media screen and (max-width: 480px) // for mobile size : 414px screen size , and for 375 
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+  top : 145px;
+  left: 115px;
+    
+}
+  
+@media screen and (max-width: 414px) // for mobile size : 414px screen size , and for 375 
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+  top : 115px;
+  left: 100px;
+}
+  
+@media screen and (min-width: 360px)
+              and (max-width: 375px) // for mobile size : 414px screen size , and for 375 
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+  top : 100px;
+  left: 90px;
+}
+  
+    
+@media screen and (max-width: 320px)
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+  top : 90px;
+  left: 70px;
+}
+  
+} // End of ID_2_Position_1 
+
+div.ID_2_Position_2{
+   position: absolute;
+   top : 248px;
+   left: 80px;
+  
+@media screen and (max-width: 1366px) // for tablet size : 1024 screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 248px;
+   left: 80px;
+  
+}
+
+@media screen and (max-width: 1024px) // for tablet size : 1024 screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+
+   top : 248px;
+   left: 80px;
+  
+}
+
+
+@media screen and (max-width: 812px) // for mobile size :812px screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 248px;
+   left: 80px;
+
+}
+
+@media screen and (max-width: 768px) // for tablet size : 768px screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+  top : 248px;
+  left: 80px;
+
+}
+  
+ @media screen and (max-width: 667px) // for tablet size : 768px screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 230px;
+   left: 80px;
+
+}
+  
+@media screen and (max-width: 640px) // for tablet size : 768px screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 230px;
+   left: 80px;
+
+}
+
+  @media screen and (max-width: 568px) // for mobile size : 414px screen size , and for 375 
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 195px;
+   left: 65px;
+}
+  
+  
+@media screen and (max-width: 480px) // for mobile size : 414px screen size , and for 375 
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 248px;
+   left: 80px;
+}
+  
+@media screen and (max-width: 414px) // for mobile size : 414px screen size , and for 375 
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 140px;
+   left: 50px;
+}
+  
+@media screen and (min-width: 360px)
+              and (max-width: 375px) // for mobile size : 414px screen size , and for 375 
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 120px;
+   left: 40px;
+}
+  
+    
+@media screen and (max-width: 320px)
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 100px;
+   left: 30px;
+}
+  
+} // End of ID_2_Position_2 
+
+div.ID_2_Position_3{
+   position: absolute;
+   top : 125px;
+   left: 360px;
+  
+@media screen and (max-width: 1366px) // for tablet size : 1024 screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 125px;
+   left: 360px;
+  
+}
+
+@media screen and (max-width: 1024px) // for tablet size : 1024 screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+
+   top : 125px;
+   left: 360px;
+  
+}
+
+
+@media screen and (max-width: 812px) // for mobile size :812px screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 125px;
+   left: 360px;
+
+}
+
+@media screen and (max-width: 768px) // for tablet size : 768px screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 125px;
+   left: 360px;
+
+}
+  
+ @media screen and (max-width: 667px) // for tablet size : 768px screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 125px;
+   left: 360px;
+
+}
+  
+@media screen and (max-width: 640px) // for tablet size : 768px screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 120px;
+   left: 345px;
+
+}
+
+  @media screen and (max-width: 568px) // for mobile size : 414px screen size , and for 375 
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 105px;
+   left: 310px; 
+}
+  
+  
+@media screen and (max-width: 480px) // for mobile size : 414px screen size , and for 375 
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+    top : 85px;
+   left : 250px;
+}
+  
+@media screen and (max-width: 414px) // for mobile size : 414px screen size , and for 375 
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+    top : 65px;
+   left : 215px;
+}
+  
+@media screen and (min-width: 360px)
+              and (max-width: 375px) // for mobile size : 414px screen size , and for 375 
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 60px;
+   left: 190px;
+}
+  
+    
+@media screen and (max-width: 320px)
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 45px;
+   left: 165px;
+}
+  
+} // End of ID_2_Position_3
+
+
+div.ID_2_Position_4
+{
+   position: absolute;
+   top : 250px;
+   left: 315px;
+  
+@media screen and (max-width: 1366px) // for tablet size : 1024 screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 250px;
+   left: 315px;
+  
+}
+
+@media screen and (max-width: 1024px) // for tablet size : 1024 screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+
+   top : 255px;
+   left: 315px;
+  
+}
+
+
+@media screen and (max-width: 812px) // for mobile size :812px screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 250px;
+   left: 310px;
+
+}
+
+@media screen and (max-width: 768px) // for tablet size : 768px screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 250px;
+   left: 310px;
+
+}
+  
+ @media screen and (max-width: 667px) // for tablet size : 768px screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 250px;
+   left: 310px;
+
+}
+  
+@media screen and (max-width: 640px) // for tablet size : 768px screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 250px;
+   left: 300px;
+
+}
+
+  @media screen and (max-width: 568px) // for mobile size : 414px screen size , and for 375 
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 210px;
+   left: 260px;
+}
+  
+  
+@media screen and (max-width: 480px) // for mobile size : 414px screen size , and for 375 
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 175px;
+   left: 220px;
+}
+  
+@media screen and (max-width: 414px) // for mobile size : 414px screen size , and for 375 
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 145px;
+   left: 188px;
+}
+  
+@media screen and (min-width: 360px)
+              and (max-width: 375px) // for mobile size : 414px screen size , and for 375 
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 130px;
+   left: 170px;
+}
+  
+    
+@media screen and (max-width: 320px)
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 110px;
+   left: 145px;
+  
+}
+  
+} // End of ID_2_Position_4
+
+
+div.ID_2_Position_5
+{
+   position: absolute;
+   top : 380px;
+   left: 315px;
+  
+@media screen and (max-width: 1366px) // for tablet size : 1024 screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 380px;
+   left: 315px;
+  
+}
+
+@media screen and (max-width: 1024px) // for tablet size : 1024 screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+
+   top : 380px;
+   left: 315px;
+  
+}
+
+
+@media screen and (max-width: 812px) // for mobile size :812px screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 380px;
+   left: 315px;
+
+}
+
+@media screen and (max-width: 768px) // for tablet size : 768px screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 380px;
+   left: 315px;
+
+}
+  
+ @media screen and (max-width: 667px) // for tablet size : 768px screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 380px;
+   left: 315px;
+
+}
+  
+@media screen and (max-width: 640px) // for tablet size : 768px screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 365px;
+   left: 300px;
+
+}
+
+  @media screen and (max-width: 568px) // for mobile size : 414px screen size , and for 375 
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 310px;
+   left: 265px;
+}
+  
+  
+@media screen and (max-width: 480px) // for mobile size : 414px screen size , and for 375 
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 175px;
+   left: 220px;
+}
+  
+@media screen and (max-width: 414px) // for mobile size : 414px screen size , and for 375 
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 230px;
+   left: 190px;
+}
+  
+@media screen and (min-width: 360px)
+              and (max-width: 375px) // for mobile size : 414px screen size , and for 375 
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 200px;
+   left: 170px;
+}
+  
+    
+@media screen and (max-width: 320px)
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 173px;
+   left: 145px;
+  
+}
+  
+} // End of ID_2_Position_5
+
+
+
+div.ID_3_Position_1
+{
+   position: absolute;
+   top : 180px;
+   left: 220px;
+  
+@media screen and (max-width: 1366px) // for tablet size : 1024 screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+ 
+}
+
+@media screen and (max-width: 1024px) // for tablet size : 1024 screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+  
+}
+
+
+@media screen and (max-width: 812px) // for mobile size :812px screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+  
+
+}
+
+@media screen and (max-width: 768px) // for tablet size : 768px screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+
+
+}
+  
+ @media screen and (max-width: 667px) // for tablet size : 768px screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+
+
+}
+  
+@media screen and (max-width: 640px) // for tablet size : 768px screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 175px;
+   left: 215px;
+
+}
+
+  @media screen and (max-width: 568px) // for mobile size : 414px screen size , and for 375 
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 150px;
+   left: 180px;
+}
+  
+  
+@media screen and (max-width: 480px) // for mobile size : 414px screen size , and for 375 
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 125px;
+   left: 145px;
+}
+  
+@media screen and (max-width: 414px) // for mobile size : 414px screen size , and for 375 
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 100px;
+   left: 125px;
+}
+  
+@media screen and (min-width: 360px)
+              and (max-width: 375px) // for mobile size : 414px screen size , and for 375 
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 90px;
+   left: 110px;
+}
+  
+    
+@media screen and (max-width: 320px)
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+   top : 75px;
+   left: 100px;
+  
+}
+  
+} // End of ID_3_Position_1
+
+
+
+
+
+// WALKTHROUGH SECTION END ----------------------------------------------
+
+// CODE FOR WHERE MURDOCH BANKSIA GARDEN IS AT START--------------------------------------
+
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300); 
+
+
+
+/* $mobile: 414px; */
+// use only the available space inside the 400x400 frame
+
+.frame{
+  width: 370px;
+  height: 370px;
+  margin-top: 40px; // this is the use for positioning and responsive design ! ^_^
+  margin-left: 595px; // fixed ! 7/3/18 2:29am  
+  border-radius: 5px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+	background: linear-gradient(to bottom, rgba(19,216,101,0.8) 0%,rgba(88,158,108,0.3) 50%,rgba(141,234,126,0.7) 100%),  url(http://www.murdoch.edu.au/Research-capabilities/Asia-Research-Centre/_image/mapimg.png/?width=580&height=400) center / contain no-repeat;
+  // background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+  /*
+ @media only screen  
+                and (min-device-width: 375px) 
+                and (max-device-width: 812px) 
+                and (-webkit-min-device-pixel-ratio: 3)  
+ {
+  margin-top:  1px;
+  margin-left: 1px; 
+  }
+  
+  
+  @media screen  and (min-device-width: 768px) 
+                 and (max-device-width: 1024px) /* the placement of your statements matter alot 
+  {
+ /* margin-top: -250px;
+  margin-left: 180px; 
+   
+  margin-top:  1px;
+  margin-left: 200px; 
+  } */ 
+  
+  
+}
+
+/*
+.frame_placement{
+  
+ 
+ @media screen and (max-width: $mobile) {
+  margin-top:  1px;
+  margin-left:1px;
+    
+  }
+
+  @media screen and (max-width: $tablet) {
+ /* margin-top: -250px;
+  margin-left: 180px; 
+  margin-top:  1px;
+  margin-left: 1px; 
+  }
+} */ 
+/* dont need the center, the center will make the circle stuck at the top of the webpage, 6/3/19 5:40pm 
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+*/ 
+
+
+.circle{
+	stroke: royalblue;
+	stroke-width: 5px;
+	fill: url(#my-cool-gradient) #447799;
+	opacity: .7;
+}
+// https://www.w3schools.com/css/css_positioning.asp
+
+.marker_placement{
+  }
+
+
+
+  #marker{
+  /* margin, it will make it stay in its position ! */
+  position:absolute;
+  margin-top: -220px;
+  margin-left: 200px; 
+/*  margin-top: -250px;  */
+	cursor: pointer;
+	transform: perspective(600px) rotateY(0deg);
+	opacity: 1;
+	transition: all .5s ease-in .5s;
+  
+
+  
+	&.inactive {
+		transform: perspective(600px) rotateY(-90deg);
+		opacity: 0;
+		transition: all .5s ease-in .5s;
+	}
+
+	
+	& .pointer { /* HUHHHHH!??! for some reason i have to 
+    make the pointer statement like this with a space!!! : & .pointer ,  #PBUG 6:18pm arrow and shadow fixed! */ 
+   
+		width: 72px;
+		height: 72px;
+		fill: orangered;
+		animation: hovering 1s ease-in-out infinite alternate;
+    
+    
+       @media screen  and (min-device-width: 768px) 
+                      and (max-device-width: 1024px)
+                      and (-webkit-min-device-pixel-ratio: 1)
+     {
+     position: absolute; // makes it movableeeee
+     margin-top:  -40px;
+     margin-left: 130px;  
+     }
+    
+     @media screen  and (min-device-width: 375px) 
+                    and (max-device-width: 812px) 
+                    and (-webkit-min-device-pixel-ratio: 3)  
+     {
+     position: absolute; // makes it movableeeee
+     margin-top: -30px;
+     margin-left: -8px;
+    }
+    
+     @media screen  and (max-width: 1024px) 
+                    and (-webkit-min-device-pixel-ratio: 2)  /* it worked ! #PBUG 7/3/18 */  
+     {
+     position: absolute; // makes it movableeeee
+     margin-top: -40px;
+     margin-left: -5px;
+     }
+    
+    /* careful this affects alot 
+    @media screen and (max-width: $tablet) 
+    {
+     position: absolute; // makes it movableeeee
+     /* margin-top: -250px;
+    margin-left: 180px; 
+     margin-top: -110px;
+     margin-left: 130px; 
+  }*/ 
+    
+	}
+	
+	& .shadow { 
+		width: 28px;
+		height: 8px;
+		background: #000;
+		border-radius: 50%;
+		margin: 5px auto;
+		animation: shadowing 1s ease-in-out infinite alternate;
+    
+    
+     @media screen  and (min-device-width: 768px) 
+                    and (max-device-width: 1024px)
+                    and (-webkit-min-device-pixel-ratio: 1)
+     {
+     position: absolute; // makes it movableeeee
+     margin-top:  -80px;
+     margin-left: 130px;  
+     }
+      
+     @media screen  and (min-device-width: 375px) 
+                    and (max-device-width: 812px) 
+                    and (-webkit-min-device-pixel-ratio: 3)  
+     {
+     position: absolute; // makes it movableeeee
+     margin-top: 50px;
+     margin-left: 15px;
+     }
+   
+    @media screen  and (max-width: 1024px) 
+                    and (-webkit-min-device-pixel-ratio: 2)  /* it worked ! #PBUG 7/3/18 */  
+     {
+     position: absolute; // makes it movableeeee
+     margin-top: 40px;
+     margin-left: 15px;
+     }
+    
+
+    /* affects WAYYYYY ALOT  @media screen and (max-width: $tablet) 
+    {
+     position: absolute; // makes it movableeeee
+     /* margin-top: -250px;
+    margin-left: 180px; 
+     margin-top: -10px;
+     margin-left: 150px;
+    }*/
+    
+  	}
+    
+}
+
+.card_placement{
+
+}
+
+
+#card {
+  
+  position:absolute;
+  margin-top: -300px;
+  margin-left: 100px;  
+  width: 210px;
+	height: 270px;
+	border-radius: 10px;
+	text-align: center;
+	font-size: 14px;
+	overflow: hidden;
+	background: #ECEFF1;
+	z-index: 6;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	pointer-events: none;
+	box-shadow: 4px 8px 10px 2px rgba(0,0,0,.3);
+	transform: perspective(600px) rotateY(90deg);
+	opacity: 0;
+	transition: all .5s ease-in;
+	-webkit-font-smoothing: antialiased;
+	
+	&.active {
+		transform: perspective(600px) rotateY(0deg);
+		opacity: 1;
+		pointer-events: all;
+		transition: all .5s ease-in .5s;
+	}
+	
+	& .name {
+		font-weight: bold;
+	}
+	
+	&-banner {
+		width: 250px; /* the image above the details! */
+		height: auto;
+	}
+	
+	.action {
+		
+		width: 100%;
+		height: 40px;
+		margin: 18px auto;
+		bottom: -25px;
+		padding-bottom: 5px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: nowrap;
+		
+		a {
+			text-decoration: none;
+		}
+	}
+  
+ 
+     @media screen  and (min-device-width: 768px) // tablet 
+                    and (max-device-width: 1024px)
+                    and (-webkit-min-device-pixel-ratio: 1)
+     {
+     position: absolute; // makes it movableeeee
+     margin-top: -325px;
+     margin-left: 125px;  
+     }
+  
+    @media screen  and (min-device-width: 375px)  // mobile 
+                   and (max-device-width: 812px) 
+                   and (-webkit-min-device-pixel-ratio: 3)  
+     {
+     position: absolute; // makes it movableeeee
+     margin-top: -300px;
+     margin-left: 100px;  
+     }
+ 
+}
+
+@keyframes shadowing {
+	0% { transform: scale(1) translate3d(0, 0, 0); }
+	100% { transform: scale(1.25) translate3d(0, 0, 0); }
+}
+
+@keyframes hovering {
+	0% { transform: translate3d(0, 0, 0); }
+	100% { transform: translate3d(0, -5px, 0); }
+   
+}
+
+
+@media screen and (max-width: 1366px) // for tablet size : 1024 screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+  .frame{
+          margin-top: 40px;
+          margin-left: 480px;
+    
+  }
+  
+}
+
+@media screen and (max-width: 1024px) // for tablet size : 1024 screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+  .frame{
+          margin-top: 40px;
+          margin-left: 325px;
+  }
+
+}
+
+
+@media screen and (max-width: 812px) // for mobile size :812px screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+  .frame
+  {
+          margin-top: 40px;
+          margin-left: 210px;
+  }
+
+}
+
+@media screen and (max-width: 768px) // for tablet size : 768px screen size
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+  .frame
+  {
+          margin-top: 40px;
+          margin-left: 180px;
+    
+  }
+
+}
+
+
+@media screen and (max-width: 414px) // for mobile size : 414px screen size , and for 375 
+              and (-webkit-min-device-pixel-ratio: 2)
+{
+  .frame
+  {
+          margin-top: 40px;
+          margin-left: 10px;
+    
+  }
+
+}
+
+// CODE FOR WHERE MURDOCH BANKSIA GARDEN IS AT END--------------------------------------
+
+
+
+
+
+
+
+
+// CODE FOR RESPONSIVE FLEX CARDS  START--------------------------------------
+
+$tablet: 899px;
+$mobile: 767px;
+$border-radius: 6px;
+
+$itembg: #ffffff;
+$headercolor: #e2a9e5;
+$headertextcolor: #ffffff;
+$iconcolor: #632c65;
+$desccolor: #4b384c;
+$bordercolor: lighten($headercolor, 20%);
+
+
+/* no need for now 
+body {
+  font-family: "Montserrat", sans-serif;
+ // padding: 30px 0; // this padding makes the upper part of the webpage to have some white space for some reason. >.< 
+  color: $desccolor;
+    background-color: lighten($headercolor, 20%);
+} */ 
+
+
+h1 {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  
+  @media screen and (max-width: $mobile) {
+    margin-bottom: 0;
+  }
+}
+.wrapper {
+  max-width: 900px;
+  margin: auto;
+
+  @media screen and (max-width: $tablet) {
+    padding: 0 20px;
+  }
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+
+  &__item {
+    text-decoration: none;
+    background-color: $itembg;
+    width: calc((100% - 90px)/4);
+    margin: 0 30px 30px 0;
+    box-shadow: 5px 5px 2px #eeeff1;
+    border: 1px solid $bordercolor;
+    border-radius: $border-radius;
+    box-sizing: border-box;
+    min-width: 200px;
+
+    &:hover {
+      box-shadow: 7px 7px 14px rgba(0, 0, 0, 0.4);
+       text-decoration: none; /*somethng was interferring with the responsive cars to be underlined.. This will hlep to remove it, #PUBG 2:00pm 8/3/2019 https://www.freecodecamp.org/forum/t/link-underlining-wont-go-away/144657/2 */
+    }
+
+    @media screen and (max-width: $tablet) {
+      width: calc((100% - 60px)/3);
+    }
+
+    @media screen and (max-width: $mobile) {
+      width: 100%;
+      margin: 30px auto 0;
+      max-width: 300px;
+    }
+
+    &:nth-child(3n) {
+      @media screen and (max-width: $tablet) {
+        margin-right: 0;
+      }
+      @media screen and (max-width: $mobile) {
+        margin: 30px auto 0;
+      }
+    }
+
+    &:nth-child(4n) {
+      margin-right: 0;
+
+      @media screen and (max-width: $tablet) {
+        margin-right: 30px;
+      }
+
+      @media screen and (max-width: $mobile) {
+        margin: 30px auto 0;
+      }
+    }
+
+    &--categorygreen {
+      padding: 10px;
+      background-color: #32612A ; //was $headercolor;
+      color: $headertextcolor;
+      border-radius: $border-radius $border-radius 0px 0px;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+    }
+    
+      &--categoryred {
+      padding: 10px;
+      background-color: #DD052C ; //was $headercolor;
+      color: $headertextcolor;
+      border-radius: $border-radius $border-radius 0px 0px;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+    }
+     
+    
+     &--img {
+      text-align: center;
+      padding: 20px 20px 0px;
+      font-size: 76px;
+      //color: #32612A; // was $iconcolour;
+    }
+    
+    &--greenDos_icon{
+      color: #32612A;
+    }
+    
+     &--redDonts_icon{
+      color: #DD052C;
+    }
+
+    &--desc {
+      padding: 20px;
+      font-size: 14px;
+      text-align: left;
+      font-weight: 500;
+      color: $desccolor;
+    }
+  }
+}
+
+
+// CODE FOR RESPONSIVE FLEX CARDS ENDS --------------------------------------

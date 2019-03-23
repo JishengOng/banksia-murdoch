@@ -1152,48 +1152,8 @@ img {
   display: block;
 }
 
-/* .shops {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  background-color: #4b384c;
-  padding: 9rem 1.5rem;
-}
-@media screen and (min-width: 75em) {
-  .shops {
-    padding: 15rem 1.5rem;
-  }
-}
-.shops__offers {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin-top: 7rem;
-}
-.shops__box {
-  display: flex;
-  flex-flow: column wrap;
-  padding: 2rem;
-  margin: 2rem;
-  background-color: #fff;
-  width: 35rem;
-  font-size: 2rem;
-}
-.shops__box--lifestyle {
-  background-color: #632c65;
-  color: #fff;
-}
-@media screen and (min-width: 93.75em) {
-  .shops__box {
-    margin: 6rem;
-  }
-}
-.shops__text {
-  margin: 3rem 0;
-}
-*/
 
-/* FOR NEWS AND EVENTS */
+/* -----FOR NEWS AND EVENTS------ */
 #title-for-news-and-events-section
 {
   padding-left: 50px;
@@ -1208,20 +1168,19 @@ img {
 }
 
 &--newsnevents {
-    border: 3px solid $bossanova;
-    color: $bossanova;
-    padding: 1rem 3rem;
-    display: block;
-    margin-top: auto;
-    font-size: 2.3rem;
+  border: 3px solid $bossanova;
+  color: $bossanova;
+  padding: 1rem 3rem;
+  display: block;
+  margin-top: auto;
+  font-size: 2.3rem;
 
-    &:focus,
-    &:hover {
-      background-color: $bossanova;
-      color: $white;
-    }
+  &:focus,
+  &:hover {
+    background-color: $bossanova;
+    color: $white;
   }
-
+}
 
 /* Main CSS for News & Events Section */
 #content { 
@@ -1264,6 +1223,7 @@ img {
 .readmore {
   background-color: grey;
 }
+
 /*END MAIN CODE FOR NEWS AND EVENTS EDITABLE */
 
 .newsnevents {
@@ -1311,7 +1271,7 @@ img {
   }
 }
 
-/* END NEWS AND EVENTS */
+/* -----------END NEWS AND EVENTS------------ */
 
 
 .feeds {

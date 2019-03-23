@@ -1288,7 +1288,7 @@ img {
 }
 
 
-/* // SHOP (WINE SECTION)
+/* SHOP (WINE SECTION)
 .shops {
   @include flex-row-wrap;
 
@@ -1335,7 +1335,7 @@ img {
 }
 */
 
-//FOR NEWS AND EVENTS
+/* -----FOR NEWS AND EVENTS------ */
 #title-for-news-and-events-section
 {
   padding-left: 50px;
@@ -1344,23 +1344,25 @@ img {
   transform-origin: 4px 0px;
   transform: translate(10%, 0);
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  background: #232323;
+  color: white;
+  font-family: "Avenir Next", "Avenir", sans-serif;
 }
 
 &--newsnevents {
-    border: 3px solid $bossanova;
-    color: $bossanova;
-    padding: 1rem 3rem;
-    display: block;
-    margin-top: auto;
-    font-size: 2.3rem;
+  border: 3px solid $bossanova;
+  color: $bossanova;
+  padding: 1rem 3rem;
+  display: block;
+  margin-top: auto;
+  font-size: 2.3rem;
 
-    &:focus,
-    &:hover {
-      background-color: $bossanova;
-      color: $white;
-    }
+  &:focus,
+  &:hover {
+    background-color: $bossanova;
+    color: $white;
   }
-
+}
 
 /* Main CSS for News & Events Section */
 #content { 
@@ -1403,6 +1405,7 @@ img {
 .readmore {
   background-color: grey;
 }
+
 /*END MAIN CODE FOR NEWS AND EVENTS EDITABLE */
 
 .newsnevents {
@@ -1450,7 +1453,7 @@ img {
   }
 }
 
-/* END NEWS AND EVENTS */
+/* -----------END NEWS AND EVENTS------------ */
 
 // FEEDS
 .feeds {

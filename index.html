@@ -2795,14 +2795,12 @@
       <!-- DIALOG BOX - BANKSIA VICTORIAE contents section END --> 
    
   
-  
-  
  </div> <!-- Elements To Filter END -->
 </section> <!-- Flowers Tab END -->
 
 
 
-      <!-- START WALKTHROUGH -->
+      <!-- ------START WALKTHROUGH---- -->
       <section class="tours" id="Walkthrough">
        <h2 class="heading-secondary heading-secondary--tours tours__heading"> Walkthrough </h2>
        Mr do raising article general norland my hastily. Its companions say uncommonly pianoforte favourable. Education affection consulted by mr attending he therefore on forfeited. High way more far feet kind evil play led. Sometimes furnished collected add for resources attention. Norland an by minuter enquire it general on towards forming. Adapted mrs totally company two yet conduct men. 
@@ -2854,98 +2852,13 @@ Behaviour we improving at something to. Evil true high lady roof men had open. T
       </section>
       <!-- END WALKTHROUGH -->
 
+    
 
-
-
-
-
-
-
-
-      <!-- START WINE SHOP 
-      <section class = "shops" id="News_Events">
-        <div style = "text-align:center; font-family: Courier">
-        <h2 class="heading-secondary heading-secondary--shop">Shop</h2> </div>
-
-        <div class="shops__offers">
-          <div class="shops__box">
-            <img src="https://i.postimg.cc/Dy8ryrx1/reds.jpg" alt="red wine" class="shops__img" />
-            <h3 class="heading-tertiary">Red Wines</h3>
-            <p class="shops__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates consequatur aspernatur quaerat quos fugit, doloribus
-              praesentium quasi neque exercitationem quisquam dicta, iure eaque
-              at possimus iusto. Quia doloremque dolor minus.
-            </p>
-            <button class="btn btn--shop">Buy</button>
-          </div>
-          <div class="shops__box">
-            <img src="https://i.postimg.cc/tCT5nQ4Z/white.jpg" alt="white wine" class="shops__img" />
-            <h3 class="heading-tertiary">White Wines</h3>
-            <p class="shops__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates consequatur aspernatur quaerat quos fugit, doloribus
-              praesentium quasi neque exercitationem quisquam dicta, iure eaque
-              at possimus iusto. Quia doloremque dolor minus.
-            </p>
-            <button class="btn btn--shop">Buy</button>
-          </div>
-          <div class="shops__box">
-            <img src="https://i.postimg.cc/vZxtXr9G/champagne.jpg" alt="champagne" class="shops__img" />
-            <h3 class="heading-tertiary">Champagne</h3>
-            <p class="shops__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates consequatur aspernatur quaerat quos fugit, doloribus
-              praesentium quasi neque exercitationem quisquam dicta, iure eaque
-              at possimus iusto. Quia doloremque dolor minus.
-            </p>
-            <button class="btn btn--shop">Buy</button>
-          </div>
-
-          <div class="shops__box " id="lifestyle">
-            <img src="https://i.postimg.cc/QCMp71hG/soap.jpgg" alt="soap" class="shops__img" />
-            <h3 class="heading-tertiary">Hand-made wine soap</h3>
-            <p class="shops__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates consequatur aspernatur quaerat quos fugit, doloribus
-              praesentium quasi neque exercitationem quisquam dicta, iure eaque
-              at possimus iusto. Quia doloremque dolor minus.
-            </p>
-            <button class="btn btn--shop">Buy</button>
-          </div>
-          <div class="shops__box ">
-            <img src="https://i.postimg.cc/D0fccRQN/candles.jpg" alt="candles" class="shops__img" />
-            <h3 class="heading-tertiary">Wine Candles</h3>
-            <p class="shops__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates consequatur aspernatur quaerat quos fugit, doloribus
-              praesentium quasi neque exercitationem quisquam dicta, iure eaque
-              at possimus iusto. Quia doloremque dolor minus.
-            </p>
-            <button class="btn btn--shop">Buy</button>
-          </div>
-          <div class="shops__box ">
-            <img src="https://i.postimg.cc/B645qRzv/cookie.jpg" alt="cookies" class="shops__img" />
-            <h3 class="heading-tertiary">Grape Cookies</h3>
-            <p class="shops__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates consequatur aspernatur quaerat quos fugit, doloribus
-              praesentium quasi neque exercitationem quisquam dicta, iure eaque
-              at possimus iusto. Quia doloremque dolor minus.  
-            </p>
-            <button class="btn btn--shop">Buy</button>
-          </div>
-        </div>
-      </section>
-
--->
-
-<!-- START NEWS AND EVENTS -->
+<!-- -------------START NEWS AND EVENTS----------------- -->
 <div id="title-for-news-and-events-section"><b> NEWS AND EVENTS<b> </div>
 </div>
 
-
-<section class="newsnevents" id="News_Events">
+<section class="newsnevents">
   <div class="newsnevents" id="newsnevents">
     <div class="post-container">
      <!-- START POST -->
@@ -2997,9 +2910,43 @@ Behaviour we improving at something to. Evil true high lady roof men had open. T
     <!--END POST -->
     </div>
   </div>
-
 </section>
-<!-- END NEWS AND EVENTS -->
+
+<script>
+if ('querySelector' in document && 
+'addEventListener' in window) {
+var toggleButtons = document.querySelectorAll('.toggle-content');
+var fullTextWrappers = document.querySelectorAll('.fulltext');
+var fullText;
+var toggleButtonText;
+
+[].forEach.call(fullTextWrappers, function(fullTextWrapper) {
+  // hide all full text on load
+  fullTextWrapper.setAttribute('hidden', true);
+});
+[].forEach.call(toggleButtons, function(toggleButton) {
+  // show toggle more buttons
+  toggleButton.removeAttribute('hidden');
+  // add listener for each button
+  toggleButton.addEventListener('click', function () {
+    fullTextWrapper = this.parentElement.querySelector('.fulltext');
+    toggleButtonText = this.querySelector('.text');
+    // change attributes and text if full text is shown/hidden
+    console.log(fullTextWrapper.hasAttribute('hidden'));
+    if (!fullTextWrapper.hasAttribute('hidden')) {
+      toggleButtonText.innerText = 'Show More';
+      fullTextWrapper.setAttribute('hidden', true);
+      toggleButton.setAttribute('aria-expanded', false);
+    } else {
+      toggleButtonText.innerText ='Show Less';
+      fullTextWrapper.removeAttribute('hidden');
+      toggleButton.setAttribute('aria-expanded', true);
+    }
+  });
+});
+}
+</script>
+
 
       <!-- INSERTED RESPONSIVE FLEX CARDS FOR DOs and DONTs for Visitor Info AND MAP OF LOCATION OF BANKSIA COURT START --> <section>
 <div style = "text-align:center; font-family: Courier">

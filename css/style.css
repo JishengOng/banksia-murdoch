@@ -1152,45 +1152,127 @@ img {
   display: block;
 }
 
-.shops {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  background-color: #4b384c;
-  padding: 9rem 1.5rem;
+
+/* -----FOR NEWS AND EVENTS------ */
+#title-for-news-and-events-section
+{
+  padding-left: 50px;
+  font-size: 250%;
+
+  transform-origin: 4px 0px;
+  transform: translate(10%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  background: #232323;
+  color: white;
+  font-family: "Avenir Next", "Avenir", sans-serif;
 }
-@media screen and (min-width: 75em) {
-  .shops {
+
+&--newsnevents {
+  border: 3px solid $bossanova;
+  color: $bossanova;
+  padding: 1rem 3rem;
+  display: block;
+  margin-top: auto;
+  font-size: 2.3rem;
+
+  &:focus,
+  &:hover {
+    background-color: $bossanova;
+    color: $white;
+  }
+}
+
+/* Main CSS for News & Events Section */
+#content { 
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 7rem;
+}
+
+.post {
+ max-width: 800px;
+ margin: 30px auto;
+ padding: 40px 40px;
+ border-style: solid;
+ border-width: 0px 0px 0px 10px;
+ border-color: #70D85D;
+ color: #FFF;
+}
+.post-author img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.post-author img, .about-author img {
+  border-radius: 50%
+}
+.post-author span {
+  margin-left: 16px;
+}
+.post-date {
+  color: #D2D2D2;
+  font-size: 14px;
+  font-weight: bold;
+
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.readmore {
+  background-color: grey;
+}
+
+/*END MAIN CODE FOR NEWS AND EVENTS EDITABLE */
+
+.newsnevents {
+  @include flex-row-wrap;
+
+  justify-content: center;
+  background-color: #232323;
+  padding: 9rem 1.5rem;
+
+  @media screen and(min-width: $bp-medium) {
     padding: 15rem 1.5rem;
   }
-}
-.shops__offers {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin-top: 7rem;
-}
-.shops__box {
-  display: flex;
-  flex-flow: column wrap;
-  padding: 2rem;
-  margin: 2rem;
-  background-color: #fff;
-  width: 35rem;
-  font-size: 2rem;
-}
-.shops__box--lifestyle {
-  background-color: #632c65;
-  color: #fff;
-}
-@media screen and (min-width: 93.75em) {
-  .shops__box {
-    margin: 6rem;
+
+  &__offers {
+    @include flex-row-wrap;
+
+    justify-content: center;
+    margin-top: 7rem;
+  }
+
+  &__img {
+  }
+
+  &__box {
+    @include flex-col;
+
+    padding: 2rem;
+    margin: 2rem;
+    background-color: $white;
+    width: 35rem;
+    font-size: 2rem;
+
+    &--lifestyle {
+      background-color: $bossanova;
+      color: $white;
+    }
+
+    @media screen and (min-width: $bp-large) {
+      margin: 6rem;
+    }
+  }
+
+  &__text {
+    margin: 3rem 0;
   }
 }
-.shops__text {
-  margin: 3rem 0;
-}
+
+/* -----------END NEWS AND EVENTS------------ */
+
 
 .feeds {
   display: flex;

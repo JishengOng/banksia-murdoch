@@ -101,7 +101,7 @@
       "types": ["flower", "cone_fruit", "tree_left"],
       "floweringPeriod": ["autumn", "winter"],
       "shortDesc": "Propeller Banksia (the fruits resemble a ship’s propeller",    
-      "description": "A semi-prostrate banksia up to 1 metre high with long, narrow, heavily divided leaves. The leaves are bright green and the mid rib is prominent.", 
+      "description": "A semi-prostrate banksia up to 1 metre high with long, narrow, heavily divided leaves. The leaves are bright green and the mid rib is prominent.",       
       "flowerDesc": "Small almost globular golden coloured flowers which appear in autumn and winter.",
       "fruitDesc": "These are very distinctive with huge seed follicles set in a small globular cone.",
       "habitat": "Banksia candolleana is found on sandy heaths in the Irwin district of WA"
@@ -160,7 +160,8 @@
         "id": "g_hiemalis",
         "index": 13,
         "name": "",      
-        "types": ["flower", "cone-fruit"],
+        "types": ["flower", "cone_fruit"],
+        "images": ["cone", "sa", "as"],
         "floweringPeriod": ["spring, winter"],
         "shortDesc": "named after Charles Gardner, a former Government botanist of WA",    
         "description": "A prostrate form which has three different varieties (var gardneri, var hiemalis, var brevidentata). Variety gardneri has deep green leaves with deep lobes. It flowers in Spring with rusty brown conical spikes. Variety brevidentata has large green leaves with toothed margins. It flowers in winter with rusty brown flower spikes. Variety hiemalis has pale green leaves with deep lobes and pink flower spikes in winter.", 

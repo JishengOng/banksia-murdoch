@@ -6,8 +6,33 @@ function convertResponseToJson(response) {
   return response.json()
 }
 
+function createNames(flower) {
+  return `
+    <ul>
+      <li>${flower.otherNames.common ? flower.otherNames.common : '' }</li>
+    </ul>
+    <div>    
+    </div>
+  `
+}
+
+function createFlowerDescHtml(flower) {
+  if ( flower.flowerDesc ) {
+    return `
+      <div>
+        <div>Flower Desc</div>
+        <p>
+          ${ flower.flowerDesc }
+        </p>
+      </div>
+    `
+  }
+
+  return '';
+}
+
 function addFlowersToSection(flowersArr, type, season) {
-  console.log('filtering', type, season)
+  
   for ( const flower of flowersArr ) {
 
     if ( 
@@ -17,7 +42,31 @@ function addFlowersToSection(flowersArr, type, season) {
       || ( flower.types.includes(type) && flower.floweringPeriod.includes(season) )
     ) {
     
-      const flowerEl = document.createElement('div')    
+      const flowerEl = document.createElement('div')
+      flowerEl.addEventListener('click',function() {
+
+
+        const modalTitleEl = document.getElementById('flower_title')
+        modalTitleEl.innerHTML = flower.name
+
+        const modalBodyEl = document.getElementById('flower_body')
+        
+        modalBodyEl.innerHTML = 
+        `
+          <div>
+            <h2>${flower.shortDesc}</h2>
+            <div></div>
+            <div>${flower.description}</div>
+            ${ createNames(flower) }
+            ${ createFlowerDescHtml(flower) }
+            ${ createFruitDescHtml(flower) }
+          </div>
+
+        `
+
+        $('#flower_details').modal({ show: true })
+      })
+      
       flowerEl.innerHTML = flower.name;    
       flowerEl.classList.add('flower')    
       

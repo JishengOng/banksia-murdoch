@@ -50,6 +50,7 @@ document.querySelectorAll('.flower_type')
             if ( type === USER_FILTER.flowerType ) {              
               delete USER_FILTER.flowerType
             } else {
+              //classList.add('selected')
               USER_FILTER.flowerType = type
             }
             
@@ -64,13 +65,13 @@ document.querySelectorAll('.flower_season')
           flowerSeasonEl.addEventListener('click', function() {
             const season = flowerSeasonEl.getAttribute('data-flowerseason')
 
-            if ( season === USER_FILTER.floweringSeason ) {               
+            if ( season === USER_FILTER.floweringSeason ) {
+              console.log('selected again, deleting')               
               delete USER_FILTER.floweringSeason
             } else {
               USER_FILTER.floweringSeason = season
             }
 
-            USER_FILTER.floweringSeason = season
             console.log('userFilter', USER_FILTER)
             flowersContainers.innerHTML = ''
             renderAllFlower(USER_FILTER.flowerType,USER_FILTER.floweringSeason)

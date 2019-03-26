@@ -16,7 +16,7 @@
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" 
         crossorigin="anonymous">
   
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/flowers.css">
   
 </head>
@@ -216,23 +216,25 @@
   <section id='flowers_section'>
     <div class='container-fluid'>
       <div class='row' id='flowers_inner'>
-        <div class='col-md-2' id='flowers_filter'>
-          <div>
+        <div>
+          <div class='col-md-2' id='flowers_filter'>
             <div>
-              <div>Type</div>
-              <div data-flowertype="flower" class='flower_type'>Flower</div>
-              <div data-flowertype="cone_fruit" class='flower_type'>Cone/Fruit</div>
-              <div data-flowertype="tree_leaf" class='flower_type'>Tree/Leaf</div>
+              <div>
+                <div class='filter_attr'>Type</div>
+                <div data-flowertype="flower" class='flower_type'><button>Flower</button></div>
+                <div data-flowertype="cone_fruit" class='flower_type'><button>Cone/Fruit</button></div>
+                <div data-flowertype="tree_leaf" class='flower_type'><button>Tree/Leaf</button></div>
+              </div>
+              <div>
+                <div class='filter_attr'>Seasons</div>
+                <div data-flowerseason='summer' class='flower_season'><button>Summer</button></div>
+                <div data-flowerseason='spring' class='flower_season'><button>Spring</button></div>
+                <div data-flowerseason='autumn' class='flower_season'><button>Autum</button></div>
+                <div data-flowerseason='winter' class='flower_season'><button>Winter</button></div>
+              </div>
             </div>
-            <div>
-              <div>Seasons</div>
-              <div data-flowerseason='summer' class='flower_season'>Summer</div>
-              <div data-flowerseason='spring' class='flower_season'>Spring</div>
-              <div data-flowerseason='autumn' class='flower_season'>Autum</div>
-              <div data-flowerseason='winter' class='flower_season'>Winter</div>
-            </div>
-          </div>
         </div>
+      </div>
         <div class='col-md-10' id='flowers_container'></div>
       </div>
     </div>

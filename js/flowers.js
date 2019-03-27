@@ -6,14 +6,49 @@ function convertResponseToJson(response) {
   return response.json()
 }
 
+function createCommonNamesDiv(flower) {
+  const otherNames = flower.otherNames || {}
+
+  if ( Object.keys(otherNames).length === 0 ) {
+      return ''
+  }
+
+  let commonNameHtmStr = ''
+  let noogarNameStr = ''
+  if ( otherNames.common && otherNames.noongar ) {
+      commonNameHtmStr = `
+      <div>
+          <span>Common name:</span>   <span>${otherNames.common}:</span> 
+      </div>
+      `
+       noogarNameStr = `
+          <div>
+              <span>Noongar name:</span>   <span>${otherNames.noongar}</span> 
+          </div>
+      `
+  } else if ( otherNames.common && otherNames.noongar === undefined ) {
+    commonNameHtmStr = `
+       <div>
+          <span>Common name:</span>   <span>${otherNames.common}:</span> 
+        </div>
+    `
+  } else {
+    commonNameHtmStr = ''
+    noogarNameStr = ''
+  }
+  return `
+      <div>
+          ${commonNameHtmStr}
+          ${noogarNameStr}
+      </div>
+  `
+}
 function createNames(flower) {
   return `
-    <ul>
-      <li>${flower.otherNames.common ? flower.otherNames.common : '' }</li>
-    </ul>
-    <div>    
-    </div>
-  `
+        <div>Name:${flower.name}</div>
+        <div>(${flower.shortDesc})</div>
+        `
+  
 }
 
 function createFlowerDescHtml(flower) {
@@ -27,7 +62,6 @@ function createFlowerDescHtml(flower) {
       </div>
     `
   }
-
   return '';
 }
 
@@ -51,17 +85,13 @@ function addFlowersToSection(flowersArr, type, season) {
 
         const modalBodyEl = document.getElementById('flower_body')
         
-        modalBodyEl.innerHTML = 
-        `
+        modalBodyEl.innerHTML = `
           <div>
-            <h2>${flower.shortDesc}</h2>
-            <div></div>
-            <div>${flower.description}</div>
             ${ createNames(flower) }
-            ${ createFlowerDescHtml(flower) }
-            ${ createFruitDescHtml(flower) }
+            ${ createCommonNamesDiv(flower) }
+            <div>Description: ${flower.description}</div>
+            <div>Habitat: ${flower.habitat}</div>
           </div>
-
         `
 
         $('#flower_details').modal({ show: true })
@@ -81,6 +111,7 @@ function addFlowersToSection(flowersArr, type, season) {
 
   }  
 }
+
 
 //retrieve flowers db
 function renderAllFlower(type,season) {
@@ -127,4 +158,4 @@ document.querySelectorAll('.flower_season')
           })
 })
         
-renderAllFlower()
+renderAllFlower();

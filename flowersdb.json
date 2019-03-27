@@ -32,7 +32,8 @@
       "index": 3,
       "name": "Banksia Attenuata",
       "otherNames": {      
-        "common": "Coastal Banksia or Candlestick Banksia"
+        "common": "Coastal Banksia or Candlestick Banksia",
+        "noongar": "biara"
       },
       "types": ["flower", "cone_fruit", "tree_leaf"],
       "floweringPeriod": ["spring", "summer"],    

@@ -34,7 +34,7 @@ function createCommonNamesDiv(flower) {
     `
   } else {
     commonNameHtmStr = ''
-    noogarNameStr = ''
+    noogarNameStr = ' '
   }
   return `
       <div>

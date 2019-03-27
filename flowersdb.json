@@ -7,8 +7,9 @@
         "common": "Wallum Banksia"
       },
       "types": ["flower", "cone_fruit", "tree_leaf"],
+      "images":["cone","fruit","tree"],
       "floweringPeriod": ["autumn", "winter"],
-      "shortDesc": "the name means to emulate as this species is very similar to Banksia serrata",    
+      "shortDesc": "The name means to emulate as this species is very similar to Banksia serrata",    
       "description": "A small, spreading tree with dark grey, rough bark. The leaves are obovate with evenly serrated margins and green on both sides. The upper surface is glossy green and the underside is pale green and glabrous. The new leaves are rusty brown.",
       "flowerDesc": "The flower spikes are silvery yellow and about 8-15cm high and 5-10cm in diameter and are ovoid to cylindrical. It flowers in later winter and autumn.",
       "habitat": "Banksia aemula occurs on sandy dunes from southern Queensland to the Sydney region."
@@ -22,7 +23,7 @@
       },
       "types": ["flower", "cone_fruit", "tree_leaf"],
       "floweringPeriod": ["spring", "summer", "winter"],
-      "shortDesc": "named after Edwin Ashby, a South Australian plant collector",
+      "shortDesc": "Named after Edwin Ashby, a South Australian plant collector",
       "description": "This species is usually a medium sized shrub 2-4 metres high, with long, narrow, sharply serrated leaves (15-20cm long and up to 3cm wide), with a prominent yellow mid-rib.",
       "flowerDesc": "The flowers are large and upright and orange in colour and cylindrical or ovoid in shape. It flowers between August and November.",
       "habitat": "This species is from the mid-west coast of WA and is found on the coastal sandplain from Geraldton to Carnarvon. It is an attractive garden specimen and is widely planted on the Murdoch campus."
@@ -37,7 +38,7 @@
       },
       "types": ["flower", "cone_fruit", "tree_leaf"],
       "floweringPeriod": ["spring", "summer"],    
-      "shortDesc": "his name was chosen to describe the way in which the leaves of this species taper towards the base",
+      "shortDesc": "This name was chosen to describe the way in which the leaves of this species taper towards the base",
       "description": "This species is usually a small tree with rough grey bark and long narrow leaves (8 – 15 cm long and less than 1cm wide). The leaves are flat and slightly serrated. ",
       "flowerDesc": "The most striking feature of this species is the tall, cylindrical flower spikes, up to 25 cm long.They have a strong light yellow colour and appear between October and March.",
       "habitat": "This species is found along the southwest coast of Australia from Geraldton to Albany. It thrives in deep, moist, sandy soils."
@@ -162,7 +163,7 @@
         "index": 13,
         "name": "",      
         "types": ["flower", "cone_fruit"],
-        "images": ["cone", "sa", "as"],
+        "images": ["cone", "fruit", "tree"],
         "floweringPeriod": ["spring, winter"],
         "shortDesc": "named after Charles Gardner, a former Government botanist of WA",    
         "description": "A prostrate form which has three different varieties (var gardneri, var hiemalis, var brevidentata). Variety gardneri has deep green leaves with deep lobes. It flowers in Spring with rusty brown conical spikes. Variety brevidentata has large green leaves with toothed margins. It flowers in winter with rusty brown flower spikes. Variety hiemalis has pale green leaves with deep lobes and pink flower spikes in winter.", 

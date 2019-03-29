@@ -2142,283 +2142,33 @@ div.ID_3_Position_1 {
   }
 }
 
-/* $mobile: 414px; */
-.frame {
-  width: 370px;
-  height: 370px;
-  margin-top: 40px;
-  margin-left: 595px;
-  border-radius: 5px;
-  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  background: linear-gradient(to bottom, rgba(19, 216, 101, 0.8) 0%, rgba(88, 158, 108, 0.3) 50%, rgba(141, 234, 126, 0.7) 100%), url(http://www.murdoch.edu.au/Research-capabilities/Asia-Research-Centre/_image/mapimg.png/?width=580&height=400) center/contain no-repeat;
-  color: #333;
-  font-family: 'Open Sans', Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
- /*
-@media only screen  
-               and (min-device-width: 375px) 
-               and (max-device-width: 812px) 
-               and (-webkit-min-device-pixel-ratio: 3)  
-{
- margin-top:  1px;
- margin-left: 1px; 
- }
- 
- 
- @media screen  and (min-device-width: 768px) 
-                and (max-device-width: 1024px) /* the placement of your statements matter alot 
- {
-/* margin-top: -250px;
- margin-left: 180px; 
-  
- margin-top:  1px;
- margin-left: 200px; 
- } */
+#map {
+  text-align: center;
+}
+
+map, iframe {
+  width:50%;
+  height:300px;
 }
 
 /*
-.frame_placement{
-  
- 
- @media screen and (max-width: $mobile) {
-  margin-top:  1px;
-  margin-left:1px;
-    
-  }
-
-  @media screen and (max-width: $tablet) {
- /* margin-top: -250px;
-  margin-left: 180px; 
-  margin-top:  1px;
-  margin-left: 1px; 
-  }
-} */
-/* dont need the center, the center will make the circle stuck at the top of the webpage, 6/3/19 5:40pm 
-.center{
+#roundmap {
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+  z-index: 99;
+  height: 500px;
+  width: 500px;
+  border: 10px solid #000;
+}
+#roundmap iframe {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  top: 0; left: 0;
+  z-index: 50;
 }
 */
-.circle {
-  stroke: royalblue;
-  stroke-width: 5px;
-  fill: url(#my-cool-gradient) #447799;
-  opacity: .7;
-}
 
-#marker {
-  /* margin, it will make it stay in its position ! */
-  position: absolute;
-  margin-top: -220px;
-  margin-left: 200px;
-  /*  margin-top: -250px;  */
-  cursor: pointer;
-  transform: perspective(600px) rotateY(0deg);
-  opacity: 1;
-  transition: all .5s ease-in .5s;
-}
-#marker.inactive {
-  transform: perspective(600px) rotateY(-90deg);
-  opacity: 0;
-  transition: all .5s ease-in .5s;
-}
-#marker .pointer {
-  	             /* HUHHHHH!??! for some reason i have to 
-      make the pointer statement like this with a space!!! : & .pointer ,  #PBUG 6:18pm arrow and shadow fixed! */
-  width: 72px;
-  height: 72px;
-  fill: orangered;
-  animation: hovering 1s ease-in-out infinite alternate;
-  /* careful this affects alot 
-  @media screen and (max-width: $tablet) 
-  {
-   position: absolute; // makes it movableeeee
-   /* margin-top: -250px;
-  margin-left: 180px; 
-   margin-top: -110px;
-   margin-left: 130px; 
-}*/
-}
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-  #marker .pointer {
-    position: absolute;
-    margin-top: -40px;
-    margin-left: 130px;
-  }
-}
-@media screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
-  #marker .pointer {
-    position: absolute;
-    margin-top: -30px;
-    margin-left: -8px;
-  }
-}
-@media screen and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
-  #marker .pointer {
-    position: absolute;
-    margin-top: -40px;
-    margin-left: -5px;
-  }
-}
-#marker .shadow {
-  width: 28px;
-  height: 8px;
-  background: #000;
-  border-radius: 50%;
-  margin: 5px auto;
-  animation: shadowing 1s ease-in-out infinite alternate;
-  /* affects WAYYYYY ALOT  @media screen and (max-width: $tablet) 
-  {
-   position: absolute; // makes it movableeeee
-   /* margin-top: -250px;
-  margin-left: 180px; 
-   margin-top: -10px;
-   margin-left: 150px;
-  }*/
-}
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-  #marker .shadow {
-    position: absolute;
-    margin-top: -80px;
-    margin-left: 130px;
-  }
-}
-@media screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
-  #marker .shadow {
-    position: absolute;
-    margin-top: 50px;
-    margin-left: 15px;
-  }
-}
-@media screen and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
-  #marker .shadow {
-    position: absolute;
-    margin-top: 40px;
-    margin-left: 15px;
-  }
-}
-
-#card {
-  position: absolute;
-  margin-top: -300px;
-  margin-left: 100px;
-  width: 210px;
-  height: 270px;
-  border-radius: 10px;
-  text-align: center;
-  font-size: 14px;
-  overflow: hidden;
-  background: #ECEFF1;
-  z-index: 6;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  pointer-events: none;
-  box-shadow: 4px 8px 10px 2px rgba(0, 0, 0, 0.3);
-  transform: perspective(600px) rotateY(90deg);
-  opacity: 0;
-  transition: all .5s ease-in;
-  -webkit-font-smoothing: antialiased;
-}
-#card.active {
-  transform: perspective(600px) rotateY(0deg);
-  opacity: 1;
-  pointer-events: all;
-  transition: all .5s ease-in .5s;
-}
-#card .name {
-  font-weight: bold;
-}
-#card-banner {
-  width: 250px;
-  /* the image above the details! */
-  height: auto;
-}
-#card .action {
-  width: 100%;
-  height: 40px;
-  margin: 18px auto;
-  bottom: -25px;
-  padding-bottom: 5px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-#card .action a {
-  text-decoration: none;
-}
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-  #card {
-    position: absolute;
-    margin-top: -325px;
-    margin-left: 125px;
-  }
-}
-@media screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
-  #card {
-    position: absolute;
-    margin-top: -300px;
-    margin-left: 100px;
-  }
-}
-
-@keyframes shadowing {
-  0% {
-    transform: scale(1) translate3d(0, 0, 0);
-  }
-  100% {
-    transform: scale(1.25) translate3d(0, 0, 0);
-  }
-}
-@keyframes hovering {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(0, -5px, 0);
-  }
-}
-@media screen and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
-  .frame {
-    margin-top: 40px;
-    margin-left: 480px;
-  }
-}
-@media screen and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
-  .frame {
-    margin-top: 40px;
-    margin-left: 325px;
-  }
-}
-@media screen and (max-width: 812px) and (-webkit-min-device-pixel-ratio: 2) {
-  .frame {
-    margin-top: 40px;
-    margin-left: 210px;
-  }
-}
-@media screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
-  .frame {
-    margin-top: 40px;
-    margin-left: 180px;
-  }
-}
-@media screen and (max-width: 414px) and (-webkit-min-device-pixel-ratio: 2) {
-  .frame {
-    margin-top: 40px;
-    margin-left: 10px;
-  }
-}
-/* no need for now 
-body {
-  font-family: "Montserrat", sans-serif;
- // padding: 30px 0; // this padding makes the upper part of the webpage to have some white space for some reason. >.< 
-  color: $desccolor;
-    background-color: lighten($headercolor, 20%);
-} */
 h1 {
   font-size: 20px;
   font-weight: 700;
@@ -2526,10 +2276,11 @@ h1 {
 .container__item--redDonts_icon {
   color: #DD052C;
 }
+/*
 .container__item--desc {
   padding: 20px;
   font-size: 14px;
   text-align: left;
   font-weight: 500;
   color: #4b384c;
-}
+}*/

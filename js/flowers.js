@@ -6,6 +6,16 @@ function convertResponseToJson(response) {
   return response.json()
 }
 
+function createImagesDiv(flower) {
+  const images = flower.images
+  let imgs = ''
+
+  images.forEach( function(image) {
+      imgs =  `${imgs}\n<img src="/img//flowers/${flower.id}/${image}.jpg"/>`
+  })
+  return `<div style="width: 550px; height 600px;">${imgs}</div>`
+} 
+
 function createCommonNamesDiv(flower) {
   const otherNames = flower.otherNames || {}
 
@@ -45,25 +55,20 @@ function createCommonNamesDiv(flower) {
 }
 function createNames(flower) {
   return `
-        <div>Name:${flower.name}</div>
-        <div>(${flower.shortDesc})</div>
-        `
-  
+        <div>
+          <div> <b>Name</b>: ${flower.name}</div>
+          <div style="font-size:15px;">(${flower.shortDesc})</div>
+        </div>
+        ` 
 }
-
 function createFlowerDescHtml(flower) {
   const flowerDesc = flower.flowerDesc
-
-  // if ( Object.keys(flowerDesc).length === 0 ) {
-  //   return ''
-  // }
+ 
   if ( flowerDesc ) {
     return `
       <div>
-        <div>Flower Desc: </div>
-        <p>
-          ${ flowerDesc }
-        </p>
+        <div> <b>Flower Description:</b> ${flowerDesc}<p> 
+        </div>
       </div>
     `
   } else {
@@ -74,16 +79,10 @@ function createFlowerDescHtml(flower) {
 function createFruitDescHtml(flower) {
   const fruitDesc = flower.fruitDesc
 
-  // if ( Object.keys(flowerDesc).length === 0 ) {
-  //   return ''
-  // }
   if ( fruitDesc ) {
     return `
       <div>
-        <div>Fruit Desc: </div>
-        <p>
-          ${ fruitDesc }
-        </p>
+        <div><b>Fruit Description:</b>  ${fruitDesc}</div>
       </div>
     `
   } else {
@@ -111,32 +110,45 @@ function addFlowersToSection(flowersArr, type, season) {
 
         const modalBodyEl = document.getElementById('flower_body')
         
+        
         modalBodyEl.innerHTML = `
           <div>
             ${ createNames(flower) }
             ${ createCommonNamesDiv(flower) }
-            <div>Description: ${flower.description}</div>
-            <div>Habitat: ${flower.habitat}</div>
+            <div><b>Description:</b> ${flower.description}</div>
+            <div><b>Habitat:</b> ${flower.habitat}</div>
             ${ createFlowerDescHtml(flower) }
             ${ createFruitDescHtml(flower) }
+            ${ createImagesDiv(flower) } 
           </div>
         `
 
         $('#flower_details').modal({ show: true })
       })
+      //idIcon to put the ID visible 
+      const idIcon = document.createElement('img')
+      idIcon.src = '/img/idIcon.png'
+
+      const iconContainer = document.createElement('div')
+      iconContainer.classList.add('icon')
+      iconContainer.style.width = '30px'
+      iconContainer.style.height = '30px'
+      iconContainer.style.top = 0
+      iconContainer.appendChild(idIcon)
       
       flowerEl.innerHTML = flower.name;    
       flowerEl.classList.add('flower')    
       
       // /img/flowers/id/preview.jpg
-      const imgUrl = '/img/flowers/' + flower.id + '/preview.jpg'
+      const previewImgUrl = '/img/flowers/' + flower.id + '/preview.jpg'
       const flowerImg = document.createElement('img')
-      flowerImg.src = imgUrl
+      flowerImg.src = previewImgUrl
+      flowerEl.appendChild(iconContainer)
       flowerEl.appendChild(flowerImg)
+      
 
       flowersContainers.appendChild(flowerEl)
     }
-
   }  
 }
 

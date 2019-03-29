@@ -7,6 +7,7 @@ const flowerDef = [
         "common" : "blah",
         "noongar": "hello"
       },
+      "images": ["cone","flower","tree"], 
       "types": ["flower", "cone_fruit", "tree_leaf"],
       "floweringPeriod": ["autumn", "winter"],
       "shortDesc": "the name means to emulate as this species is very similar to Banksia serrata",    
@@ -22,6 +23,7 @@ const flowerDef = [
         "common" : "blah",
         "noongar": "hello"
       },
+      "images": ["cone","flower","tree"], 
       "types": ["flower", "cone_fruit", "tree_leaf"],
       "floweringPeriod": ["spring", "summer", "winter"],
       "shortDesc": "named after Edwin Ashby, a South Australian plant collector",
@@ -30,67 +32,62 @@ const flowerDef = [
       "habitat": "This species is from the mid-west coast of WA and is found on the coastal sandplain from Geraldton to Carnarvon. It is an attractive garden specimen and is widely planted on the Murdoch campus."
     }
 ]
-/**
- * <div>
- *     <div>
- *          <span>Common</span> <span>Heath-leaf banksia</span>
- *     </div>
- *     <div>
- *          <span>Noogar</span> <span>Some Other Name</span>
- *     </div>
- * </div>
- * 
- */
-function createCommonNamesDiv(flower) {
-    const otherNames = flower.otherNames || {}
 
-    if ( Object.keys(otherNames).length === 0 ) {
-        return ''
-    }
+// function createCommonNamesDiv(flower) {
+//     const otherNames = flower.otherNames || {}
 
-    let commonNameHtmStr = ''
-    let noogarNameStr = ''
-    if ( otherNames.common ) {
-        commonNameHtmStr = 
-        `<div>
-            <div>
-                <span>Common name:</span>   <span>${otherNames.common}:</span> 
-            </div>
-            <div>
-                <span>Noongar name:</span>   <span>${otherNames.noongar}</span> 
-            </div>
-        </div>
-        `
-    }
-    return `
-        <div>
-            ${commonNameHtmStr}
-            ${noogarNameStr}
-        </div>
-    `
+//     if ( Object.keys(otherNames).length === 0 ) {
+//         return ''
+//     }
+
+//     let commonNameHtmStr = ''
+//     let noogarNameStr = ''
+//     if ( otherNames.common ) {
+//         commonNameHtmStr = 
+//         `<div>
+//             <div>
+//                 <span>Common name:</span>   <span>${otherNames.common}:</span> 
+//             </div>
+//             <div>
+//                 <span>Noongar name:</span>   <span>${otherNames.noongar}</span> 
+//             </div>
+//         </div>
+//         `
+//     }
+//     return `
+//         <div>
+//             ${commonNameHtmStr}
+//             ${noogarNameStr}
+//         </div>
+//     `
     
-    Object.keys(otherNames).forEach( key => {
-        console.log(key, otherNames[key])        
-    })
+//     Object.keys(otherNames).forEach( key => {
+//         console.log(key, otherNames[key])        
+//     })
 
-    console.log(otherNames.common)
-    console.log(otherNames.noogar)
+//     console.log(otherNames.common)
+//     console.log(otherNames.noogar)
     
-    console.log(otherNames['common'])
+//     console.log(otherNames['common'])
 
-    return 
+//     return 
     
-}
-function createImagesDiv(flower) {
+// }
+function createImagesDiv(flowerDef) {
+    // const images = flower.images
+    // let imgs = ''
+
+    for ( const flower of flowerDef ) {
     const images = flower.images
     let imgs = ''
     images.forEach( function(image) {
         imgs =  `${imgs}\n<img src="/img/${flower.id}/${image}.jpg"/>`
     })
     return `<div>${imgs}</div>`
+    }
 }  
 
-// const flowerImagesDiv = createImagesDiv(flowerDef)
+ //const flowerImagesDiv = createImagesDiv(flowerDef)
 // const flowerCommonNamesDiv = createCommonNamesDiv(flowerDef)
 
 //console.log(flowerCommonNamesDiv)
@@ -105,32 +102,13 @@ function createImagesDiv(flower) {
 //     console.log(result)
 // }
 
-//createImagesDiv(flowerDef)
-const otherNamesString = createCommonNamesDiv(flowerDef[1])
-console.log(otherNamesString)
+createImagesDiv(flowerDef)
+//const otherNamesString = createCommonNamesDiv(flowerDef[1])
+//console.log(otherNamesString)
 //createCommonNamesDiv(flowerDef)
 
 
-// if ( otherNames.noongar != undefined && otherNames.common != undefined  ) {
-//     return `<div>
-//                 <div>
-//                     <span>Common name:</span>   <span>${otherNames.common}:</span> 
-//                 </div>
-//                 <div>
-//                     <span>Noongar name:</span>   <span>${otherNames.noongar}</span> 
-//                 </div>
-//             <div>
-// `
-// } else if ( otherNames.common != undefined ) {
-//     return `<div>
-//                 <div>
-//                     <span>Common name:</span>   <span>${otherNames.common}:</span> 
-//                 </div>
-//             </div>
-//             ` 
-// } else {
-//     return ''
-// }
+
 
 
 /**

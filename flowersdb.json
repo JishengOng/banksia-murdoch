@@ -31,6 +31,7 @@
         { "left": 315, "top": 263 }
 
       ],
+      "images": ["cone","flower","tree"],
       "types": ["flower", "cone_fruit", "tree_leaf"],
       "floweringPeriod": ["spring", "summer", "winter"],
       "shortDesc": "Named after Edwin Ashby, a South Australian plant collector",
@@ -49,6 +50,7 @@
       "locations": [
         { "left": 226, "top": 188 }
       ],
+      "images": ["cone","flower","tree"],
       "types": ["flower", "cone_fruit", "tree_leaf"],
       "floweringPeriod": ["spring", "summer"],    
       "shortDesc": "This name was chosen to describe the way in which the leaves of this species taper towards the base",
@@ -65,7 +67,8 @@
       }, 
       "locations": [
         { "left": 207, "top": 303 }
-      ],  
+      ],
+      "images": ["cone","flower","tree"],  
       "types": ["flower", "cone_fruit", "tree_leaf"],
       "floweringPeriod": ["summer"],
       "shortDesc": "named after William Baxter, a 19th century English gardener",    
@@ -82,7 +85,8 @@
       },
       "locations": [
         { "left": 173, "top": 289 }
-      ],     
+      ],
+      "images": ["cone","flower","tree"],     
       "types": ["flower", "cone_fruit", "tree_leaf"],
       "floweringPeriod": ["summer"],
       "shortDesc": "named in honour of the 19th C British botanist George Bentham",    
@@ -104,7 +108,8 @@
         { "left": 481, "top": 184 },
         { "left": 511, "top": 340 },
         { "left": 180, "top": 541 }
-      ],     
+      ],
+      "images": ["cone","flower"],     
       "types": ["flower", "cone_fruit"],
       "floweringPeriod": ["summer"],
       "shortDesc": "the name indicates that it has fern-like foliage",    
@@ -121,8 +126,9 @@
       },
       "locations": [
         { "left": 345, "top": 316 }
-      ],            
-      "types": ["flower", "cone_fruit"],
+      ],
+      "images": ["cone","flower","tree"],            
+      "types": ["flower", "cone_fruit","tree_leaf"],
       "floweringPeriod": ["summer"],
       "shortDesc": "named after the Burdett family who were pioneer native plant collectors in SA",    
       "description": "A large shrub with tapered leaves up to 25cm long with many small sharp teeth.", 
@@ -138,8 +144,9 @@
       },
       "locations": [
         { }
-      ],     
-      "types": ["flower", "cone_fruit", "tree_left"],
+      ],
+      "images": ["cone","flower","tree"],     
+      "types": ["flower", "cone_fruit", "tree_leaf"],
       "floweringPeriod": ["autumn", "winter"],
       "shortDesc": "the fruits resemble a ship’s propeller",    
       "description": "A semi-prostrate banksia up to 1 metre high with long, narrow, heavily divided leaves. The leaves are bright green and the mid rib is prominent.",       
@@ -156,8 +163,9 @@
       },
       "locations": [
         { "left": 458, "top": 223 }
-      ],     
-      "types": ["flower", "tree_left"],
+      ],
+      "images": ["cone","flower","tree"],     
+      "types": ["flower","cone_fruit","tree_leaf"],
       "floweringPeriod": ["spring"],
       "shortDesc": "the name means low-growing or prostrate",    
       "description": "This is a prostrate banksia with fern-like foliage. It has long green leaves that are deeply divided to form a fishbone pattern.", 
@@ -174,8 +182,9 @@
       "locations": [
         { "left": 363, "top": 356  }
       ],
-      "types": ["flower"],
-      "floweringPeriod": [],
+      "images": ["cone","flower","tree"],
+      "types": ["flower","cone_fruit","tree_leaf"],
+      "floweringPeriod": ["winter"],
       "shortDesc": "named after Edward John Eyre who made the epic journey on foot from Adelaide to Albany in 1846",    
       "description": "A medium size shrub up to 3 metres high with wedge-shaped green leaves (1-5cm long, 0.5-1.5cm wide)", 
       "flowerDesc": "Cylindrical pale yellow flower spikes (9-17cm tall and up to 6cm in diameter) in winter.",
@@ -190,8 +199,9 @@
         },
         "locations": [
           { "left": 48, "top": 342 }
-        ],     
-        "types": ["flower", "tree_left"],
+        ],
+        "images": ["cone","flower","tree"],     
+        "types": ["flower","cone_fruit", "tree_left"],
         "floweringPeriod": ["winter"],
         "shortDesc": "the name means heath like",    
         "description": "A tall compact shrub up to 7 metres high with small dark green needle-like leaves.", 
@@ -207,7 +217,8 @@
         },
         "locations": [
           { "left": 320, "top": 163 }
-        ],   
+        ],
+        "images": ["cone","flower"],   
         "types": ["flower", "cone_fruit" ],
         "floweringPeriod": ["spring","winter"],
         "shortDesc": "named after Charles Gardner, a former Government botanist of WA",    
@@ -223,8 +234,8 @@
           { "left": 452, "top": 291 },
           { "left": 242, "top": 245 }
         ],
-        "types": ["flower", "cone_fruit"],
-        "images": ["cone", "fruit", "tree"],
+        "images": ["cone","flower"],   
+        "types": ["flower", "cone_fruit" ],
         "floweringPeriod": ["spring, winter"],
         "shortDesc": "named after Charles Gardner, a former Government botanist of WA",    
         "description": "A prostrate form which has three different varieties (var gardneri, var hiemalis, var brevidentata). Variety gardneri has deep green leaves with deep lobes. It flowers in Spring with rusty brown conical spikes. Variety brevidentata has large green leaves with toothed margins. It flowers in winter with rusty brown flower spikes. Variety hiemalis has pale green leaves with deep lobes and pink flower spikes in winter.", 
@@ -240,7 +251,8 @@
         },
         "locations": [
           { "left": 59, "top": 299 }
-        ],     
+        ],
+        "images": ["cone","flower","tree"],      
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Spring"],
         "shortDesc": "name means large or small",    
@@ -257,7 +269,8 @@
         },
         "locations": [
           { "left": 321, "top": 334 }
-        ],     
+        ],
+        "images": ["cone","flower","tree"],      
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Spring"],
         "shortDesc": "named after the 19th century British botanist, Sir James Hooker",    
@@ -271,7 +284,8 @@
         "name": "Banksia Ilicifolia", 
         "otherNames": {
           "common": "Holly-leaf banksia"
-        },     
+        },
+        "images": ["cone","flower","tree"],      
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Autumn"],
         "shortDesc": "The name means holly like foliage",    
@@ -289,7 +303,8 @@
         "locations": [
           { "left": 228, "top": 343 },
           { "left": 477, "top": 148 }
-        ],     
+        ],
+        "images": ["cone","flower","tree"],      
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Autumn","Winter"],
         "shortDesc": "the name refers to the smooth or unbroken leaf margins",    
@@ -307,7 +322,8 @@
         "locations": [
           { "left": 295, "top": 414 },
           { "left": 366, "top": 288 }
-        ],     
+        ],
+        "images": ["cone","flower","tree"],      
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Spring","Summer"],
         "shortDesc": " same as id 17?",    
@@ -321,7 +337,8 @@
         "name": "Banksia leptophylla", 
         "otherNames": {
           "common": "Slender leaf banksia"
-        },     
+        },
+        "images": ["cone","flower","tree"],      
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Summer"],
         "shortDesc": "the name means thin leaf banksia",    
@@ -340,7 +357,8 @@
           { "left": 389, "top": 153 },
           { "left": 396, "top": 257 },
           { "left": 151, "top": 397 }
-        ],      
+        ],
+        "images": ["cone","flower","tree"],       
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Autumn","Winter"],
         "shortDesc": "The word littoralis means close to water",    
@@ -358,7 +376,8 @@
         "locations": [
           { "left": 109, "top": 534 },
           { "left": 104, "top": 327 }
-        ],     
+        ],
+        "images": ["cone","flower","tree"],      
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Summer","Autumn","Winter"],
         "shortDesc": "name means medium-sized",    
@@ -378,7 +397,8 @@
           { "left": 234, "top": 287 },
           { "left": 258, "top": 312 },
           { "left": 204, "top": 538 }
-        ],     
+        ],
+        "images": ["cone","flower","tree"],      
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Autumn","Winter"],
         "shortDesc": "named after Archibald Menzies and 18th century botanist",    
@@ -400,8 +420,9 @@
           { "left": 242, "top": 482 },
           { "left": 212, "top": 512 },
           { "left": 179, "top": 485 }
-        ],     
-        "types": ["flower", "cone_fruit"],
+        ],
+        "images": ["cone","flower","tree"],      
+        "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Spring"],
         "shortDesc": "the name petiolaris refers to the leaf stalk which is quite long",    
         "description": "A prostrate species with spreading horizontal branches underneath the soil surface. The leaves are long and moderately wide with regular teeth. The new growth is soft and brown and hairy.", 
@@ -419,7 +440,7 @@
           { "left": 418, "top": 328 },
           { "left": 137, "top": 342 }
         ],       
-        "types": ["cone_fruit", "tree_leaf"],
+        "types": ["flower","cone_fruit", "tree_leaf"],
         "floweringPeriod": ["Summer"],
         "shortDesc": " ",    
         "description": " ", 
@@ -436,7 +457,8 @@
         "locations": [
           { "left": 285, "top": 354 },
           { "left": 447, "top": 80 }
-        ],     
+        ],
+        "images": ["cone","flower","tree"],      
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Spring","Winter"],
         "shortDesc": "the name means cut off or truncated and refers to the leaves ",    
@@ -453,7 +475,8 @@
         },
         "locations": [
           { "left": 390, "top": 184 }
-        ],     
+        ],
+        "images": ["cone","flower","tree"],      
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Autumn"],
         "shortDesc": "The name refers to the saw-toothed leaves",    
@@ -470,8 +493,9 @@
         },
         "locations": [
           { "left": 286, "top": 246 }
-        ],     
-        "types": ["flower", "cone_fruit","tree_leaf"],
+        ],
+        "images": ["cone","flower"],      
+        "types": ["flower", "cone_fruit"],
         "floweringPeriod": ["Spring"],
         "shortDesc": "the name means creeping banksia",    
         "description": "A prostrate form with branches just below the ground. The leaves are large and have deep irregular lobes. ", 
@@ -487,7 +511,8 @@
         },
         "locations": [
           { "left": 147, "top": 509 }
-        ],     
+        ],
+        "images": ["cone","flower","tree"],      
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Summer"],
         "shortDesc": "the name refers to the sceptre-like flower spikes on long branches ",    
@@ -506,7 +531,8 @@
           { "left": 205, "top": 462 },
           { "left": 416, "top": 85 },
           { "left": 422, "top": 129 }
-        ],      
+        ],
+        "images": ["cone","flower","tree"],       
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Summer","Autumn"],
         "shortDesc": "the name means showy or handsome and refers to the shrub itself",    
@@ -524,7 +550,8 @@
         "locations": [
           { "left": 71, "top": 518 },
           { "left": 152, "top": 365 }
-        ],      
+        ],
+        "images": ["cone","flower","tree"],       
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Summer","Autumn"],
         "shortDesc": "named in honour of Queen Victoria",    

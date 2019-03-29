@@ -142,8 +142,7 @@
       "otherNames": {
         "common": "Propeller Banksia"
       },
-      "locations": [
-        { }
+      "locations": [        
       ],
       "images": ["cone","flower","tree"],     
       "types": ["flower", "cone_fruit", "tree_leaf"],
@@ -228,6 +227,7 @@
     },
     {
         "id": "g_hiemalis",
+        "as": "gardneri",
         "index": 13,
         "name": "G Hiemalis",
         "locations": [
@@ -285,6 +285,7 @@
         "otherNames": {
           "common": "Holly-leaf banksia"
         },
+        "locations": [],
         "images": ["cone","flower","tree"],      
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Autumn"],
@@ -338,6 +339,7 @@
         "otherNames": {
           "common": "Slender leaf banksia"
         },
+        "locations": [],
         "images": ["cone","flower","tree"],      
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Summer"],
@@ -347,7 +349,7 @@
         "habitat": "Banksia leptophylla is a native of WA which grows on the coastal sandplain from the Moore River to Kalbarri."   
     },
     {
-        "id": "Banksia littoralis",
+        "id": "littoralis",
         "index": 20,
         "name": "Banksia littoralis", 
         "otherNames": {

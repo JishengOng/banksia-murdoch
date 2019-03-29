@@ -92,6 +92,7 @@ function createFruitDescHtml(flower) {
 
 function addFlowersToSection(flowersArr, type, season) {
   
+  const renderedFlowers = []
   for ( const flower of flowersArr ) {
 
     if ( 
@@ -100,17 +101,26 @@ function addFlowersToSection(flowersArr, type, season) {
       || ( type === undefined && season !== undefined && flower.floweringPeriod.includes(season) )
       || ( flower.types.includes(type) && flower.floweringPeriod.includes(season) )
     ) {
-    
+
+      let imgPreviewPath = `/img/flowers/${flower.id}/preview.jpg`
+      if ( Boolean(flower.as) ) {
+        imgPreviewPath = `/img/flowers/${flower.as}/preview.jpg`
+      }
+
       const flowerEl = document.createElement('div')
-      flowerEl.addEventListener('click',function() {
-
-
+      flowerEl.classList.add('flower')       
+      flowerEl.innerHTML = `
+        <div>${flower.name}</div>
+        <div style="position: relative;" data-desc="image-container">
+          <img src="${imgPreviewPath}"/>
+          <div class="flower_icon_cont"/>            
+        </div>
+      `
+      flowerEl.addEventListener('click', function() {
         const modalTitleEl = document.getElementById('flower_title')
         modalTitleEl.innerHTML = flower.name
 
         const modalBodyEl = document.getElementById('flower_body')
-        
-        
         modalBodyEl.innerHTML = `
           <div>
             ${ createNames(flower) }
@@ -122,34 +132,20 @@ function addFlowersToSection(flowersArr, type, season) {
             ${ createImagesDiv(flower) } 
           </div>
         `
-
         $('#flower_details').modal({ show: true })
       })
-      //idIcon to put the ID visible 
-      const idIcon = document.createElement('img')
-      idIcon.src = '/img/idIcon.png'
-
-      const iconContainer = document.createElement('div')
-      iconContainer.classList.add('icon')
-      iconContainer.style.width = '30px'
-      iconContainer.style.height = '30px'
-      iconContainer.style.top = 0
-      iconContainer.appendChild(idIcon)
-      
-      flowerEl.innerHTML = flower.name;    
-      flowerEl.classList.add('flower')    
-      
-      // /img/flowers/id/preview.jpg
-      const previewImgUrl = '/img/flowers/' + flower.id + '/preview.jpg'
-      const flowerImg = document.createElement('img')
-      flowerImg.src = previewImgUrl
-      flowerEl.appendChild(iconContainer)
-      flowerEl.appendChild(flowerImg)
-      
 
       flowersContainers.appendChild(flowerEl)
+      renderedFlowers.push(flowerEl)
     }
   }  
+  setTimeout(function() {   
+    renderedFlowers.forEach( el => {
+      el.classList.add('flower_visible')
+    })
+  }, 100)
+  
+  
 }
 
 

@@ -18,6 +18,14 @@
   text-align: right;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   width: 240px; 
+  opacity: 0;
+  /* visibility: hidden; */
+  transition: all 0.8s ease-in-out;
+}
+
+.flower_visible {
+  /* visibility: visible !important; */
+  opacity: 1 !important;
 }
 
 .flower_type {
@@ -47,12 +55,20 @@
   text-align: center;
 }
 
-.icon {
-  top: 0%;
-  
-}
 
 #flower_body {
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
 }
+
+.flower_icon_cont {
+  top: 0px;
+  left: 0px;
+  background: url('/img/idicon.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+

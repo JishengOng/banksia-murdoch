@@ -1,6 +1,34 @@
 
+#walkthrough_section {
+    background: #FFF;
+}
 #walkthrough_map {
     width: 640px;
     height: 575px;
     position: relative;
+}
+
+
+.walkthrough_filter_id {
+    padding: 10px 12px;
+    cursor: pointer;
+    color: #666;
+    display: flex;
+}
+.walkthrough_filter_id:hover {
+    background: pink;
+    color: #FFF;
+}
+
+.walkthrough_filter_selected {
+    color: pink;
+    font-weight: bold;
+}
+
+.walkthrough_filter_img {
+    visibility: hidden;
+}
+
+.walkthrough_filter_selected > .walkthrough_filter_img {
+    visibility: visible !important;
 }

@@ -69,14 +69,14 @@ function createCommonNamesDiv(flower) {
         </div>
     `
     
-    // Object.keys(otherNames).forEach( key => {
-    //     console.log(key, otherNames[key])        
-    // })
+    Object.keys(otherNames).forEach( key => {
+        console.log(key, otherNames[key])        
+    })
 
-    //console.log(otherNames.common)
-    //console.log(otherNames.noogar)
+    console.log(otherNames.common)
+    console.log(otherNames.noogar)
     
-    //console.log(otherNames['common'])
+    console.log(otherNames['common'])
 
     return 
     

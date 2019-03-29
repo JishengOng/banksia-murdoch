@@ -52,17 +52,43 @@ function createNames(flower) {
 }
 
 function createFlowerDescHtml(flower) {
-  if ( flower.flowerDesc ) {
+  const flowerDesc = flower.flowerDesc
+
+  // if ( Object.keys(flowerDesc).length === 0 ) {
+  //   return ''
+  // }
+  if ( flowerDesc ) {
     return `
       <div>
-        <div>Flower Desc</div>
+        <div>Flower Desc: </div>
         <p>
-          ${ flower.flowerDesc }
+          ${ flowerDesc }
         </p>
       </div>
     `
+  } else {
+    return '';
   }
-  return '';
+}
+
+function createFruitDescHtml(flower) {
+  const fruitDesc = flower.fruitDesc
+
+  // if ( Object.keys(flowerDesc).length === 0 ) {
+  //   return ''
+  // }
+  if ( fruitDesc ) {
+    return `
+      <div>
+        <div>Fruit Desc: </div>
+        <p>
+          ${ fruitDesc }
+        </p>
+      </div>
+    `
+  } else {
+    return '';
+  }
 }
 
 function addFlowersToSection(flowersArr, type, season) {
@@ -91,6 +117,8 @@ function addFlowersToSection(flowersArr, type, season) {
             ${ createCommonNamesDiv(flower) }
             <div>Description: ${flower.description}</div>
             <div>Habitat: ${flower.habitat}</div>
+            ${ createFlowerDescHtml(flower) }
+            ${ createFruitDescHtml(flower) }
           </div>
         `
 

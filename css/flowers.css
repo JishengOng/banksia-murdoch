@@ -13,11 +13,12 @@
 .flower {
   padding: 4px;
   margin: 12px;
+  cursor: pointer;
   text-transform: uppercase;
-  font-size: 0.86em;
+  font-size: 0.80em;
   text-align: right;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  width: 240px; 
+  width: 200px; 
   opacity: 0;
   /* visibility: hidden; */
   transition: all 0.8s ease-in-out;
@@ -30,23 +31,36 @@
 
 .flower_type {
   cursor: pointer;
+  color: black;
+  /* border-bottom: 0.5px;  */
+}
+.flower_type:hover {
+  color: palevioletred;
 }
 
 .flower_season {
   cursor: pointer;
+  color: black;
 }
+.flower_season:hover {
+  color: palevioletred;
+}
+
 #flowers_filter {
-  background: #232323;
+  text-align: center;
   border: 2px solid red;
   justify-content: left;
   margin-top: 30px;
   box-shadow: 
 		0px 0px 0px 1px #aaa, 
 		1px 0px 0px 0px rgba(255,255,255,0.9) inset, 
-		0px 1px 2px rgba(0,0,0,0.2);
+    0px 1px 2px rgba(0,0,0,0.2);
+  
 }
 .filter_attr{
-  color: #fff;
+  color: black;
+  font-size: 30px;
+  text-align: center;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif
 }

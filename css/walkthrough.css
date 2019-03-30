@@ -3,9 +3,11 @@
     background: #FFF;
 }
 #walkthrough_map {
-    width: 640px;
-    height: 575px;
+    width: 660px;
+    height: 600px;
     position: relative;
+    margin: 10%;
+
 }
 
 
@@ -16,7 +18,7 @@
     display: flex;
 }
 .walkthrough_filter_id:hover {
-    background: pink;
+    background: grey;
     color: #FFF;
 }
 

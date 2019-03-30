@@ -221,17 +221,17 @@
           <div class='col-md-2' id='flowers_filter'>
             <div>
               <div>
-                <div class='filter_attr'>Type</div>
-                <div data-flowertype="flower" class='flower_type'><button>Flower</button></div>
-                <div data-flowertype="cone_fruit" class='flower_type'><button>Cone/Fruit</button></div>
-                <div data-flowertype="tree_leaf" class='flower_type'><button>Tree/Leaf</button></div>
+                <div class='filter_attr'>Types</div>
+                <div data-flowertype="flower" class='flower_type'><div>Flower</div></div>
+                <div data-flowertype="cone_fruit" class='flower_type'><div>Cone/Fruit</div></div>
+                <div data-flowertype="tree_leaf" class='flower_type'><div>Tree/Leaf</div></div>
               </div>
               <div>
                 <div class='filter_attr'>Seasons</div>
-                <div data-flowerseason='summer' class='flower_season'><button>Summer</button></div>
-                <div data-flowerseason='spring' class='flower_season'><button>Spring</button></div>
-                <div data-flowerseason='autumn' class='flower_season'><button>Autum</button></div>
-                <div data-flowerseason='winter' class='flower_season'><button>Winter</button></div>
+                <div data-flowerseason='summer' class='flower_season'><div>Summer</div></div>
+                <div data-flowerseason='spring' class='flower_season'><div>Spring</div></div>
+                <div data-flowerseason='autumn' class='flower_season'><div>Autum</div></div>
+                <div data-flowerseason='winter' class='flower_season'><div>Winter</div></div>
               </div>
             </div>
         </div>
@@ -245,13 +245,14 @@
       <div id='walkthrough_filter'>        
       </div>
       <div id='walkthrough_map'>
-        <div style='background: green; width: 640px; height: 575px;'/>
-        
+        <img src="/img/map_base.jpg">
       </div>
     </div>
     
   </section>
-  <section id='news_section'></section>
+  <section id='news_section'>
+    <div></div>
+  </section>
   <section id='visitors_info_section'></section>
   <section id='about_us_section'></section>
 
@@ -266,19 +267,7 @@
           Rebelle Glens 188 Normandy France
         </address>
         <a href="#" class="contacts__link">Phone: 1-268-869-8551</a>
-        <form action="#" class="contacts__form">
-          <label for="email">Your Email:</label>
-          <input
-            type="email"
-            id="email"
-            placeholder="youremail@email.com"
-            class="contacts__input"
-          />
-          <input
-            type="submit"
-            class="contacts__input contacts__input--submit"
-          />
-        </form>
+        
       </div>
       <div class="contacts__box">
         <ul> <i><b><u>Site Map</u></b></i>
@@ -356,14 +345,14 @@
         <li class="NavigationTab"><a href="#VisitorInfo"><p>Visitor Info</p></a></li>  
         <li class="NavigationTab"><a href="#AboutUs"><p>About Us</p></a></li>
       </ul> <!-- Navigation Bar Menu Tabs END -->         
-      <p> <!-- Enlarge Text and Play Background Music Button Section START-->          
-        <!--  Enlarge Text Button START -->
-        <button type="button" class="btn btn-primary btn-lg btn3d">
+      <p> <!-- Enlarge Text and Play Background Music</div>Section START-->          
+        <!--  Enlarge Text</div>START -->
+        </div>type=</div> class="btn btn-primary btn-lg btn3d">
           <span class="glyphicon glyphicon-text-size"></span>
-        </button>                  
-        <button id = "musica" type="button" class="btn btn-danger btn-lg btn3d" onclick="javascript:toggleSound();">
+        </div>                  
+        </div>id = "musica" type=</div> class="btn btn-danger btn-lg btn3d" onclick="javascript:toggleSound();">
           <span class="glyphicon glyphicon-music"></span>
-        </button>        
+        </div>        
         <audio id="testAudio" src="ChillMill2.mpeg" loop="true" type="audio/mpeg" style="display:none"  autoplay loop></audio>           
       </p>
 
@@ -376,7 +365,7 @@
       <div class="line_three"></div>
     </div> <!-- Hamburger Menu 3 lines END -->
     
-  </div> <!-- Navigation Button END -->
+  </div> <!-- Navigation</div>END -->
   <div id='flower_details' class='modal fade in' role='dialog'>
     <div class='modal-dialog'>
       <div class='modal-content'>
@@ -394,9 +383,10 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>  
   <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
   
-  <script  src="js/index.js"></script>
-  <script  src="js/flowers.js"></script>
-  <script  src="js/walkthrough.js"></script>
+  <script  src="/js/index.js"></script>
+  <script  src="/js/flowers.js"></script>
+  <script  src="/js/walkthrough.js"></script>
+  <script src="/js/newsandevents.js"></script>
 
 
 </body>
@@ -410,32 +400,31 @@
 <script>
 if ('querySelector' in document && 
 'addEventListener' in window) {
-var toggleButtons = document.querySelectorAll('.toggle-content');
+var toggl</div> = document.querySelectorAll('.toggle-content');
 var fullTextWrappers = document.querySelectorAll('.fulltext');
 var fullText;
-var toggleButtonText;
+var toggl</div>ext;
 
 [].forEach.call(fullTextWrappers, function(fullTextWrapper) {
   // hide all full text on load
   fullTextWrapper.setAttribute('hidden', true);
 });
-[].forEach.call(toggleButtons, function(toggleButton) {
-  // show toggle more buttons
-  toggleButton.removeAttribute('hidden');
-  // add listener for each button
-  toggleButton.addEventListener('click', function () {
+[].forEach.call(toggl</div>, function(toggl</div> {
+  // show toggle more</div>
+  toggl</div>removeAttribute('hidden');
+  // add listener for each</div>  toggl</div>addEventListener('click', function () {
     fullTextWrapper = this.parentElement.querySelector('.fulltext');
-    toggleButtonText = this.querySelector('.text');
+    toggl</div>ext = this.querySelector('.text');
     // change attributes and text if full text is shown/hidden
     console.log(fullTextWrapper.hasAttribute('hidden'));
     if (!fullTextWrapper.hasAttribute('hidden')) {
-      toggleButtonText.innerText = 'Show More';
+      toggl</div>ext.innerText = 'Show More';
       fullTextWrapper.setAttribute('hidden', true);
-      toggleButton.setAttribute('aria-expanded', false);
+      toggl</div>setAttribute('aria-expanded', false);
     } else {
-      toggleButtonText.innerText ='Show Less';
+      toggl</div>ext.innerText ='Show Less';
       fullTextWrapper.removeAttribute('hidden');
-      toggleButton.setAttribute('aria-expanded', true);
+      toggl</div>setAttribute('aria-expanded', true);
     }
   });
 });

@@ -139,11 +139,16 @@ function addFlowersToSection(flowersArr, type, season) {
       renderedFlowers.push(flowerEl)
     }
   }  
-  setTimeout(function() {   
-    renderedFlowers.forEach( el => {
-      el.classList.add('flower_visible')
+    
+  renderedFlowers.forEach( el => {
+    window.requestAnimationFrame( () => {
+      setTimeout( function() {
+        el.classList.add('flower_visible')
+      }, Math.floor(Math.random() * 600))
     })
-  }, 100)
+    
+  })
+
   
   
 }

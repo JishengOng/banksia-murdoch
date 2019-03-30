@@ -9,7 +9,7 @@
       "locations": [
       ],
       "types": ["flower", "cone_fruit", "tree_leaf"],
-      "images":["cone","fruit","tree"],
+      "images":["cone","flower","tree"],
       "floweringPeriod": ["autumn", "winter"],
       "shortDesc": "The name means to emulate as this species is very similar to Banksia serrata",    
       "description": "A small, spreading tree with dark grey, rough bark. The leaves are obovate with evenly serrated margins and green on both sides. The upper surface is glossy green and the underside is pale green and glabrous. The new leaves are rusty brown.",
@@ -200,7 +200,7 @@
           { "left": 48, "top": 342 }
         ],
         "images": ["cone","flower","tree"],     
-        "types": ["flower","cone_fruit", "tree_left"],
+        "types": ["flower","cone_fruit", "tree_leaf"],
         "floweringPeriod": ["winter"],
         "shortDesc": "the name means heath like",    
         "description": "A tall compact shrub up to 7 metres high with small dark green needle-like leaves.", 

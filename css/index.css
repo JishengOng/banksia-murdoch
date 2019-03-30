@@ -310,6 +310,18 @@ body {
   color: white;
 }
 
+
+.onandoff {
+  display: inline-block;
+	position: absolute;
+  z-index: 100;
+  bottom: 1%;
+  left: 85%;
+  color: white;
+  position: fixed;
+  
+}
+
 .bounce {
   -moz-animation: bounce 3s infinite;
   -webkit-animation: bounce 3s infinite;

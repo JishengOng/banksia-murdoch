@@ -1,100 +1,161 @@
-const FLOWERSMAP = {}
+
+  const BASE_MAP_WIDTH = 660
+  const BASE_MAP_HEIGHT = 594
+
+  function getParentWithFlowerId(element) {
+      let possibleFlowerIdEl = element     
+      while ( possibleFlowerIdEl ) {
+          const flowerId = possibleFlowerIdEl.getAttribute('data-id')
+          if ( Boolean(flowerId) ) {            
+              return possibleFlowerIdEl
+          }         
+          possibleFlowerIdEl = possibleFlowerIdEl.parentElement
+      }
+  }
+  function drawLocationsOnMap(id) {
     
+    const flower = FLOWERS_MAP[id]
+    // get current width height of image
+    const imageEl = document.getElementById('walkthough_img')
+    const currentWidth = imageEl.clientWidth
+    const currentHeight = imageEl.clientHeight
 
-function removeCoordinates(flowerId) {
-    const markerClassName = `.${flowerId}-marker__`
-    const mapEl = document.getElementById('walkthrough_map')
-
-    const markerElements = document.querySelectorAll(markerClassName)
-
-    markerElements.forEach( function(markerEl) {
-        mapEl.removeChild(markerEl)
+    const resizedPositions = flower.locations.map(function(loc) {
+      return {        
+        left: loc.left/(BASE_MAP_WIDTH/currentWidth),
+        top: loc.top / ( BASE_MAP_HEIGHT/currentHeight)
+      }
     })
-}
 
-function addCoordinates(flowerId) {
-    const flower = FLOWERSMAP[flowerId]
-    const locations = flower.locations
     const mapEl = document.getElementById('walkthrough_map')
     
-    locations.forEach( location => { // left and top
-        const markerLocationEl = document.createElement('div')
-        markerLocationEl.classList.add(`${flower.id}-marker__`)
-
-        markerLocationEl.style.position = 'absolute';
-        markerLocationEl.style.top = `${location.top}px`;
-        markerLocationEl.style.left = `${location.left}px`;
-        markerLocationEl.innerHTML = `
-            <img src='/img/marker.png' />
-        `
-        mapEl.appendChild(markerLocationEl)
+    resizedPositions.forEach( location => { // left and top
+      const markerLocationEl = document.createElement('div')
+      markerLocationEl.classList.add(`${flower.id}-marker__`)
+      markerLocationEl.setAttribute('data-toggle','tooltip')
+      markerLocationEl.setAttribute('title',flower.name)
+      markerLocationEl.style.position = 'absolute';
+      markerLocationEl.style.top = `${location.top}px`;
+      markerLocationEl.style.left = `${location.left}px`;
+      markerLocationEl.innerHTML = `
+          <img src='/img/marker.png' />
+      `
+      mapEl.appendChild(markerLocationEl)
+      
     })
-}
+  }
+  function removeCoordinates(id) {
+      const markerClassName = `.${id}-marker__`
+      const mapEl = document.getElementById('walkthrough_map')
+      
+      const markerElements = document.querySelectorAll(markerClassName)
+
+      markerElements.forEach( function(markerEl) {
+          mapEl.removeChild(markerEl)
+      })
+  }
 
 
-function getParentWithFlowerId(element) {
-    let possibleFlowerIdEl = element
-    console.log('searching for parent start ', element)
-    while ( possibleFlowerIdEl ) {
-        const flowerId = possibleFlowerIdEl.getAttribute('data-id')
-        if ( Boolean(flowerId) ) {            
-            return possibleFlowerIdEl
-        }         
-        possibleFlowerIdEl = possibleFlowerIdEl.parentElement
-    }
-}
-
-function convertResponseToJson(response) {
-    return response.json()
-}
-
-//
-function drawLocationsOnMap(event) {
+  function handleFlowerClick(event) {
     const targetEl = getParentWithFlowerId(event.target)
-
-    const flowerId = targetEl.getAttribute('data-id')
+    const id = targetEl.getAttribute('data-id')
     if ( targetEl.classList.contains('walkthrough_filter_selected') ) {
-        // remove, being unselected
-        targetEl.classList.remove('walkthrough_filter_selected')        
-        // remove coordinates
-        removeCoordinates(flowerId)
+          // remove, being unselected
+          targetEl.classList.remove('walkthrough_filter_selected')        
+          // remove coordinates
+          removeCoordinates(id)
     } else {
-        targetEl.classList.add('walkthrough_filter_selected')
-        // add coordinates
-        addCoordinates(flowerId)
+      targetEl.classList.add('walkthrough_filter_selected')
+          // add coordinates
+      drawLocationsOnMap(id)
     }
-}
+  }
 
-function renderWalkthroughInterface(flowers) {    
-    const flowersFilterEl = document.getElementById('walkthrough_filter')
+  function renderFlowersDropdown() {
+      const flowersFilterEl = document.getElementById('walkthrough_filter')
+      
+      FLOWERS.forEach(function(flower) {
+          if ( flower.locations && flower.locations.length > 0 ) {
 
-    flowers.forEach(function(flower) {
-        if ( flower.locations && flower.locations.length > 0 ) {
-            FLOWERSMAP[flower.id] = flower
+              const filterEl = document.createElement('div')              
+              filterEl.setAttribute('data-id', flower.id)              
+              filterEl.classList.add('walkthrough_flower')
+              const flowerName = flower.id.charAt(0).toUpperCase() + flower.id.substring(1)
+              // filterEl.innerHTML = flower.name
+              filterEl.innerHTML = `            
+                  <div class='walkthrough_filter_img'><img src="/img/marker.png"/></div>
+                  <div>${flowerName}</div>        
+              `
+              
+              filterEl.addEventListener('click', handleFlowerClick)
 
-            const filterEl = document.createElement('div')
-            filterEl.setAttribute('data-id', flower.id)
-            filterEl.classList.add('walkthrough_filter_id')
-            
-            // filterEl.innerHTML = flower.name
-            filterEl.innerHTML = `            
-                <div class='walkthrough_filter_img'><img src="/img/marker.png"/></div>
-                <div>${flower.name}</div>        
-            `
-            
-            filterEl.addEventListener('click', drawLocationsOnMap)
+              flowersFilterEl.appendChild(filterEl);
+          }    
+      })
+  }
 
-            flowersFilterEl.appendChild(filterEl);
-        }    
-    })
 
-}
+  // function addCoordinates(flowerId) {
+  //     const flower = FLOWERSMAP[flowerId]
+  //     const locations = flower.locations
+  //     const mapEl = document.getElementById('walkthrough_map')
+      
+  //     locations.forEach( location => { // left and top
+  //         const markerLocationEl = document.createElement('div')
+  //         markerLocationEl.classList.add(`${flower.id}-marker__`)
 
-function getFlowers() {
+  //         markerLocationEl.style.position = 'absolute';
+  //         markerLocationEl.style.top = `${location.top}px`;
+  //         markerLocationEl.style.left = `${location.left}px`;
+  //         markerLocationEl.innerHTML = `
+  //             <img src='/img/marker.png' />
+  //         `
+  //         mapEl.appendChild(markerLocationEl)
+  //     })
+  // }
 
-    fetch('/flowersdb.json')
-        .then( convertResponseToJson)
-        .then(renderWalkthroughInterface)
-}
+  // function getParentWithFlowerId(element) {
+  //     let possibleFlowerIdEl = element     
+  //     while ( possibleFlowerIdEl ) {
+  //         const flowerId = possibleFlowerIdEl.getAttribute('data-id')
+  //         if ( Boolean(flowerId) ) {            
+  //             return possibleFlowerIdEl
+  //         }         
+  //         possibleFlowerIdEl = possibleFlowerIdEl.parentElement
+  //     }
+  // }
 
-getFlowers()
+  // function convertResponseToJson(response) {
+  //     return response.json()
+  // }
+
+  // //
+  // function drawLocationsOnMap(event) {
+  //     const targetEl = getParentWithFlowerId(event.target)
+
+  //     const flowerId = targetEl.getAttribute('data-id')
+  //     if ( targetEl.classList.contains('walkthrough_filter_selected') ) {
+  //         // remove, being unselected
+  //         targetEl.classList.remove('walkthrough_filter_selected')        
+  //         // remove coordinates
+  //         removeCoordinates(flowerId)
+  //     } else {
+  //         targetEl.classList.add('walkthrough_filter_selected')
+  //         // add coordinates
+  //         addCoordinates(flowerId)
+  //     }
+  // }
+
+  function renderWalkthroughInterface(flowers) {    
+    FLOWERS = flowers;
+    renderFlowersDropdown()
+  }
+
+  function getFlowers() {
+
+      fetch('/flowersdb.json')
+          .then( convertResponseToJson)
+          .then(renderWalkthroughInterface)
+  }
+
+  getFlowers()

@@ -3,32 +3,31 @@
     background: #FFF;
 }
 #walkthrough_map {
-    width: 640px;
-    height: 575px;
-    position: relative;
+  max-width: 660px;    
+  position: relative;
 }
 
-
-.walkthrough_filter_id {
-    padding: 10px 12px;
-    cursor: pointer;
-    color: #666;
-    display: flex;
-}
-.walkthrough_filter_id:hover {
-    background: pink;
-    color: #FFF;
+#walkthrough_filter {
+  display: flex;  
+  flex-wrap: wrap;  
+  padding-top: 40px;
+  justify-content: center;
 }
 
-.walkthrough_filter_selected {
-    color: pink;
-    font-weight: bold;
+.walkthrough_flower {
+  width: 140px;  
+  padding: 8px 12px;
+  font-size: 0.82em;
+  display: flex;
+  justify-content: left;
+  align-items: center;  
+  cursor: pointer;
 }
-
 .walkthrough_filter_img {
-    visibility: hidden;
+  margin-right: 6px;
+  visibility: hidden;
 }
 
 .walkthrough_filter_selected > .walkthrough_filter_img {
-    visibility: visible !important;
+  visibility: visible !important;
 }

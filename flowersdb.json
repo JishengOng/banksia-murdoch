@@ -9,7 +9,7 @@
       "locations": [
       ],
       "types": ["flower", "cone_fruit", "tree_leaf"],
-      "images":["cone","fruit","tree"],
+      "images":["cone","flower","tree"],
       "floweringPeriod": ["autumn", "winter"],
       "shortDesc": "The name means to emulate as this species is very similar to Banksia serrata",    
       "description": "A small, spreading tree with dark grey, rough bark. The leaves are obovate with evenly serrated margins and green on both sides. The upper surface is glossy green and the underside is pale green and glabrous. The new leaves are rusty brown.",
@@ -200,7 +200,7 @@
           { "left": 48, "top": 342 }
         ],
         "images": ["cone","flower","tree"],     
-        "types": ["flower","cone_fruit", "tree_left"],
+        "types": ["flower","cone_fruit", "tree_leaf"],
         "floweringPeriod": ["winter"],
         "shortDesc": "the name means heath like",    
         "description": "A tall compact shrub up to 7 metres high with small dark green needle-like leaves.", 
@@ -236,7 +236,7 @@
         ],
         "images": ["cone","flower"],   
         "types": ["flower", "cone_fruit" ],
-        "floweringPeriod": ["spring, winter"],
+        "floweringPeriod": ["spring", "winter"],
         "shortDesc": "named after Charles Gardner, a former Government botanist of WA",    
         "description": "A prostrate form which has three different varieties (var gardneri, var hiemalis, var brevidentata). Variety gardneri has deep green leaves with deep lobes. It flowers in Spring with rusty brown conical spikes. Variety brevidentata has large green leaves with toothed margins. It flowers in winter with rusty brown flower spikes. Variety hiemalis has pale green leaves with deep lobes and pink flower spikes in winter.", 
         "flowerDesc": "It has orange-brown and cream flower spikes that appear in late spring (October – December)",

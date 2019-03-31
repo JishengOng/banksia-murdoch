@@ -23,12 +23,11 @@
 
 // Scroll button for Homepage
 $(function() {
-  $('a[href*=#]').on('click', function(e) {
+  $('a[href*=\\#]').on('click', function(e) {
     e.preventDefault();
     $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
   });
 });
-
 
 
 
@@ -92,6 +91,7 @@ bgm.onpause = function() {
 };
 
 */
+<<<<<<< HEAD
 
 /* Slides for the Homepage */
 var slideshowDuration = 4000;
@@ -327,6 +327,11 @@ slideshow.data('timeout',timeout);
 if($('.main-content .slideshow').length > 1) {
   $(window).on('scroll',homeSlideshowParallax);
 }
+=======
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+>>>>>>> refactor
 
 
 // Select navigation button
@@ -372,48 +377,6 @@ function showDropdown(e) {
   }
 }
 
-// Select slideshow elements
-const slides = document.getElementsByClassName("header__back");
-
-// Select slideshow arrows
-const handleLeft = document.querySelector(".arrow-left");
-const handleRight = document.querySelector(".arrow-right");
-// Set initial slide index
-let slideIndex = 1;
-
-// Add 1 or subtract 1 if right or left arrow are clicked
-handleLeft.addEventListener("click", () => {
-  plusSlide(-1);
-});
-handleRight.addEventListener("click", () => {
-  plusSlide(+1);
-});
-
-// Call first slide
-slideImg(slideIndex);
-
-// Add or subtract 1 to the slideshowIndex
-function plusSlide(num) {
-  console.log("click");
-  slideImg((slideIndex += num));
-}
-
-//Slide the images
-function slideImg(n) {
-  console.log(n);
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  console.log(slideIndex);
-  slides[slideIndex - 1].style.display = "flex";
-}
 
 // Select all links in navigation menu
 const navigationLink = document.querySelectorAll(".navigation__link");
@@ -478,58 +441,6 @@ function closeMenu() {
 // ENLARGE TEXT BOIIII END --------------------------------------------------------------------
 
 
-
-
-
-
-
-
- 
-// CODE FOR FLOWERS FILTERING TABLE START---------------
-
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-
-// CODE FOR FLOWERS FILTERING TABLE END--------------
-
-
-
-
-
-// CODE FOR WHERE MURDOCH BANKSIA GARDEN IS AT START--------------------------------------
-
-// jQuery v3.3.1 is supported
-// const marker = document.getElementById('marker');
-// const card = document.getElementById('card');
-
-// marker.addEventListener('click', function() {
-// 	marker.classList.add('inactive');
-// 	card.classList.add('active');
-// })
-
-// card.addEventListener('click', function() {
-// 	marker.classList.remove('inactive');
-// 	card.classList.remove('active');
-// })
-
-
-// CODE FOR WHERE MURDOCH BANKSIA GARDEN IS AT END--------------------------------------
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})

@@ -312,7 +312,7 @@ body {
 
 
 .onandoff {
-  display: inline;
+  display: inline-block;
 	position: absolute;
   z-index: 100;
   bottom: 1%;

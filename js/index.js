@@ -353,7 +353,7 @@ console.log(typeof dropBtn);
 
 // Set click event listener on each dropdown button
 dropBtn.forEach(v => {
-  v.addEventListener("click", showDropdown);git config —global user.name “jishengong”;
+  v.addEventListener("click", showDropdown);
 });
 
 // Toggle dropdown items

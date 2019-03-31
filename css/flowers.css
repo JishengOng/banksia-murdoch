@@ -138,3 +138,19 @@
   display: flex;
   justify-content: flex-end;
 }
+
+
+.modal_flower_img_cont {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: center; 
+  align-items: center; 
+  width: 100%; 
+  height: 100%;
+}
+
+.modal_flower_img_cont {
+  width: 100%;
+  height: auto;
+  padding: 6px;
+}

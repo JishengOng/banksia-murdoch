@@ -244,6 +244,7 @@ function slideshowSwitch(slideshow,index,auto){
   }
 }
 
+
 function slideshowNext(slideshow,previous,auto){
   var slides=slideshow.find('.slide');
   var activeSlide=slides.filter('.is-active');
@@ -273,6 +274,18 @@ function homeSlideshowParallax(){
     transform:'translateY('+newTop+'px)',height:newHeight
   });
 }
+
+
+const textButton = document.getElementById("onoffbutton");
+
+textButton.addEventListener('click', function() {
+  if(textButton === undefined) {
+    textButton.unbind('click')
+    console.log('undefined')
+  } else {
+    console.log('hovering')
+  }
+})
 
 $(document).ready(function() {
  $('.slide').addClass('is-loaded');
@@ -340,7 +353,7 @@ console.log(typeof dropBtn);
 
 // Set click event listener on each dropdown button
 dropBtn.forEach(v => {
-  v.addEventListener("click", showDropdown);
+  v.addEventListener("click", showDropdown);git config —global user.name “jishengong”;
 });
 
 // Toggle dropdown items

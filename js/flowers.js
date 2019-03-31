@@ -106,11 +106,29 @@ function createImagesDiv(flower) {
   let imgs = ''
 
   images.forEach( function(image) {
-      imgs =  `${imgs}\n<img src="/img//flowers/${flower.id}/${image}.jpg"/>`
+      imgs =  `${imgs}\n<img class="modal_flower_img_cont" src="/img//flowers/${flower.id}/${image}.jpg"/>`
   })
-  return `<div style="width: 550px; height 600px;">${imgs}</div>`
+  return `<div >${imgs}</div>`
 } 
 
+function showModal(flower) {
+  const modalTitleEl = document.getElementById('flower_title')
+  modalTitleEl.innerHTML = flower.name
+
+  const modalBodyEl = document.getElementById('flower_body')
+  modalBodyEl.innerHTML = `
+    <div>
+      ${ createNames(flower) }
+      ${ createCommonNamesDiv(flower) }
+      <div><b>Description:</b> ${flower.description}</div>
+      <div><b>Habitat:</b> ${flower.habitat}</div>
+      ${ createFlowerDescHtml(flower) }
+      ${ createFruitDescHtml(flower) }
+      <div class="modal_flower_img_cont">${ createImagesDiv(flower) }</div>
+    </div>
+  `
+  $('#flower_details').modal({ show: true })
+}
 function createCommonNamesDiv(flower) {
   const otherNames = flower.otherNames || {}
 
@@ -233,22 +251,7 @@ function renderFlowers() {
         </div>
       `
       flowerEl.addEventListener('click', function() {
-        const modalTitleEl = document.getElementById('flower_title')
-        modalTitleEl.innerHTML = flower.name
-
-        const modalBodyEl = document.getElementById('flower_body')
-        modalBodyEl.innerHTML = `
-          <div>
-            ${ createNames(flower) }
-            ${ createCommonNamesDiv(flower) }
-            <div><b>Description:</b> ${flower.description}</div>
-            <div><b>Habitat:</b> ${flower.habitat}</div>
-            ${ createFlowerDescHtml(flower) }
-            ${ createFruitDescHtml(flower) }
-            ${ createImagesDiv(flower) } 
-          </div>
-        `
-        $('#flower_details').modal({ show: true })
+        showModal(flower)
       })
 
       flowersContainers.appendChild(flowerEl)
@@ -332,5 +335,26 @@ document.querySelectorAll('.flower_season')
             renderFlowers()
           })
 })
+
+function showModalForId(id) {
+  const flower = FLOWERS_MAP[id]    
+  showModal(flower)
+}
+
+// listen to learn more click 
+document.getElementById('slide_show_learn_more1').addEventListener('click', function() {  
+  showModalForId('menziesii')
+})
+
+document.getElementById('slide_show_learn_more2').addEventListener('click', function() {
+  showModalForId('victoriae')
+})
+document.getElementById('slide_show_learn_more3').addEventListener('click', function() {
+  showModalForId('repens')
+})
+document.getElementById('slide_show_learn_more4').addEventListener('click', function() {
+  showModalForId('sceptrum')
+})
         
 fetchAndRenderAllFlowers();
+console.log('showing ', flower, id, FLOWERS_MAP)

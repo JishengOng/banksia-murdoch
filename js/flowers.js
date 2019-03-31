@@ -223,6 +223,7 @@ function renderFlowers() {
       flowerEl.innerHTML = `
         
         <div style="position: relative;" data-desc="image-container">
+          <div class="flower_index">${flower.index}</div> 
           <div class="flower_img"><img src="${imgPreviewPath}"/></div>
           <div class="flower_icon_cont"/>          
         </div>

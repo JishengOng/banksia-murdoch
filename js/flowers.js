@@ -196,8 +196,7 @@ function createAttribsIcon(attribs) {
 
 }
 
-function flowerHasAllFilterAttributes(flower) {
-  
+function flowerHasAllFilterAttributes(flower) {  
   for ( const filter of USER_FILTER ) {
     if ( flower.attributes.indexOf(filter) < 0 ) {     
       return false;
@@ -209,7 +208,7 @@ function flowerHasAllFilterAttributes(flower) {
 
 function renderFlowers() {
   const flowersArr = FLOWERS
-  const renderedFlowers = []
+  const renderedFlowers = []  
   for ( const flower of flowersArr ) {
 
     if ( USER_FILTER.length === 0 || flowerHasAllFilterAttributes(flower) ) {
@@ -289,19 +288,19 @@ function fetchAndRenderAllFlowers(type,season) {
       // type and season so its easier to filter      
       FLOWERS = flowersArr.map(flower => {
         const floweringPeriod = flower.floweringPeriod.map( period => period.toLowerCase())
-        const updatedFlower = Object.assign({}, flower, { floweringPeriod: floweringPeriod, attributes: [].concat(flower.types).concat(flower.floweringPeriod) })
+        const updatedFlower = Object.freeze(Object.assign({}, flower, { floweringPeriod: floweringPeriod, attributes: [].concat(flower.types).concat(flower.floweringPeriod) }))
         FLOWERS_MAP[flower.id] =updatedFlower
         return updatedFlower
       })
 
-      renderFlowers(type, season)
+      renderFlowers()
     });
 }
 
 document.querySelectorAll('.flower_type')
         .forEach(function(flowerTypeEl) {
           flowerTypeEl.addEventListener('click',function() {
-            const filter = flowerTypeEl.getAttribute('data-filter')
+            const filter = flowerTypeEl.getAttribute('data-filter')            
             if ( isFilterInSelectedFilter(filter) ) {
               //remove
               removeUserFilter(filter)

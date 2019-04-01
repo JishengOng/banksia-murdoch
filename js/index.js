@@ -106,7 +106,7 @@ const navigationList = document.querySelector(".navigation__list");
 // Toggle Navigation Menu
 function showMenu() {
   menuButton.classList.toggle("navigation__btn--active");
-  navigationList.classList.toggle("navigation__list--active");
+  // navigationList.classList.toggle("navigation__list--active");
   if (menuButton.getAttribute("aria-expanded") === "false") {
     menuButton.setAttribute("aria-expanded", true);
   } else {

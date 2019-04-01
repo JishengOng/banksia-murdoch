@@ -91,7 +91,7 @@ bgm.onpause = function() {
 };
 
 */
-<<<<<<< HEAD
+
 
 /* Slides for the Homepage */
 var slideshowDuration = 4000;
@@ -327,11 +327,16 @@ slideshow.data('timeout',timeout);
 if($('.main-content .slideshow').length > 1) {
   $(window).on('scroll',homeSlideshowParallax);
 }
-=======
+
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
->>>>>>> refactor
+refactor
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+ refactor
 
 
 // Select navigation button

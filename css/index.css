@@ -251,6 +251,7 @@ html,body {
   color: white;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 .onandoff {
@@ -318,6 +319,8 @@ html,body {
     transform: translateY(-15px);
   }
 }
+=======
+>>>>>>> refactor
 =======
 >>>>>>> refactor
 /* Demo Purpose Only*/
@@ -541,6 +544,20 @@ a.scroll_indicator {
 @keyframes sdb03 {
   0% {
     opacity: 0;
+<<<<<<< HEAD
+  }
+  30% {
+      opacity: 1;
+  }
+  60% {
+      box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+      opacity: 0;
+  }
+  100% {
+      opacity: 0;
+  }
+}
+@keyframes sdb03 {
   }
   30% {
       opacity: 1;

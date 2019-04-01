@@ -354,4 +354,3 @@ document.getElementById('slide_show_learn_more4').addEventListener('click', func
 })
         
 fetchAndRenderAllFlowers();
-console.log('showing ', flower, id, FLOWERS_MAP)

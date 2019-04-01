@@ -23,10 +23,7 @@
   text-align: left;
 }
 
-#tablescroll {
-  overflow-y: auto;
-  width: 100%;
-}
+
 
 #post {
  margin: 0px auto 30px auto;
@@ -44,6 +41,7 @@
   letter-spacing: 0.1em;
 }
 
+/* need to use class as this changes all a 
 a {
   cursor: pointer;
   display: inline-block;
@@ -59,7 +57,7 @@ a:hover
 {
   box-shadow: inset 0 0 0 25px #53a7ea;
 }
-
+ */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) and (min-height: 400px) {
 
@@ -112,10 +110,6 @@ a:hover
     font-size: 15px;
   }
 
-  #tablescroll {
-    height: 200px;
-  }
-
   #post {
    max-width: 500px;
   }
@@ -149,9 +143,6 @@ a:hover
     font-size: 15px;
   }
 
-  #tablescroll {
-    height: 200px;
-  }
 
   #post {
    max-width: 500px;
@@ -186,10 +177,7 @@ a:hover
     font-size: 15px;
   }
 
-  #tablescroll {
-    height: 300px;
-  }
-
+ 
   #post {
    max-width: 500px;
   }
@@ -221,10 +209,6 @@ a:hover
 
   #newsnevents {
     font-size: 15px;
-  }
-
-  #tablescroll {
-    height: 300px;
   }
 
   #post {
@@ -260,10 +244,6 @@ a:hover
     font-size: 15px;
   }
 
-  #tablescroll {
-    height: 300px;
-  }
-
   #post {
    max-width: 1000px;
   }
@@ -280,4 +260,10 @@ a:hover
     max-height: 3em;
     font-size: 17px;
   }
+}
+
+#tablescroll {
+  overflow-y: auto;
+  width: 100%;
+  height: 100vh;
 }

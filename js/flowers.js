@@ -106,11 +106,29 @@ function createImagesDiv(flower) {
   let imgs = ''
 
   images.forEach( function(image) {
-      imgs =  `${imgs}\n<img src="/img//flowers/${flower.id}/${image}.jpg"/>`
+      imgs =  `${imgs}\n<img class="modal_flower_img_cont" src="/img//flowers/${flower.id}/${image}.jpg"/>`
   })
-  return `<div style="width: 550px; height 600px;">${imgs}</div>`
+  return `<div >${imgs}</div>`
 } 
 
+function showModal(flower) {
+  const modalTitleEl = document.getElementById('flower_title')
+  modalTitleEl.innerHTML = flower.name
+
+  const modalBodyEl = document.getElementById('flower_body')
+  modalBodyEl.innerHTML = `
+    <div>
+      ${ createNames(flower) }
+      ${ createCommonNamesDiv(flower) }
+      <div><b>Description:</b> ${flower.description}</div>
+      <div><b>Habitat:</b> ${flower.habitat}</div>
+      ${ createFlowerDescHtml(flower) }
+      ${ createFruitDescHtml(flower) }
+      <div class="modal_flower_img_cont">${ createImagesDiv(flower) }</div>
+    </div>
+  `
+  $('#flower_details').modal({ show: true })
+}
 function createCommonNamesDiv(flower) {
   const otherNames = flower.otherNames || {}
 
@@ -196,8 +214,7 @@ function createAttribsIcon(attribs) {
 
 }
 
-function flowerHasAllFilterAttributes(flower) {
-  
+function flowerHasAllFilterAttributes(flower) {  
   for ( const filter of USER_FILTER ) {
     if ( flower.attributes.indexOf(filter) < 0 ) {     
       return false;
@@ -209,7 +226,7 @@ function flowerHasAllFilterAttributes(flower) {
 
 function renderFlowers() {
   const flowersArr = FLOWERS
-  const renderedFlowers = []
+  const renderedFlowers = []  
   for ( const flower of flowersArr ) {
 
     if ( USER_FILTER.length === 0 || flowerHasAllFilterAttributes(flower) ) {
@@ -233,22 +250,7 @@ function renderFlowers() {
         </div>
       `
       flowerEl.addEventListener('click', function() {
-        const modalTitleEl = document.getElementById('flower_title')
-        modalTitleEl.innerHTML = flower.name
-
-        const modalBodyEl = document.getElementById('flower_body')
-        modalBodyEl.innerHTML = `
-          <div>
-            ${ createNames(flower) }
-            ${ createCommonNamesDiv(flower) }
-            <div><b>Description:</b> ${flower.description}</div>
-            <div><b>Habitat:</b> ${flower.habitat}</div>
-            ${ createFlowerDescHtml(flower) }
-            ${ createFruitDescHtml(flower) }
-            ${ createImagesDiv(flower) } 
-          </div>
-        `
-        $('#flower_details').modal({ show: true })
+        showModal(flower)
       })
 
       flowersContainers.appendChild(flowerEl)
@@ -288,19 +290,19 @@ function fetchAndRenderAllFlowers(type,season) {
       // type and season so its easier to filter      
       FLOWERS = flowersArr.map(flower => {
         const floweringPeriod = flower.floweringPeriod.map( period => period.toLowerCase())
-        const updatedFlower = Object.assign({}, flower, { floweringPeriod: floweringPeriod, attributes: [].concat(flower.types).concat(flower.floweringPeriod) })
+        const updatedFlower = Object.freeze(Object.assign({}, flower, { floweringPeriod: floweringPeriod, attributes: [].concat(flower.types).concat(flower.floweringPeriod) }))
         FLOWERS_MAP[flower.id] =updatedFlower
         return updatedFlower
       })
 
-      renderFlowers(type, season)
+      renderFlowers()
     });
 }
 
 document.querySelectorAll('.flower_type')
         .forEach(function(flowerTypeEl) {
           flowerTypeEl.addEventListener('click',function() {
-            const filter = flowerTypeEl.getAttribute('data-filter')
+            const filter = flowerTypeEl.getAttribute('data-filter')            
             if ( isFilterInSelectedFilter(filter) ) {
               //remove
               removeUserFilter(filter)
@@ -332,5 +334,26 @@ document.querySelectorAll('.flower_season')
             renderFlowers()
           })
 })
+
+function showModalForId(id) {
+  const flower = FLOWERS_MAP[id]    
+  showModal(flower)
+}
+
+// listen to learn more click 
+document.getElementById('slide_show_learn_more1').addEventListener('click', function() {  
+  showModalForId('menziesii')
+})
+
+document.getElementById('slide_show_learn_more2').addEventListener('click', function() {
+  showModalForId('victoriae')
+})
+document.getElementById('slide_show_learn_more3').addEventListener('click', function() {
+  showModalForId('repens')
+})
+document.getElementById('slide_show_learn_more4').addEventListener('click', function() {
+  showModalForId('sceptrum')
+})
         
 fetchAndRenderAllFlowers();
+console.log('showing ', flower, id, FLOWERS_MAP)

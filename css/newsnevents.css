@@ -1,3 +1,23 @@
+/* WALKTHROUGH DROP DOWN TEST */
+/* 
+<div class="wpDataTableFilterSection" id="table_1_3_filter_sections">
+  <label>ITEM TYPE FILTER:</label>
+  <div id="table_1_3_filter" class="column-item-type">
+  <span class="filter_column filter_select" data-filter_type="multiselectbox" data-index="3">
+  <div class="btn-group bootstrap-select show-tick wdt-multiselect-filter wdt-filter-control dropup">
+  <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="button" title="Outfit, Spear" aria-expanded="false">
+  <span class="filter-option pull-left">Outfit, Spear</span>
+  <span class="bs-caret"><span class="caret"></span>
+  </span>
+  </button><div class="dropdown-menu open" role="combobox" style="max-height: 373.594px; overflow: hidden; min-height: 82px;"><div class="bs-searchbox" style="display: none;"><input type="text" class="form-control" autocomplete="off" placeholder="Search..." role="textbox" aria-label="Search"></div><ul class="dropdown-menu inner" role="listbox" aria-expanded="false" style="max-height: 342.594px; overflow-y: auto; min-height: 51px;"><li data-original-index="0" class=""><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">2H-Sword</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Belt</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2" class=""><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Bow</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Cape</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="4" class=""><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Claw</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="5"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Gloves</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="6" class=""><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Gun</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="7" class=""><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Hat</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="8"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Knuckles</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="9" class="selected"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="true"><span class="text">Outfit</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="10"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Shoes</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="11"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Shoulder</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="12" class="selected"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="true"><span class="text">Spear</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="13"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Staff</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="14"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Wand</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div><select class="wdt-multiselect-filter wdt-filter-control selectpicker" title="ITEM TYPE FILTER" data-index="3" multiple="" data-live-search="true" data-live-search-placeholder="Search..." tabindex="-98"><option value="2H-Sword">2H-Sword</option><option value="Belt">Belt</option><option value="Bow">Bow</option><option value="Cape">Cape</option><option value="Claw">Claw</option><option value="Gloves">Gloves</option><option value="Gun">Gun</option><option value="Hat">Hat</option><option value="Knuckles">Knuckles</option><option value="Outfit">Outfit</option><option value="Shoes">Shoes</option><option value="Shoulder">Shoulder</option><option value="Spear">Spear</option><option value="Staff">Staff</option><option value="Wand">Wand</option></select></div></span></div>
+</div>
+*/
+
+#news_section {
+  padding: 20px 0px 20px 0px;
+  background-color: #f0f0f0;
+}
+
 #filter {
   margin: 1% 5% 1% 5%;
   width: 7%;
@@ -28,12 +48,12 @@
  padding: 20px 40px 20px 40px;
  border-style: solid;
  border-width: 0px 0px 0px 10px;
- border-color: #32612A;
- color: #FFF;
+ border-color: #232323;
+ color: #232323;
 }
 
 .post-date, .post-author { 
-  color: #D2D2D2;
+  color: #7F7E7E;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.1em;

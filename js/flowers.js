@@ -231,9 +231,6 @@ function renderFlowers() {
 
     if ( USER_FILTER.length === 0 || flowerHasAllFilterAttributes(flower) ) {
       let imgPreviewPath = `/img/flowers/${flower.id}/preview.jpg`
-      if ( Boolean(flower.as) ) {
-        imgPreviewPath = `/img/flowers/${flower.as}/preview.jpg`
-      }
 
       const flowerEl = document.createElement('div')
       flowerEl.classList.add('flower')       

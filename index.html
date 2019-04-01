@@ -15,9 +15,10 @@
   <link rel="stylesheet" href="/css/about_us.css">
   <link rel="stylesheet" href="/css/visitor_info.css">
 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
 </head>
 
 <body>
@@ -199,8 +200,21 @@
     </div>
     
   </section>
+  
+  <!-- START NEWS & EVENTS -->
   <section id='news_section'>
-    <div></div>
+    <!-- START FILTER DROPDOWN -->
+    <select id="filter" onchange="filter()" class='form-control'>
+      <option value="">Show All</option> 
+      <option>2018</option>
+      <option>2019</option>
+    </select>
+    <!-- END FILTER DROPDOWN -->
+    <div id = "tablescroll">
+      <table id = "newsnevents">
+        
+      </table>
+    </div>
   </section>
 
   <section id='visitors_info_section'>
@@ -507,6 +521,9 @@
   <script  src="/js/index.js"></script>
   <script  src="/js/flowers.js"></script>
   <script  src="/js/walkthrough.js"></script>
+  <script  src="/js/newsnevents.js"></script>
+  <script  src="/js/readmore.min.js"></script>
+
 
 
 </body>

@@ -1,29 +1,140 @@
-#flowers_section {
-  background: #fff;
-  
+
+.flowers_inner {
+  margin: 0% 5%;
 }
-#flowers_inner {
-  margin: 0% 10%;
+.flower_filter_cont {
+  display: flex;
+  padding: 4px 8px;
+  justify-content: space-between;
 }
+.flower_attributes {
+  display: flex;
+  padding: 4px 6px;
+  justify-content: space-between;
+  color: #A5A5A5;
+}
+.flower_filter_toggle {
+  text-decoration: none;
+  color: #777 !important;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0 15px;
+  line-height: 32px;
+  height: auto;
+  display: inline-block;
+  text-align: center;
+  background-color: #F5F5F5;
+  border-radius: 16px;
+  margin: 6px;
+  transition: all .5s ease-in-out;
+}
+.flower_img {
+  box-shadow: 0 4px 2px -2px rgb(0,0,0,0.2);
+  margin: 1px;  
+}
+
+.filter_type_selected {
+  background: #8B5674 !important;
+  color: #FFF !important;
+}
+.filter_flowerings_selected {
+  background: #E79292 !important;
+  color: #FFF !important;
+}
+
 #flowers_container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;  
 }
 .flower {
-  padding: 4px;
+  padding: 0px;
   margin: 12px;
-  text-transform: uppercase;
-  font-size: 0.86em;
-  text-align: right;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  cursor: pointer;  
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.16), 0 2px 4px rgba(0,0,0,0.23);
   width: 240px; 
+  opacity: 0;
+  /* visibility: hidden; */
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  background: #FFF;
+}
+
+.flower:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.flower_name {
+  font-size: 1.3em;  
+  padding: 4px 12px;
+  text-align: right;
+  color: #302e2e;
+}
+
+.flower_visible {
+  /* visibility: visible !important; */
+  opacity: 1 !important;
 }
 
 .flower_type {
   cursor: pointer;
+  color: black;
+  /* border-bottom: 0.5px;  */
+}
+.flower_type:hover {
+  color: palevioletred;
 }
 
 .flower_season {
   cursor: pointer;
+  color: black;
+}
+.flower_season:hover {
+  color: palevioletred;
+}
+
+#flowers_filter {
+  display: flex;
+  
+}
+.filter_attr{
+  color: black;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+#flower_title {
+  text-align: center;
+}
+
+
+#flower_body {
+  text-align: center;  
+}
+
+.flower_icon_cont {
+  /* top: 0px;
+  left: 0px;
+  background: url('/img/idicon.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  position: absolute;
+  width: 30px;
+  height: 30px; */
+  width: 0px;
+  height: 0px;
+  border-top: 14px solid #007373;
+  border-bottom: 14px solid transparent;
+  border-left: 14px solid #007373;
+  border-right: 14px solid transparent;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.flowers_filter {
+  display: flex;
+  justify-content: flex-end;
 }

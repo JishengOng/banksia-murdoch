@@ -1,0 +1,33 @@
+
+#walkthrough_section {
+    background: #FFF;
+}
+#walkthrough_map {
+  max-width: 660px;    
+  position: relative;
+}
+
+#walkthrough_filter {
+  display: flex;  
+  flex-wrap: wrap;  
+  padding-top: 40px;
+  justify-content: center;
+}
+
+.walkthrough_flower {
+  width: 140px;  
+  padding: 8px 12px;
+  font-size: 0.82em;
+  display: flex;
+  justify-content: left;
+  align-items: center;  
+  cursor: pointer;
+}
+.walkthrough_filter_img {
+  margin-right: 6px;
+  visibility: hidden;
+}
+
+.walkthrough_filter_selected > .walkthrough_filter_img {
+  visibility: visible !important;
+}

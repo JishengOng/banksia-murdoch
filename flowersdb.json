@@ -6,9 +6,12 @@
       "otherNames": {
         "common": "Wallum Banksia"
       },
+      "locations": [
+      ],
       "types": ["flower", "cone_fruit", "tree_leaf"],
+      "images":["cone","flower","tree"],
       "floweringPeriod": ["autumn", "winter"],
-      "shortDesc": "the name means to emulate as this species is very similar to Banksia serrata",    
+      "shortDesc": "The name means to emulate as this species is very similar to Banksia serrata",    
       "description": "A small, spreading tree with dark grey, rough bark. The leaves are obovate with evenly serrated margins and green on both sides. The upper surface is glossy green and the underside is pale green and glabrous. The new leaves are rusty brown.",
       "flowerDesc": "The flower spikes are silvery yellow and about 8-15cm high and 5-10cm in diameter and are ovoid to cylindrical. It flowers in later winter and autumn.",
       "habitat": "Banksia aemula occurs on sandy dunes from southern Queensland to the Sydney region."
@@ -20,9 +23,18 @@
       "otherNames": {
         "common": "Ashby’s Banksia"
       },
+      "locations": [
+        { "left": 373, "top": 129 },
+        { "left": 322, "top": 383 },
+        { "left": 174, "top": 212 },
+        { "left": 87, "top": 245 },
+        { "left": 315, "top": 263 }
+
+      ],
+      "images": ["cone","flower","tree"],
       "types": ["flower", "cone_fruit", "tree_leaf"],
       "floweringPeriod": ["spring", "summer", "winter"],
-      "shortDesc": "named after Edwin Ashby, a South Australian plant collector",
+      "shortDesc": "Named after Edwin Ashby, a South Australian plant collector",
       "description": "This species is usually a medium sized shrub 2-4 metres high, with long, narrow, sharply serrated leaves (15-20cm long and up to 3cm wide), with a prominent yellow mid-rib.",
       "flowerDesc": "The flowers are large and upright and orange in colour and cylindrical or ovoid in shape. It flowers between August and November.",
       "habitat": "This species is from the mid-west coast of WA and is found on the coastal sandplain from Geraldton to Carnarvon. It is an attractive garden specimen and is widely planted on the Murdoch campus."
@@ -32,11 +44,16 @@
       "index": 3,
       "name": "Banksia Attenuata",
       "otherNames": {      
-        "common": "Coastal Banksia or Candlestick Banksia"
+        "common": "Coastal Banksia or Candlestick Banksia",
+        "noongar": "biara"
       },
+      "locations": [
+        { "left": 226, "top": 188 }
+      ],
+      "images": ["cone","flower","tree"],
       "types": ["flower", "cone_fruit", "tree_leaf"],
       "floweringPeriod": ["spring", "summer"],    
-      "shortDesc": "his name was chosen to describe the way in which the leaves of this species taper towards the base",
+      "shortDesc": "This name was chosen to describe the way in which the leaves of this species taper towards the base",
       "description": "This species is usually a small tree with rough grey bark and long narrow leaves (8 – 15 cm long and less than 1cm wide). The leaves are flat and slightly serrated. ",
       "flowerDesc": "The most striking feature of this species is the tall, cylindrical flower spikes, up to 25 cm long.They have a strong light yellow colour and appear between October and March.",
       "habitat": "This species is found along the southwest coast of Australia from Geraldton to Albany. It thrives in deep, moist, sandy soils."
@@ -47,7 +64,11 @@
       "name": "Banksia Baxteri", 
       "otherNames": {
         "common": "Bird’s nest Banksia"
-      },     
+      }, 
+      "locations": [
+        { "left": 207, "top": 303 }
+      ],
+      "images": ["cone","flower","tree"],  
       "types": ["flower", "cone_fruit", "tree_leaf"],
       "floweringPeriod": ["summer"],
       "shortDesc": "named after William Baxter, a 19th century English gardener",    
@@ -61,7 +82,11 @@
       "name": "Banksia Benthamiana", 
       "otherNames": {
           "common": ""
-      },     
+      },
+      "locations": [
+        { "left": 173, "top": 289 }
+      ],
+      "images": ["cone","flower","tree"],     
       "types": ["flower", "cone_fruit", "tree_leaf"],
       "floweringPeriod": ["summer"],
       "shortDesc": "named in honour of the 19th C British botanist George Bentham",    
@@ -72,7 +97,19 @@
     {
       "id": "blechnifolia", 
       "index": 6,
-      "name": "Banksia Blechnifolia",     
+      "name": "Banksia Blechnifolia",
+      "otherNames": {
+        "common": ""
+      },
+      "locations": [
+        { "left": 457, "top": 48 },
+        { "left": 497, "top": 62 },
+        { "left": 503, "top": 104 },
+        { "left": 481, "top": 184 },
+        { "left": 511, "top": 340 },
+        { "left": 180, "top": 541 }
+      ],
+      "images": ["cone","flower"],     
       "types": ["flower", "cone_fruit"],
       "floweringPeriod": ["summer"],
       "shortDesc": "the name indicates that it has fern-like foliage",    
@@ -83,8 +120,15 @@
     {      
       "id": "burdettii",
       "index": 7,
-      "name": "Banksia Burdettii ",       
-      "types": ["flower", "cone_fruit"],
+      "name": "Banksia Burdettii ",
+      "otherNames": {
+        "common": ""
+      },
+      "locations": [
+        { "left": 345, "top": 316 }
+      ],
+      "images": ["cone","flower","tree"],            
+      "types": ["flower", "cone_fruit","tree_leaf"],
       "floweringPeriod": ["summer"],
       "shortDesc": "named after the Burdett family who were pioneer native plant collectors in SA",    
       "description": "A large shrub with tapered leaves up to 25cm long with many small sharp teeth.", 
@@ -96,12 +140,15 @@
       "index": 8,
       "name": "Banksia Cadolleana", 
       "otherNames": {
-        "common": "Propeller Banksia (the fruits resemble a ship’s propeller"
-      },     
-      "types": ["flower", "cone_fruit", "tree_left"],
+        "common": "Propeller Banksia"
+      },
+      "locations": [        
+      ],
+      "images": ["cone","flower","tree"],     
+      "types": ["flower", "cone_fruit", "tree_leaf"],
       "floweringPeriod": ["autumn", "winter"],
-      "shortDesc": "Propeller Banksia (the fruits resemble a ship’s propeller",    
-      "description": "A semi-prostrate banksia up to 1 metre high with long, narrow, heavily divided leaves. The leaves are bright green and the mid rib is prominent.", 
+      "shortDesc": "the fruits resemble a ship’s propeller",    
+      "description": "A semi-prostrate banksia up to 1 metre high with long, narrow, heavily divided leaves. The leaves are bright green and the mid rib is prominent.",       
       "flowerDesc": "Small almost globular golden coloured flowers which appear in autumn and winter.",
       "fruitDesc": "These are very distinctive with huge seed follicles set in a small globular cone.",
       "habitat": "Banksia candolleana is found on sandy heaths in the Irwin district of WA"
@@ -111,9 +158,13 @@
       "index": 9,
       "name": "Banksia Chamaephyton", 
       "otherNames": {
-        "common": "Fishbone banksia"
-      },     
-      "types": ["flower", "tree_left"],
+        "common": " "
+      },
+      "locations": [
+        { "left": 458, "top": 223 }
+      ],
+      "images": ["cone","flower","tree"],     
+      "types": ["flower","cone_fruit","tree_leaf"],
       "floweringPeriod": ["spring"],
       "shortDesc": "the name means low-growing or prostrate",    
       "description": "This is a prostrate banksia with fern-like foliage. It has long green leaves that are deeply divided to form a fishbone pattern.", 
@@ -124,8 +175,15 @@
       "id": "epica",
       "index": 10,    
       "name": "Banksia Epica", 
-      "types": ["flower"],
-      "floweringPeriod": [],
+      "otherNames": {
+        "common": " "
+      },
+      "locations": [
+        { "left": 363, "top": 356  }
+      ],
+      "images": ["cone","flower","tree"],
+      "types": ["flower","cone_fruit","tree_leaf"],
+      "floweringPeriod": ["winter"],
       "shortDesc": "named after Edward John Eyre who made the epic journey on foot from Adelaide to Albany in 1846",    
       "description": "A medium size shrub up to 3 metres high with wedge-shaped green leaves (1-5cm long, 0.5-1.5cm wide)", 
       "flowerDesc": "Cylindrical pale yellow flower spikes (9-17cm tall and up to 6cm in diameter) in winter.",
@@ -137,8 +195,12 @@
         "name": "Banksia ericifolia", 
         "otherNames": {
           "common": "Heath-leaf banksia"
-        },     
-        "types": ["flower", "tree_left"],
+        },
+        "locations": [
+          { "left": 48, "top": 342 }
+        ],
+        "images": ["cone","flower","tree"],     
+        "types": ["flower","cone_fruit", "tree_leaf"],
         "floweringPeriod": ["winter"],
         "shortDesc": "the name means heath like",    
         "description": "A tall compact shrub up to 7 metres high with small dark green needle-like leaves.", 
@@ -148,7 +210,14 @@
     {
         "id": "gardneri",
         "index": 12,
-        "name": "Banksia Gardneri",   
+        "name": "Banksia Gardneri",
+        "otherNames": {
+          "common": ""
+        },
+        "locations": [
+          { "left": 320, "top": 163 }
+        ],
+        "images": ["cone","flower"],   
         "types": ["flower", "cone_fruit" ],
         "floweringPeriod": ["spring","winter"],
         "shortDesc": "named after Charles Gardner, a former Government botanist of WA",    
@@ -158,10 +227,16 @@
     },
     {
         "id": "g_hiemalis",
+        "as": "gardneri",
         "index": 13,
-        "name": "",      
-        "types": ["flower", "cone-fruit"],
-        "floweringPeriod": ["spring, winter"],
+        "name": "G Hiemalis",
+        "locations": [
+          { "left": 452, "top": 291 },
+          { "left": 242, "top": 245 }
+        ],
+        "images": ["cone","flower"],   
+        "types": ["flower", "cone_fruit" ],
+        "floweringPeriod": ["spring", "winter"],
         "shortDesc": "named after Charles Gardner, a former Government botanist of WA",    
         "description": "A prostrate form which has three different varieties (var gardneri, var hiemalis, var brevidentata). Variety gardneri has deep green leaves with deep lobes. It flowers in Spring with rusty brown conical spikes. Variety brevidentata has large green leaves with toothed margins. It flowers in winter with rusty brown flower spikes. Variety hiemalis has pale green leaves with deep lobes and pink flower spikes in winter.", 
         "flowerDesc": "It has orange-brown and cream flower spikes that appear in late spring (October – December)",
@@ -173,7 +248,11 @@
         "name": "Banksia Grandis", 
         "otherNames": {
           "common": "Bull Banksia"
-        },     
+        },
+        "locations": [
+          { "left": 59, "top": 299 }
+        ],
+        "images": ["cone","flower","tree"],      
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Spring"],
         "shortDesc": "name means large or small",    
@@ -187,7 +266,11 @@
         "name": "Banksia Hookeriana", 
         "otherNames": {
           "common": " "
-        },     
+        },
+        "locations": [
+          { "left": 321, "top": 334 }
+        ],
+        "images": ["cone","flower","tree"],      
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Spring"],
         "shortDesc": "named after the 19th century British botanist, Sir James Hooker",    
@@ -201,7 +284,9 @@
         "name": "Banksia Ilicifolia", 
         "otherNames": {
           "common": "Holly-leaf banksia"
-        },     
+        },
+        "locations": [],
+        "images": ["cone","flower","tree"],      
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Autumn"],
         "shortDesc": "The name means holly like foliage",    
@@ -215,7 +300,12 @@
         "name": "Banksia Integrifolia", 
         "otherNames": {
           "common": "Coastal banksia"
-        },     
+        },
+        "locations": [
+          { "left": 228, "top": 343 },
+          { "left": 477, "top": 148 }
+        ],
+        "images": ["cone","flower","tree"],      
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Autumn","Winter"],
         "shortDesc": "the name refers to the smooth or unbroken leaf margins",    
@@ -229,7 +319,12 @@
         "name": "Banksia Lanata", 
         "otherNames": {
           "common": "Coomallo banksia"
-        },     
+        },
+        "locations": [
+          { "left": 295, "top": 414 },
+          { "left": 366, "top": 288 }
+        ],
+        "images": ["cone","flower","tree"],      
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Spring","Summer"],
         "shortDesc": " same as id 17?",    
@@ -243,7 +338,9 @@
         "name": "Banksia leptophylla", 
         "otherNames": {
           "common": "Slender leaf banksia"
-        },     
+        },
+        "locations": [],
+        "images": ["cone","flower","tree"],      
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Summer"],
         "shortDesc": "the name means thin leaf banksia",    
@@ -252,12 +349,18 @@
         "habitat": "Banksia leptophylla is a native of WA which grows on the coastal sandplain from the Moore River to Kalbarri."   
     },
     {
-        "id": "Banksia littoralis",
+        "id": "littoralis",
         "index": 20,
         "name": "Banksia littoralis", 
         "otherNames": {
           "common": "Swamp banksia"
-        },     
+        },
+        "locations": [
+          { "left": 389, "top": 153 },
+          { "left": 396, "top": 257 },
+          { "left": 151, "top": 397 }
+        ],
+        "images": ["cone","flower","tree"],       
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Autumn","Winter"],
         "shortDesc": "The word littoralis means close to water",    
@@ -271,7 +374,12 @@
         "name": "Banksia Media", 
         "otherNames": {
           "common": ""
-        },     
+        },
+        "locations": [
+          { "left": 109, "top": 534 },
+          { "left": 104, "top": 327 }
+        ],
+        "images": ["cone","flower","tree"],      
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Summer","Autumn","Winter"],
         "shortDesc": "name means medium-sized",    
@@ -285,7 +393,14 @@
         "name": "Banksia Mienziesii", 
         "otherNames": {
           "common": "firewood banksia"
-        },     
+        },
+        "locations": [
+          { "left": 507, "top": 241 },
+          { "left": 234, "top": 287 },
+          { "left": 258, "top": 312 },
+          { "left": 204, "top": 538 }
+        ],
+        "images": ["cone","flower","tree"],      
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Autumn","Winter"],
         "shortDesc": "named after Archibald Menzies and 18th century botanist",    
@@ -299,8 +414,17 @@
         "name": "Banksia Petiolaris", 
         "otherNames": {
           "common": " "
-        },     
-        "types": ["flower", "cone_fruit"],
+        },
+        "locations": [
+          { "left": 303, "top": 325 },
+          { "left": 254, "top": 402 },
+          { "left": 196, "top": 386 },
+          { "left": 242, "top": 482 },
+          { "left": 212, "top": 512 },
+          { "left": 179, "top": 485 }
+        ],
+        "images": ["cone","flower","tree"],      
+        "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Spring"],
         "shortDesc": "the name petiolaris refers to the leaf stalk which is quite long",    
         "description": "A prostrate species with spreading horizontal branches underneath the soil surface. The leaves are long and moderately wide with regular teeth. The new growth is soft and brown and hairy.", 
@@ -313,8 +437,12 @@
         "name": "Banksia Pilostylis", 
         "otherNames": {
           "common": " "
-        },     
-        "types": ["cone_fruit", "tree_leaf"],
+        },
+        "locations": [
+          { "left": 418, "top": 328 },
+          { "left": 137, "top": 342 }
+        ],       
+        "types": ["flower","cone_fruit", "tree_leaf"],
         "floweringPeriod": ["Summer"],
         "shortDesc": " ",    
         "description": " ", 
@@ -327,7 +455,12 @@
         "name": "Banksia Praemorsa", 
         "otherNames": {
           "common": "Cut-leaf banksia"
-        },     
+        },
+        "locations": [
+          { "left": 285, "top": 354 },
+          { "left": 447, "top": 80 }
+        ],
+        "images": ["cone","flower","tree"],      
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Spring","Winter"],
         "shortDesc": "the name means cut off or truncated and refers to the leaves ",    
@@ -341,7 +474,11 @@
         "name": "Banksia Prionotes", 
         "otherNames": {
           "common": "Acorn Banksia "
-        },     
+        },
+        "locations": [
+          { "left": 390, "top": 184 }
+        ],
+        "images": ["cone","flower","tree"],      
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Autumn"],
         "shortDesc": "The name refers to the saw-toothed leaves",    
@@ -355,8 +492,12 @@
         "name": "Banksia Repens ", 
         "otherNames": {
           "common": " "
-        },     
-        "types": ["flower", "cone_fruit","tree_leaf"],
+        },
+        "locations": [
+          { "left": 286, "top": 246 }
+        ],
+        "images": ["cone","flower"],      
+        "types": ["flower", "cone_fruit"],
         "floweringPeriod": ["Spring"],
         "shortDesc": "the name means creeping banksia",    
         "description": "A prostrate form with branches just below the ground. The leaves are large and have deep irregular lobes. ", 
@@ -369,7 +510,11 @@
         "name": "Banksia Sceptrum ", 
         "otherNames": {
           "common": " "
-        },     
+        },
+        "locations": [
+          { "left": 147, "top": 509 }
+        ],
+        "images": ["cone","flower","tree"],      
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Summer"],
         "shortDesc": "the name refers to the sceptre-like flower spikes on long branches ",    
@@ -383,7 +528,13 @@
         "name": "Banksia Speciosa", 
         "otherNames": {
           "common": "Showy Banksia"
-        },     
+        },
+        "locations": [
+          { "left": 205, "top": 462 },
+          { "left": 416, "top": 85 },
+          { "left": 422, "top": 129 }
+        ],
+        "images": ["cone","flower","tree"],       
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Summer","Autumn"],
         "shortDesc": "the name means showy or handsome and refers to the shrub itself",    
@@ -397,7 +548,12 @@
         "name": "Banksia Victoriae", 
         "otherNames": {
           "common": " "
-        },     
+        },
+        "locations": [
+          { "left": 71, "top": 518 },
+          { "left": 152, "top": 365 }
+        ],
+        "images": ["cone","flower","tree"],       
         "types": ["flower", "cone_fruit","tree_leaf"],
         "floweringPeriod": ["Summer","Autumn"],
         "shortDesc": "named in honour of Queen Victoria",    

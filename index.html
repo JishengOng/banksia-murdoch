@@ -11,8 +11,11 @@
   <link rel="stylesheet" href="/css/index.css">
   <link rel="stylesheet" href="/css/flowers.css">
   <link rel="stylesheet" href="/css/walkthrough.css">
-  <link rel="stylesheet" href="/css/newsnevents.css">
   <link rel="stylesheet" href="/css/slideshow.css">
+  <link rel="stylesheet" href="/css/about_us.css">
+  <link rel="stylesheet" href="/css/visitor_info.css">
+  <link rel="stylesheet" href="/css/newsnevents.css">
+  
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -26,6 +29,18 @@
     </span>
     Scroll
   </a>  
+
+
+  <div id="onandoffButton" class="onandoff">
+    <div> <button id ="Textbutton" type="button" class="btn btn-primary btn-lg btn3d">
+      <span class="glyphicon glyphicon-text-size"></span>
+    </button></div>
+    <div> <button id = "musica" type="button" class="btn btn-danger btn-lg btn3d" onclick="javascript:toggleSound();">
+      <span class="glyphicon glyphicon-music"></span>
+    </button>        
+    <audio id="testAudio" src="ChillMill2.mpeg" loop="true" type="audio/mpeg" style="display:none"  autoplay loop></audio></div>
+  </div> 
+  
   <main id="Home" class="main-content">             
     <section class="slideshow">
       <div data-fadeshow="quick-nav prev-next-nav autoplay">
@@ -168,8 +183,9 @@
       </div>
     </div>
   </section>
-  
   <section id='walkthrough_section'>
+    
+  
     <div class='container-fluid'>      
       <div class="row">
           <div class='col-md-4' >    
@@ -183,38 +199,210 @@
           </div>
       </div>
     </div>
+    
   </section>
 
-  <!-- START NEWS & EVENTS -->
+  <section id='visitors_info_section'>
+    <!-- INSERTED RESPONSIVE FLEX CARDS FOR DOs and DONTs for Visitor Info AND MAP OF LOCATION OF BANKSIA COURT START --> 
+      <h1  id = "VisitorInfo"> Where is the Banksia Court ? </h1>
+
+    <div id = "map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3381.035395012458!2d115.83321450783647!3d-32.06829139547403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32a3a38018007b%3A0xfddda458a78d8d2b!2sBanksia+Court!5e0!3m2!1sen!2ssg!4v1553880128132!5m2!1sen!2ssg" 
+    frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+
+    <div class="wrapper">
+      <br>
+        <h1>Visitor Guidelines</h1>
+        <h3> <b style = "color: green">DOs</b> and <b style = "color: red ">DONTs</b> in the Banksia Court </h3> <br>
+
+
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> <!-- #PBUG ^_^ now the icons can be seen in Visitor Info <3 -->
+
+      <div class="container"> <!-- https://www.nparks.gov.sg/gardens-parks-and-nature/dos-and-donts (learn from this website) --> 
+
+        <a class="container__item">
+          <div class="container__item--categorygreen"> Have a picnic </div>
+          <div class="container__item--img">
+            <div class = "container__item--greenDos_icon"><i class="fas fa-drumstick-bite"></i></div></div>
+        </a>
+
+
+        <a class="container__item">
+          <div class="container__item--categorygreen"> Park appropriately </div>
+          <div class="container__item--img">
+            <div class = "container__item--greenDos_icon"><i class="fas fa-car"></i></div></div>
+        </a>
+
+
+        <a class="container__item">
+          <div class="container__item--categorygreen"> Mobility aids </div>
+          <div class="container__item--img">
+            <div class = "container__item--greenDos_icon"><i class="fab fa-accessible-icon"></i></div></div>
+        </a>
+
+
+        <a class="container__item">
+          <div class="container__item--categorygreen"> Respect our flora and fauna </div>
+          <div class="container__item--img">
+            <div class = "container__item--greenDos_icon"><i class="fas fa-leaf"></i></div></div>
+        </a> 
+
+
+        <a class="container__item">
+          <div class="container__item--categorygreen"> Film & photography </div>
+          <div class="container__item--img">
+            <div class = "container__item--greenDos_icon"><i class="fas fa-camera"></i></div></div>
+        </a> 
+
+
+        <a class="container__item">
+            <div class="container__item--categorygreen"> Keep noise levels low </div>
+            <div class="container__item--img">
+            <div class ="container__item--greenDos_icon"><i class="fas fa-volume-down"></i></div></div>
+          </a>
+
+
+        <a class="container__item">
+          <div class="container__item--categoryred"> No pedestrian conveyances </div>
+          <div class="container__item--img">
+          <div class ="container__item--redDonts_icon"><i class="fas fa-skating"></i></div></div>
+        </a>
+
+
+        <a class="container__item">
+          <div class="container__item--categoryred"> No pets </div>
+          <div class="container__item--img">
+          <div class ="container__item--redDonts_icon"><i class="fas fa-paw"></i></div></div>
+        </a>
+
+
+        <a class="container__item">
+          <div class="container__item--categoryred"> No littering </div>
+          <div class="container__item--img">
+          <div class ="container__item--redDonts_icon"><i class="far fa-trash-alt"></i></div></div>
+          </a>
+
+
+        <a class="container__item">
+          <div class="container__item--categoryred"> No vandalism </div>
+          <div class="container__item--img">
+          <div class ="container__item--redDonts_icon"><i class="fas fa-spray-can"></i></div></div>
+        </a>
+
+
+        <a class="container__item">
+          <div class="container__item--categoryred"> No open fires </div>
+          <div class="container__item--img">
+          <div class ="container__item--redDonts_icon"><i class="fas fa-fire"></i></div></div>
+        </a>
+
+
+        <a class="container__item">
+          <div class="container__item--categoryred"> No smoking </div>
+          <div class="container__item--img">
+          <div class ="container__item--redDonts_icon"><i class="fas fa-smoking-ban"></i></div></div>
+        </a>
+
+
+      </div><!-- end of container class-->
+    </div><!-- end of wrapper class-->
+    <!--<i class="fas fa-ghost"></i> my fav icon! :3 ~Robie and for hosting into the server instructions 
+    https://www.youtube.com/watch?v=tq7dqdHCc7U -->
+    <!-- info of the Dos and Donts came from as well : https://www.nparks.gov.sg/gardens-parks-and-nature/dos-and-donts-->
+
+    <!-- INSERTED RESPONSIVE FLEX CARDS FOR DOs and DONTs for Visitor Info  END --> 
+  </section>
+
   <section id='news_section'>
-    <!-- START FILTER DROPDOWN -->
     <select id="filter" onchange="filter()" class='form-control'>
       <option value="">Show All</option> 
-      <option>2018</option>
-      <option>2019</option>
     </select>
-    <!-- END FILTER DROPDOWN -->
     <div id = "tablescroll">
       <table id = "newsnevents">
-        
+
       </table>
     </div>
   </section>
-  <!-- END NEWS & EVENTS -->
 
-  <!-- START VISITOR INFO -->
-  <section id='visitors_info_section'></section>
-  <!-- END VISITOR INFO -->
+  
 
-  <section id='about_us_section'></section>
+  <section class="feeds" id="AboutUs">
+    <h2 class="heading-secondary">About Us : Team Menziesii</h2>
+      
+        
+       <!-- removed wrapper to mke it middle ! -->
+       <div style = "text-align:center; font-family: Courier">
+            <br><h1>The BANKSIA COURT APP Project</h1>
+            <h3> BANKSIA COURT, this specialised banksia arboretum was established in 1995 to mark the 20th anniversary of the opening of the University.<br><br>
+           
+            <p>It holds a vibrant diversity of banksias and is a rich food source for honeyeaters and black cockatoos, while the dense undergrowth provides vital habitat for ‘Conservation Dependent’ Southern Brown Bandicoots (Quendas), native lizards and invertebrates. 
+            Murdoch’s Banksia Court is the only other dedicated Banksia Garden in WA apart from the one in King’s Park.</p><br>
+           
+            The Banksia Court's interpretation assets are limited, which makes under-utilized with regards to its educational potential, and its regional importance is greatly unknown. </h3> 
+      </div>
+  
+        <div class="feeds__content">
+          <div class="feeds__box">
+            <img src= "https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/49210820_10218635460626628_5028763768486625280_n.jpg?_nc_cat=105&_nc_ht=scontent-sin6-2.xx&oh=9ee17874621c9f7210320a6b08ea8f48&oe=5CDC3D43" alt="robie" class="feeds__img" />
+            <span class="feeds__name">Robileen Espanol </span>
+            <p class="feeds__text">
+             <b>Team Manager</b> of the team ! I ensure we  make progress weekly and are always ready for drastic changes.
+                Trust me anytime! ^_^
+            </p>
+          </div>
+        
+          <div class="feeds__box">
+            <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-1/c0.0.959.959a/46391164_2562699897103493_4231087753485352960_n.jpg?_nc_cat=106&_nc_ht=scontent-sin6-2.xx&oh=e9fe7b22daaa9f7183f172c66bd9daed&oe=5D23FD94" alt="sam" class="feeds__img" />
+            <span class="feeds__name">Aung Khine San</span>
+            <p class="feeds__text">
+            <b>System Analyst!</b> I plan for organizational and human impacts and ensure new technical requirements are properly integrated with appropriate measures.
+            </p>
+          </div>
+          <div class="feeds__box">
+            <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/51677731_1521450791323763_8406632328473870336_o.jpg?_nc_cat=107&_nc_ht=scontent-sin6-2.xx&oh=465ca716ccdddcb14a9df6e15cf585fa&oe=5D1BDDF8" alt="layla" class="feeds__img" />
+            <span class="feeds__name">Layla Mira</span>
+            <p class="feeds__text">
+            <b>Computer Systems Analyst!</b> I am responsible for the system's analysis, design and implementation to make sure it operates properly and efficiently.
+            </p>
+          </div>
+        
+           <div class="feeds__box">
+            <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/27973645_2256883534337377_1638251128404286738_n.jpg?_nc_cat=107&_nc_ht=scontent-sin6-2.xx&oh=5c91e5e1a8e02aef6aee5f79eef87ee8&oe=5CDB7D95" alt="doug" class="feeds__img" />
+            <span class="feeds__name">JiSheng Ong</span>
+            <p class="feeds__text">
+            <b>Programmer!</b> I develop new computer programming methods from basic methods to more-in-depth methods.              
+            </p>
+          </div>
+        
+          <div class="feeds__box">
+            <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/50084487_10216199859602845_6976471561083551744_n.jpg?_nc_cat=104&_nc_ht=scontent-sin6-2.xx&oh=86c963bed78141708a07eaa67c341c93&oe=5D1E5093" alt="Royroymoymoy" class="feeds__img" />
+            <span class="feeds__name">Royette Villamor</span>
+            <p class="feeds__text">
+            <b>Programmer Analyst!</b> I design technology solutions for the system and put the components into place.
+            </p>
+          </div>
+        
+          <div class="feeds__box">
+            <img src="https://d3pz1jifuab5zg.cloudfront.net/2016/08/16153058/hamster-health-center-2.jpg" alt="Qiyamarsh" class="feeds__img" />
+            <span class="feeds__name">Qiya Soo</span>
+            <p class="feeds__text">
+            <b>Technical Consultant!</b> I provide technical support, perform trouble-shooting functions and make resolution for any related issues. 
+            </p>
+          </div> 
+        </div> 
+    </section>
 
-  <!-- START FOOTER -->
+
+
+
+    <!-- START FOOTER -->
   <footer>
     <div class="contacts" id="contacts">
       <div class="contacts__box">
-        <h3 class="heading-tertiary contacts__title">Chateau Roux</h3>
+        <h3 class="heading-tertiary contacts__title"></h3>
         <address class="contacts__address">
-          Rebelle Glens 188 Normandy France
+          
         </address>
         <a href="#" class="contacts__link">Phone: 1-268-869-8551</a>
         
@@ -243,7 +431,7 @@
         </ul>
       </div>
       <div class="contacts__box">
-        <h3 class="heading-tertiary contacts__title">Follow Us!</h3>
+        <h3 class="heading-tertiary contacts__title"></h3>
         <div class="contacts__social">
           <a
             href="#"
@@ -279,11 +467,11 @@
       >
     </div>
   </footer>
-  <!-- END FOOTER -->
+    <!-- END FOOTER -->
   
-  <!-- Navigation Menu -->modal_flower_img_cont
-  <div class = "navigation__btn" >      modal_flower_img_cont
-    <div class = "NavigationSlideOut">       modal_flower_img_cont 
+  <!-- Navigation Menu -->
+  <div class = "navigation__btn" >      
+    <div class = "NavigationSlideOut">       
       <div class = "Murdoch_logo"> <!-- Murdomodal_flower_img_contch Logo On Navigation Bar START -->
         <img src = "https://gdurl.com/QX7Y"/>
       </div>        
@@ -300,7 +488,7 @@
         <div class="btn btn-primary btn-lg btn3d">
           <span class="glyphicon glyphicon-text-size"></span>
         </div>                  
-        </div>id = "musica" type=</div> class="btn btn-danger btn-lg btn3d" onclick="javascript:toggleSound();">
+        </div id = "musica" type="" class="btn btn-danger btn-lg btn3d" onclick="javascript:toggleSound();"></div>
           <span class="glyphicon glyphicon-music"></span>
         </div>        
         <audio id="testAudio" src="ChillMill2.mpeg" loop="true" type="audio/mpeg" style="display:none"  autoplay loop></audio>           
@@ -328,13 +516,11 @@
   </div>
 <!-- END OF BANKSIA COURT APP HTML SOURCE CODE -->
 
-
   <script  src="/js/index.js"></script>
   <script  src="/js/flowers.js"></script>
   <script  src="/js/walkthrough.js"></script>
-  <script  src="/js/newsnevents.js"></script>
-  <script  src="/js/readmore.min.js"></script>
-
+  <script src="/js/newsnevents.js"></script>
+  <script src="/js/readmore.min.js"></script>
 
 </body>
 

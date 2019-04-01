@@ -156,7 +156,8 @@ function closeMenu() {
   menuButton.setAttribute("aria-expanded", false);
 }
 
-const textButton = document.getElementById("onoffbutton");
+
+const textButton = document.getElementById("Textbutton");
 
 textButton.addEventListener('click', function() {
   if(textButton === undefined) {

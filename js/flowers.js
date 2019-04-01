@@ -106,7 +106,7 @@ function createImagesDiv(flower) {
   let imgs = ''
 
   images.forEach( function(image) {
-      imgs =  `${imgs}\n<img class="modal_flower_img_cont" src="/img//flowers/${flower.id}/${image}.jpg"/>`
+      imgs =  `${imgs}\n<img class="modal_flower_img_cont" src="/img/flowers/${flower.id}/${image}.jpg"/>`
   })
   return `<div >${imgs}</div>`
 } 

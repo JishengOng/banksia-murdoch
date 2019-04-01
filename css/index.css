@@ -324,27 +324,11 @@ img {
   height: auto;
 }
 
-.heading-primary {
-  font-size: 4rem;
-  color: #000;
-  font-family: "Special Elite", cursive;
-}
-
-.heading-secondary {
-  color: #000;
-  font-size: 3rem;
-  border-bottom: 4px dotted #000;
-  font-family: "Special Elite", cursive;
-}
-.heading-secondary--tours, .heading-secondary--shop, .heading-secondary--blog {
-  color: #fff;
-  border-color: #fff;
-}
 
 .heading-tertiary {
   font-family: "Special Elite", cursive;
   margin: 2rem 0;
-  padding: 2rem;
+  padding: 2px;
   background-color: #632c65;
   text-align: center;
   color: #fff;
@@ -446,11 +430,40 @@ img {
   display: inline-block;
 	position: absolute;
   z-index: 100;
-  bottom: 1%;
+  top: 1%;
   left: 85%;
-  color: white;
+  color: white; 
   position: fixed;
-  
+  margin-left: 80px;
+  margin-top: 0%;
+}
+
+.btn3d {
+  width: 50px;
+  /*width and height is the length and height and the box*/
+  height: 50px;
+  position: relative;
+  top: -6px;
+  border: 0;
+  transition: all 40ms linear;
+  margin-top: 50px;
+  /* moved the buttons down! */
+  margin-bottom: 10px;
+  margin-left: 60px;
+  margin-right: 2px;
+  margin-top: 5px;
+}
+
+
+.btn3d.btn-primary {
+  box-shadow: 0 0 0 1px #232323 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #232323, 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+  background-color: #232323;
+}
+
+.btn3d.btn-primary:active,
+.btn3d.btn-primary.active {
+  box-shadow: 0 0 0 1px #232323 inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+  background-color: #232323;
 }
 
 a.scroll_indicator:visited {
@@ -543,4 +556,11 @@ section {
 ::-webkit-scrollbar-track {
   background: #ddd;
   border-radius: 20px;
+}
+ul {
+  display: inline-flex;
+}
+li{
+  padding: 10px;
+  list-style-type: none;
 }

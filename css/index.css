@@ -442,6 +442,17 @@ img {
   box-sizing: border-box;
 }
 
+.onandoff {
+  display: inline-block;
+	position: absolute;
+  z-index: 100;
+  bottom: 1%;
+  left: 85%;
+  color: white;
+  position: fixed;
+  
+}
+
 a.scroll_indicator:visited {
   color: #FFF;
 }

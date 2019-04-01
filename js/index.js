@@ -156,6 +156,16 @@ function closeMenu() {
   menuButton.setAttribute("aria-expanded", false);
 }
 
+const textButton = document.getElementById("onoffbutton");
+
+textButton.addEventListener('click', function() {
+  if(textButton === undefined) {
+    textButton.unbind('click')
+    console.log('undefined')
+  } else {
+    console.log('hovering')
+  }
+})
 
 
 // RESPONSIVE FIXED SIDE MENU 

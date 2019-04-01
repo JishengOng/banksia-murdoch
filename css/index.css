@@ -519,4 +519,5 @@ a.scroll_indicator {
   font: 300 50px/1.2 "Lato", sans-serif;
   letter-spacing: 0.35em;
   text-transform: uppercase;
+  text-align: center;
 }

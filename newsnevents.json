@@ -1,0 +1,24 @@
+[
+    {
+        "id": "1",
+        "date": "00/0/2018",
+        "author": "AUTHOR",
+        "title": "Lorem ipsum dolor sit amet",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."                   
+                    
+    },
+    {
+        "id": "2",
+        "date": "00/0/2019",
+        "author": "AUTHOR",
+        "title": "Consectetur adipiscing elit",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum curabitur vitae nunc sed velit dignissim sodales ut. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam."
+    },
+    {
+        "id": "3",
+        "date": "00/0/2019",
+        "author": "AUTHOR",
+        "title": "Sed do eiusmod tempor",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed turpis tincidunt id aliquet risus feugiat in ante metus."
+    }
+]

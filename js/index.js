@@ -184,9 +184,11 @@ $(window).scroll(function() {
   var header = $(document).scrollTop();
   var headerHeight = $(".header").outerHeight();
   if (header > headerHeight) {
-    $(".header").addClass("fixed");
+    $(".header").addClass("fixed")
+      .css("background-color", "#232020");
   } else {
-    $(".header").removeClass("fixed");
+    $(".header").removeClass("fixed")
+    .css("background-color", "");
   }
 });
 

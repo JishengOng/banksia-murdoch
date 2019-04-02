@@ -1,4 +1,5 @@
   let FLOWERS_WALKTHROUGH = []
+  let FLOWERS_WALKTHROUGH_SHOWN = {}
   const BASE_MAP_WIDTH = 660
   const BASE_MAP_HEIGHT = 594
   function convertResponseToJson(response) {  
@@ -14,9 +15,27 @@
           possibleFlowerIdEl = possibleFlowerIdEl.parentElement
       }
   }
+  function redrawLocations() {
+    const flowersToCleanup = Object.keys(FLOWERS_WALKTHROUGH_SHOWN).map( function(key) {
+      return FLOWERS_WALKTHROUGH_SHOWN[key]
+    })
+    flowersToCleanup.forEach(function(flower) {
+      removeCoordinates(flower.id)
+    })
+    flowersToCleanup.forEach(function(flower) {
+      drawLocationsOnMap(flower.id)
+    })
+  }
+
+  $(window).resize(function() {
+    redrawLocations()
+  })
   function drawLocationsOnMap(id) {
     
     const flower = FLOWERS_MAP[id]
+    if (!FLOWERS_WALKTHROUGH_SHOWN[id] ) {
+      FLOWERS_WALKTHROUGH_SHOWN[id] = flower
+    }
     // get current width height of image
     const imageEl = document.getElementById('walkthough_img')
     const currentWidth = imageEl.clientWidth
@@ -55,6 +74,7 @@
       markerElements.forEach( function(markerEl) {
           mapEl.removeChild(markerEl)
       })
+      delete FLOWERS_WALKTHROUGH_SHOWN[id]
   }
 
 
@@ -74,8 +94,17 @@
   }
 
   function renderFlowersDropdown() {
-      const flowersFilterEl = document.getElementById('walkthrough_filter')
+      const windowWidth = document.body.clientWidth
+      let container = 'walkthrough_filter_anchor'
+      const filterToggle = document.getElementById('walkthrough_filter_toggle')
+      filterToggle.style.display = 'none'
+      if ( windowWidth < 900 ) {
+        container = 'walkthrough_filter'
+        filterToggle.style.display = 'block';
+      } 
       
+      const flowersFilterEl = document.getElementById(container)
+      console.log('flowersFilterEl', flowersFilterEl, container)
       FLOWERS_WALKTHROUGH.forEach(function(flower) {
           if ( flower.locations && flower.locations.length > 0 ) {
 
@@ -95,7 +124,16 @@
           }    
       })
   }
-
+  
+  
+  document.getElementById('walkthrough_select_flowers').addEventListener('click', function() {    
+    const reference = document.querySelector('#walkthrough_select_flowers');
+    const popper = document.querySelector('#walkthrough_filter');    
+    var popperInstance = new Popper(reference, popper, {
+      placement: 'bottom'
+    });
+    $('#walkthrough_filter').css('visibility', 'visible')
+  })
   function renderWalkthroughInterface(flowers) {    
     FLOWERS_WALKTHROUGH = flowers;    
     renderFlowersDropdown()

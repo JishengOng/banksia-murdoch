@@ -520,8 +520,8 @@ a.scroll_indicator {
   text-align: center;
 }
 
-#flowers_section, #walkthrough_section, #visitors_info_section, #AboutUs {
-  padding: 42px 22px; 
+#flowers_section, #walkthrough_section, #visitors_info_section, #aboutUs, news_section {
+  padding: 62px 22px; 
 }
 
 section {
@@ -563,13 +563,17 @@ footer{
   width:100%;
   top:0;
   left:0;
-  z-index:9;
+  z-index: 100;
   height: 62px;
+  justify-content: left;
+  text-transform: uppercase;
+  
 }
 
 .header > main_section_header {
   display: flex;
   width: 100%;
+  justify-content: center;
 }
 
 header.fixed {
@@ -601,33 +605,38 @@ header.in-view{
   }
 }
 
-ul.menu_ul {
-  list-style:none;
-  padding:0;
-  margin:0;
-  display:flex;
-  padding: 8px;
-  flex-direction: row;
+div.menu_ul {
+  display: flex;
+  width:100%;
+  height: 100%;
+  justify-content: center;
+  align-items: left;
+  
 }
 
-ul.menu_ul > li {
+div.menu_ul > div {
   padding: 6px 8px;
-  font-size: 1.1em;
-  font-weight: bold;
-  letter-spacing: 1px;
+  font-size: 0.88em;
+  
+  letter-spacing: 2px;
+  border-right: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 24px 0px;
 }
 
-ul.menu_ul > li > a {
+div.menu_ul > div > a {
   text-decoration: none;
   color: #FFF;
   padding: 4px;  
   transition: all .6s ease-in-out;
 }
-ul.menu_ul > li > a:visited {
+div.menu_ul > div > a:visited {
   color: #FFF !important;
 }
 
-ul.menu_ul > li > a:hover {
+div.menu_ul > div > a:hover {
   text-decoration: none;
   border-bottom: 1px solid rgba(255,255,255,0.5);
 }

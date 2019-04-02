@@ -1,7 +1,9 @@
   let FLOWERS_WALKTHROUGH = []
   const BASE_MAP_WIDTH = 660
   const BASE_MAP_HEIGHT = 594
-
+  function convertResponseToJson(response) {  
+    return response.json()
+  }
   function getParentWithFlowerId(element) {
       let possibleFlowerIdEl = element     
       while ( possibleFlowerIdEl ) {

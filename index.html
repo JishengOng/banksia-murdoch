@@ -31,8 +31,20 @@
     Scroll
   </a>  
 
-
-  <div id="onandoffButton" class="onandoff">
+  <header class="header" id="sticky_header">
+   
+      <div class="main_section_header">
+        <ul class="menu_ul">
+          <li><a href="#home_section">Home</a></li>
+          <li><a href="#flowers_section">Flowers</a></li>
+          <li><a href="#walkthrough_section">Walkthrough</a></li>
+          <li><a href="#visitors_info_section">Visitors Info</a></li>
+          <li><a href="#news_section">News And Events</a></li>
+          <li>About Us</li>
+      </div>
+    
+  </header>
+  <!-- <div id="onandoffButton" class="onandoff">
     <div> <button id ="Textbutton" type="button" class="btn btn-primary btn-lg btn3d">
           <span class="glyphicon glyphicon-text-size"></span>
           </button>
@@ -43,10 +55,10 @@
         </button>
         <audio id="audio" src="ChillMill2.mpeg" loop="true" type="audio/mpeg" style="display:none"  autoplay loop></audio>
     </div>
-  </div> 
+  </div>  -->
   
   <main id="Home" class="main-content">             
-    <section class="slideshow">
+    <section id='home_section' class="slideshow">
       <div data-fadeshow="quick-nav prev-next-nav autoplay">
 
         <!-- Radio -->
@@ -416,7 +428,7 @@
                 </div>       
         </div>
       </div>
-    </div>
+    </div>    
   </section>
 
   <section id='news_section'>
@@ -649,11 +661,11 @@
         
     </div>
     
-    <div class="menuIcon"> <!-- Hamburger Menu 3 lines START -->
+    <!-- <div class="menuIcon">
       <div class="line_one"></div>
       <div class="line_two"></div>
       <div class="line_three"></div>
-    </div> <!-- Hamburger Menu 3 lines END -->
+    </div> -->
     
   </div> <!-- Navigation</div>END -->
   <div id='flower_details' class='modal fade in' role='dialog'>
@@ -666,6 +678,7 @@
       </div>
     </div>
   </div>
+
 <!-- END OF BANKSIA COURT APP HTML SOURCE CODE -->
 
   <script src="/js/index.js"></script>

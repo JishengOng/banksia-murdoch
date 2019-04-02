@@ -309,7 +309,6 @@ html,body {
   border-color: #373737;
   transition: border 0.1s linear 0s;
 }
-
 .slideshow {
   overflow: hidden;
   position: relative;
@@ -317,23 +316,10 @@ html,body {
   height: 100vh;
   z-index: 1;
 }
-
-
 img {
   max-width: 100%;
   height: auto;
 }
-
-
-.heading-tertiary {
-  font-family: "Special Elite", cursive;
-  margin: 2rem 0;
-  padding: 2px;
-  background-color: #632c65;
-  text-align: center;
-  color: #fff;
-}
-
 .btn {
   border: none;
   padding: 1rem;
@@ -428,12 +414,11 @@ img {
 
 .onandoff {
   display: inline-block;
-	position: absolute;
+	position: fixed;
   z-index: 100;
   top: 1%;
   left: 85%;
   color: white; 
-  position: fixed;
   margin-left: 80px;
   margin-top: 0%;
 }
@@ -557,10 +542,15 @@ section {
   background: #ddd;
   border-radius: 20px;
 }
-ul {
-  display: inline-flex;
+
+.section_header{
+  text-align: right;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  font-family: 'lato', sans-serif;
 }
-li{
-  padding: 10px;
-  list-style-type: none;
+footer{
+  padding: 5% 5% 100px;
+  background: rgba(35,35,35,0.5);
 }
+

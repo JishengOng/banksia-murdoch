@@ -114,6 +114,7 @@ function createImagesDiv(flower) {
 function showModal(flower) {
   const modalTitleEl = document.getElementById('flower_title')
   modalTitleEl.innerHTML = flower.name
+  modalTitleEl.innerHTML = '<button type="button" class="close" data-dismiss="modal">&times;</button>'
 
   const modalBodyEl = document.getElementById('flower_body')
   modalBodyEl.innerHTML = `
@@ -141,7 +142,7 @@ function createCommonNamesDiv(flower) {
   if ( otherNames.common && otherNames.noongar ) {
       commonNameHtmStr = `
       <div>
-          <span>Common name:</span>   <span>${otherNames.common}:</span> 
+          <span>Common name:</span>   <span>${otherNames.common}</span> 
       </div>
       `
        noogarNameStr = `
@@ -152,7 +153,7 @@ function createCommonNamesDiv(flower) {
   } else if ( otherNames.common && otherNames.noongar === undefined ) {
     commonNameHtmStr = `
        <div>
-          <span>Common name:</span>   <span>${otherNames.common}:</span> 
+          <span>Common name:</span>   <span>${otherNames.common}</span> 
         </div>
     `
   } else {

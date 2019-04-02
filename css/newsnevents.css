@@ -62,7 +62,7 @@ a:hover
 @media only screen and (max-width: 600px) and (min-height: 400px) {
 
   #news_section {
-    height: 400px;
+    height: 600px;
   }
 
   #filter {
@@ -200,7 +200,7 @@ a:hover
 @media only screen and (min-width: 992px) {
 
   #news_section {
-    height: 400px;
+    height: 600px;
   }
 
   #filter {

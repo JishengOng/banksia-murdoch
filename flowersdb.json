@@ -265,7 +265,7 @@
         "index": 15,
         "name": "Banksia Hookeriana", 
         "otherNames": {
-          "common": " "
+          "common": ""
         },
         "locations": [
           { "left": 321, "top": 334 }
@@ -560,5 +560,5 @@
         "description": "A medium sized shrub up to 3 metres high with long narrow leaves which are deeply divided into regular triangular lobes. The new foliage is soft and greenish. ", 
         "flowerDesc": "The flower spikes are conical and initially are white but they turn orange from the base upwards as they age. It flowers in summer and autumn. ",
         "habitat": "Banksia Victoriae is found in the sandy heathlands of the Irwin and Murchison districts of WA. "   
-    } 
+    }
   ]

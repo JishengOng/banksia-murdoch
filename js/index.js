@@ -1,25 +1,27 @@
-/*document.getElementById("orchestra").addEventListener("click", function()
-{
-	var audio = document.getElementById('testAudio');
 
-  if(this.className == 'is-playing')
-  {
-    alert("will become a pause in the next step");
-    this.className = "";
-    /* this.innerHTML = "Play"; 
-    audio.pause();
+  function closePrint() {
+  document.body.removeChild(this._container_);
   }
   
-  else
-  {
-    alert("will play in the next step");
-    this.className = "is-playing";
-    /*this.innerHTML = "Pause";  
-    audio.play();
+  function setPrint() {
+    this.contentWindow._container_ = this;
+    this.contentWindow.onbeforeunload = closePrint;
+    this.contentWindow.onafterprint = closePrint;
+    this.contentWindow.focus(); // Required for IE
+    this.contentWindow.print();
   }
-
-});  */
-
+  
+  function printPage (sURL) {
+    var oHiddFrame = document.createElement("iframe");
+    oHiddFrame.onload = setPrint;
+    oHiddFrame.style.visibility = "hidden";
+    oHiddFrame.style.position = "fixed";
+    oHiddFrame.style.right = "0";
+    oHiddFrame.style.bottom = "0";
+    oHiddFrame.src = sURL;
+    document.body.appendChild(oHiddFrame);
+  }
+  
 
 // Scroll button for Homepage
 $(function() {
@@ -31,66 +33,25 @@ $(function() {
 
 
 
-function toggleSound() {
-  var audioElem = document.getElementById('testAudio');
-  if (audioElem.paused)
-    audioElem.play();
-  else
-    audioElem.pause();
+var mutebtn = document.getElementById("mutebtn");
+var audio = document.getElementById("audio");
+var icon = document.getElementById("btnicon");
+icon.classList.add = "glyphicon-volume-up";
+
+function mute() { 
+
+  console.log(icon.classList.contains("glyphicon-volume-up"));
+  icon.className = ' ';
+
+        if(audio.muted){
+          audio.muted = false;
+          icon.className = 'glyphicon glyphicon-volume-up';
+        } else {
+          audio.muted = true;
+          icon.className = 'glyphicon glyphicon-volume-off';
+        }
 }
 
-jQuery(function($) 
-              {
-                $('#musica')
-                  .on('click', function() 
-                      {
-                     /* alert('orchestra on click'); */ 
-                      var $el = $(this),
-                      textNode = this.lastChild;
-                     /*  alert(textNode); */
-
-                      $el.find('span').toggleClass("muted_music");
-                      /*textNode.nodeValue = 'Gimme' + 
-                      ($el.hasClass('btn btn-danger btn-lg                                       btn3d') ?  'Orchestra On':'Music Gone') */ 
-                      //$el.toggleClass("muted_music");               
-                      }
-                    );
-              }
-          );
-
-
-/*
-var bgm=document.getElementById("bgm");
-
-function bgmPlay()
-{
-  /*
-  alert('isPlaying');
-  alert('bgmplay'); 
-   if (isPlaying) 
-   {
-    alert ('currently playing. now this will pause');
-              
-     bgm.pause();
-    }
-    else
-    {
-      alert('currently not playing. now this will play');
-      bgm.play();
-    }
-};
-
-bgm.onplaying = function() {
-  alert('bgm on playing'); 
-  isPlaying = true;
-};
-
-bgm.onpause = function() {
-  alert('bgm pause');
-  isPlaying = false;
-};
-
-*/
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
@@ -217,3 +178,4 @@ textButton.addEventListener('click', function() {
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
+

@@ -20,6 +20,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -33,12 +34,15 @@
 
   <div id="onandoffButton" class="onandoff">
     <div> <button id ="Textbutton" type="button" class="btn btn-primary btn-lg btn3d">
-      <span class="glyphicon glyphicon-text-size"></span>
-    </button></div>
-    <div> <button id = "musica" type="button" class="btn btn-danger btn-lg btn3d" onclick="javascript:toggleSound();">
-      <span class="glyphicon glyphicon-music"></span>
-    </button>        
-    <audio id="testAudio" src="ChillMill2.mpeg" loop="true" type="audio/mpeg" style="display:none"  autoplay loop></audio></div>
+          <span class="glyphicon glyphicon-text-size"></span>
+          </button>
+    </div>
+    <div> 
+        <button id="mutebtn" type="button" class="btn btn-danger btn-lg btn3d" onclick="mute()">
+        <span id="btnicon" class="glyphicon glyphicon-volume-up"></span>
+        </button>
+        <audio id="audio" src="ChillMill2.mpeg" loop="true" type="audio/mpeg" style="display:none"  autoplay loop></audio>
+    </div>
   </div> 
   
   <main id="Home" class="main-content">             
@@ -205,7 +209,7 @@
 
   <section id='visitors_info_section'>
     <!-- INSERTED RESPONSIVE FLEX CARDS FOR DOs and DONTs for Visitor Info AND MAP OF LOCATION OF BANKSIA COURT START --> 
-      <h1  id = "VisitorInfo"> Where is the Banksia Court ? </h1>
+      <h1  class='section-header'> Visitors Info </h1>
 
     <div id = "map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3381.035395012458!2d115.83321450783647!3d-32.06829139547403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32a3a38018007b%3A0xfddda458a78d8d2b!2sBanksia+Court!5e0!3m2!1sen!2ssg!4v1553880128132!5m2!1sen!2ssg" 
@@ -274,7 +278,7 @@
                     </div>
                     <div class="visitors_text_cont">
                       <div class="visitors_text">
-                        As simple as that. No plucking, stomping on, damaging any of the Banksias or climb trees. If you spot any inappropriate behaviour, approach our staff immediately.
+                        No plucking, stomping on, damaging any of the Banksias or climbing trees. If you spot any inappropriate behaviour, approach our staff immediately.
                       </div>
                     </div>
                   </div>
@@ -291,7 +295,7 @@
                   </div>
                   <div class="visitors_text_cont">
                     <div class="visitors_text">
-                      Film and photography is much welcome. However if you wish to do so for commercial filming and photography, prior approval from the university is then required.
+                      Film and photography is very much welcome. However if you wish to do so for commercial filming and photography, prior approval from the university is then required.
                     </div>
                   </div>
                 </div>
@@ -340,7 +344,7 @@
                     </div>
                     <div class="visitors_text_cont">
                       <div class="visitors_text">
-                          Pets are not allowed in the Banksia Court.
+                          Pets are not allowed in the Banksia Court. Other animals 
                       </div>
                     </div>
                   </div>
@@ -416,6 +420,7 @@
   </section>
 
   <section id='news_section'>
+      <h1  class = "section_header"> News and Events </h1>
     <select id="filter" onchange="filter()" class='form-control'>
       <option value="">Show All</option> 
     </select>
@@ -429,21 +434,22 @@
   
 
   <section id="AboutUs">
+      <h1  class = "section_header"> About Us </h1>
     <div class="container">      
       <div class="row">
         <div class="team_container_outer">
           <div class="team_container">
             <div class="team_avatar_cont">
                 <div class="team_avatar_img">
-                  <img style="width: 60px; height: 60px;" src="/img/avatarsample.jpg"/>
+                  <img style="width: 60px; height: 60px;" src="/img/about_us/robie.png"/>
                 </div>
             </div>
             <div class="team_avatar_bio_cont">
                 <div class="team_name">
-                  <div class="team_fullname">Layla Mira</div>
-                  <div class="team_role">Computer System Analyst</div>
+                  <div class="team_fullname">Robileen Espanol</div>
+                  <div class="team_role">Project Manager</div>
                 </div>
-                <div class="team_role_desc">Responsible for system's analysis, design and implementation to make sure it operates properly and efficiently.</div>
+                <div class="team_role_desc">I ensure we make progress weekly and are always ready for drastic changes. Trust me anytime</div>
             </div>
           </div>
           <div class="team_social">
@@ -458,7 +464,7 @@
           <div class="team_container">
               <div class="team_avatar_cont">
                   <div class="team_avatar_img">
-                    <img style="width: 60px; height: 60px;" src="/img/avatarsample.jpg"/>
+                    <img style="width: 60px; height: 60px;" src="/img/about_us/layla.png"/>
                   </div>
               </div>
               <div class="team_avatar_bio_cont">
@@ -483,15 +489,15 @@
             <div class="team_container">
               <div class="team_avatar_cont">
                   <div class="team_avatar_img">
-                    <img style="width: 60px; height: 60px;" src="/img/avatarsample.jpg"/>
+                    <img style="width: 60px; height: 60px;" src="/img/about_us/qiya.png"/>
                   </div>
               </div>
               <div class="team_avatar_bio_cont">
                   <div class="team_name">
-                    <div class="team_fullname">Layla Mira</div>
-                    <div class="team_role">Computer System Analyst</div>
+                    <div class="team_fullname">Qiya Soo</div>
+                    <div class="team_role">Technical Consultant</div>
                   </div>
-                  <div class="team_role_desc">Responsible for system's analysis, design and implementation to make sure it operates properly and efficiently.</div>
+                  <div class="team_role_desc">I provide technical support, perform trouble-shooting functions and make resolution for any related issues.</div>
               </div>
             </div>
             <div class="team_social">
@@ -506,15 +512,15 @@
             <div class="team_container">
                 <div class="team_avatar_cont">
                     <div class="team_avatar_img">
-                      <img style="width: 60px; height: 60px;" src="/img/avatarsample.jpg"/>
+                      <img style="width: 60px; height: 60px;" src="/img/about_us/douglas.png"/>
                     </div>
                 </div>
                 <div class="team_avatar_bio_cont">
                     <div class="team_name">
-                      <div class="team_fullname">Layla Mira</div>
-                      <div class="team_role">Computer System Analyst</div>
+                      <div class="team_fullname">Jisheng Ong</div>
+                      <div class="team_role">Programmer</div>
                     </div>
-                    <div class="team_role_desc">Responsible for system's analysis, design and implementation to make sure it operates properly and efficiently.</div>
+                    <div class="team_role_desc">I develop new computer programming methods from basic methods to more-in-depth methods.</div>
                 </div>
             </div>          
             <div class="team_social">
@@ -531,15 +537,15 @@
               <div class="team_container">
                 <div class="team_avatar_cont">
                     <div class="team_avatar_img">
-                      <img style="width: 60px; height: 60px;" src="/img/avatarsample.jpg"/>
+                      <img style="width: 60px; height: 60px;" src="/img/about_us/sam.png"/>
                     </div>
                 </div>
                 <div class="team_avatar_bio_cont">
                     <div class="team_name">
-                      <div class="team_fullname">Layla Mira</div>
-                      <div class="team_role">Computer System Analyst</div>
+                      <div class="team_fullname">Aung Khine San</div>
+                      <div class="team_role">System Analyst</div>
                     </div>
-                    <div class="team_role_desc">Responsible for system's analysis, design and implementation to make sure it operates properly and efficiently.</div>
+                    <div class="team_role_desc">I plan for organizational and human impacts and ensure new technical requirements are properly integrated with appropriate measures.</div>
                 </div>
               </div>
               <div class="team_social">
@@ -554,15 +560,15 @@
               <div class="team_container">
                   <div class="team_avatar_cont">
                       <div class="team_avatar_img">
-                        <img style="width: 60px; height: 60px;" src="/img/avatarsample.jpg"/>
+                        <img style="width: 60px; height: 60px;" src="/img/about_us/roy.png"/>
                       </div>
                   </div>
                   <div class="team_avatar_bio_cont">
                       <div class="team_name">
-                        <div class="team_fullname">Layla Mira</div>
-                        <div class="team_role">Computer System Analyst</div>
+                        <div class="team_fullname">Royette Villamor</div>
+                        <div class="team_role">Programmer Analyst</div>
                       </div>
-                      <div class="team_role_desc">Responsible for system's analysis, design and implementation to make sure it operates properly and efficiently.</div>
+                      <div class="team_role_desc">I design technology solutions for the system and put the components into place.</div>
                   </div>
               </div>          
               <div class="team_social">
@@ -582,42 +588,40 @@
 
     <!-- START FOOTER -->
   <footer>
-    <div class="contacts" id="contacts">
-      <div class="contacts__box">
-        <h3 class="heading-tertiary contacts__title"></h3>
-        <div class="contacts_address">
+    <div id="footer_section">
+      <div class="murdoch_contact">
+        <p>
+        <a href="#" class="contacts__link">+61 8 9360 6000</a>
+        <br>
+        <a href="https://www.murdoch.edu.au/contact-us/" class="contacts__link">General Enquiries</a>
+          <br>
+          <br>
           Perth campus
+          <br>
           90 South Street, Murdoch
+          <br>
           Western Australia 6150
-          (15 mins from the city centre of Perth) 
-        </div>
-        <a href="#" class="contacts__link">Phone: 1-268-869-8551</a>
-        </div>
-
-      <div class="site_map">
-        <ul> <i><b><u></u></b></i>
-          <li>
-            <a href="#Home" class="contacts__link">Home</a>
-          </li>
-          <li>
-            <a href="#flowers_section" class="contacts__link">Flowers</a>
-          </li>
-          <li>
-            <a href="#Walkthrough" class="contacts__link">Walkthrough</a>
-          </li>
-          <li>
-            <a href="#news_section" class="contacts__link">News & Events</a>
-          </li>
-          <li>
-            <a href="#visitors_info_section" class="contacts__link">Visitor Info</a>
-          </li>
-          <li>
-            <a href="#AboutUs" class="contacts__link">About Us</a>
-          </li>  
-        </ul>
-      </div>  
+          <br>
+          (15 mins from the city centre of Perth)
+          <br> 
+          <a href="https://goo.gl/maps/RQ1VFJ4Mk3B2" class="contacts__link">View on Map</a>
+        </p> 
+      </div>
     </div>
-    
+
+      <div id="site_map">
+        <div>Links</div>
+            <div class="sitemap_links"><a href="#Home" class="contacts__link">Home</a></div>
+            <div class="sitemap_links"><a href="#flowers_section" class="contacts__link">Flowers</a></div>
+            <div class="sitemap_links"><a href="#Walkthrough" class="contacts__link">Walkthrough</a></div>
+            <div class="sitemap_links"><a href="#news_section" class="contacts__link">News & Events</a></div>
+            <div class="sitemap_links"><a href="#visitors_info_section" class="contacts__link">Visitor Info</a></div>
+            <div class="sitemap_links"><a href="#AboutUs" class="contacts__link">About Us</a></div>
+            <div> <button id="mutebtn" type="button" class="btn btn-danger btn-lg btn3d" onclick="printPage('/Banksia_Court_Garden_Information.pdf');">
+              <span id="btnicon" class="glyphicon glyphicon-print"></span>
+                </button>
+            </div>
+      </div>   
   </footer>
     <!-- END FOOTER -->
   
@@ -637,9 +641,10 @@
         <li class="NavigationTab"><a href="#Home"><p>Home</p></a></li> 
         <li class="NavigationTab"><a href="#flowers_section"><p>Flowers</p></a></li>
         <li class="NavigationTab"><a href="#walkthrough_section"><p>Walkthrough</p></a></li>
-        <li class="NavigationTab"><a href="#News_Events"><p>News&Events</p></a></li>
         <li class="NavigationTab"><a href="#VisitorInfo"><p>Visitor Info</p></a></li>  
+        <li class="NavigationTab"><a href="#News_Events"><p>News&Events</p></a></li>
         <li class="NavigationTab"><a href="#AboutUs"><p>About Us</p></a></li>
+        
       </ul> <!-- Navigation Bar Menu Tabs END -->         
 
         
@@ -664,12 +669,13 @@
   </div>
 <!-- END OF BANKSIA COURT APP HTML SOURCE CODE -->
 
-  <script  src="/js/index.js"></script>
-  <script  src="/js/flowers.js"></script>
-  <script  src="/js/walkthrough.js"></script>
+  <script src="/js/index.js"></script>
+  <script src="/js/flowers.js"></script>
+  <script src="/js/walkthrough.js"></script>
   <script src="/js/newsnevents.js"></script>
   <script src="/js/readmore.min.js"></script>
 
+  
 </body>
 
 </html>

@@ -473,7 +473,7 @@
         "index": 26,
         "name": "Banksia Prionotes", 
         "otherNames": {
-          "common": "Acorn Banksia "
+          "common": "Acorn Banksia"
         },
         "locations": [
           { "left": 390, "top": 184 }
@@ -491,7 +491,7 @@
         "index": 27,
         "name": "Banksia Repens ", 
         "otherNames": {
-          "common": " "
+          "common": ""
         },
         "locations": [
           { "left": 286, "top": 246 }
@@ -509,7 +509,7 @@
         "index": 28,
         "name": "Banksia Sceptrum ", 
         "otherNames": {
-          "common": " "
+          "common": ""
         },
         "locations": [
           { "left": 147, "top": 509 }
@@ -547,7 +547,7 @@
         "index": 30,
         "name": "Banksia Victoriae", 
         "otherNames": {
-          "common": " "
+          "common": ""
         },
         "locations": [
           { "left": 71, "top": 518 },

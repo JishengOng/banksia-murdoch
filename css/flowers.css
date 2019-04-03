@@ -150,3 +150,9 @@
   height: auto;
   padding: 6px;
 }
+#flower_name_modal {
+  left: 0%;
+}
+#close_button_modal {
+  right: 0%;
+}

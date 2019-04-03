@@ -23,6 +23,7 @@
 </head>
 
 <body>
+<div id='fontId'>
   <!-- ScrollDown Arrow Action START --> 
   <a class="scroll_indicator" href="#flowers_section">
     <span>        
@@ -43,18 +44,21 @@
       </div>
     
   </header>
-  <!-- <div id="onandoffButton" class="onandoff">
-    <div> <button id ="Textbutton" type="button" class="btn btn-primary btn-lg btn3d">
-          <span class="glyphicon glyphicon-text-size"></span>
-          </button>
-    </div>
-    <div> 
+  <div id="onandoffButton" class="onandoff">
+    <div class="plusMinusButton">
+      <button id="upSize" type="button" onclick="fontEnlarge()">
+          <i class="far fa-plus-square"></i></button>
+
+      <button id="downSize" type="button" onclick="fontReduce()">
+          <i class="far fa-minus-square"></i></button>
+  </div>
+  <div> 
         <button id="mutebtn" type="button" class="btn btn-danger btn-lg btn3d" onclick="mute()">
         <span id="btnicon" class="glyphicon glyphicon-volume-up"></span>
         </button>
         <audio id="audio" src="ChillMill2.mpeg" loop="true" type="audio/mpeg" style="display:none"  autoplay loop></audio>
     </div>
-  </div>  -->
+  </div>  
   
   <main id="Home" class="main-content">             
     <section id='home_section' class="slideshow">
@@ -631,7 +635,7 @@
           <a href="https://goo.gl/maps/RQ1VFJ4Mk3B2" class="contacts__link">View on Map</a>
         </p> 
       </div>
-    </div>
+    
 
       <div id="site_map">
         <div>Links</div>
@@ -692,8 +696,8 @@
     </div>
   </div>
   <div id='walkthrough_filter'>
-
   </div>
+</div>
 <!-- END OF BANKSIA COURT APP HTML SOURCE CODE -->
 
   <script src="/js/index.js"></script>

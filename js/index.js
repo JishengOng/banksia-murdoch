@@ -33,24 +33,34 @@ $(function() {
 
 
 
-var mutebtn = document.getElementById("mutebtn");
-var audio = document.getElementById("audio");
-var icon = document.getElementById("btnicon");
-icon.classList.add = "glyphicon-volume-up";
+// var mutebtn = document.getElementById("mutebtn");
+// var audio = document.getElementById("audio");
+// var icon = document.getElementById("btnicon");
+// icon.classList.add = "glyphicon-volume-up";
 
-function mute() { 
+// function mute() { 
 
-  console.log(icon.classList.contains("glyphicon-volume-up"));
-  icon.className = ' ';
+//   console.log(icon.classList.contains("glyphicon-volume-up"));
+//   icon.className = ' ';
 
-        if(audio.muted){
-          audio.muted = false;
-          icon.className = 'glyphicon glyphicon-volume-up';
-        } else {
-          audio.muted = true;
-          icon.className = 'glyphicon glyphicon-volume-off';
-        }
+//         if(audio.muted){
+//           audio.muted = false;
+//           icon.className = 'glyphicon glyphicon-volume-up';
+//         } else {
+//           audio.muted = true;
+//           icon.className = 'glyphicon glyphicon-volume-off';
+//         }
+// }
+
+//for enlarging font size
+function fontEnlarge() {
+  document.getElementById("fontID").style.fontSize='1.8em';
 }
+//for decreasing font size
+function fontReduce() {
+  document.getElementById("fontID").style.fontSize='1.0em';
+}
+
 
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()

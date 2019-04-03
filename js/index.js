@@ -119,15 +119,16 @@ function closeMenu() {
 
 
 const textButton = document.getElementById("Textbutton");
-
-textButton.addEventListener('click', function() {
-  if(textButton === undefined) {
-    textButton.unbind('click')
-    console.log('undefined')
-  } else {
-    console.log('hovering')
-  }
-})
+if ( textButton ) {
+  textButton.addEventListener('click', function() {
+    if(textButton === undefined) {
+      textButton.unbind('click')
+      console.log('undefined')
+    } else {
+      console.log('hovering')
+    }
+  })
+}
 
 
 // RESPONSIVE FIXED SIDE MENU 
@@ -179,3 +180,30 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
 
+$(window).scroll(function() {
+  var header = $(document).scrollTop();
+  var headerHeight = $(".header").outerHeight();
+  if (header > headerHeight) {
+    $(".header").addClass("fixed")
+      .css("background-color", "#232020");
+  } else {
+    $(".header").removeClass("fixed")
+    .css("background-color", "");
+  }
+});
+
+$(window).scroll(function() {
+  var header = $(document).scrollTop();
+  var headerHeight = $(".header").outerHeight();
+  var firstSection = $("#home_section").outerHeight() - 5;
+  if (header > headerHeight) {
+    $(".header").addClass("fixed");
+  } else {
+    $(".header").removeClass("fixed");
+  }
+  if (header > firstSection) {
+    $(".header").addClass("in-view");
+  } else {
+    $(".header").removeClass("in-view");
+  }
+});

@@ -7,11 +7,24 @@
   position: relative;
 }
 
-#walkthrough_filter {
+#walkthrough_filter {    
+  visibility: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;  
+  flex-wrap: wrap;  
+  padding-top: 40px;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#walkthrough_filter_anchor {
   display: flex;  
   flex-wrap: wrap;  
   padding-top: 40px;
   justify-content: center;
+  align-items: center;
 }
 
 .walkthrough_flower {
@@ -30,4 +43,8 @@
 
 .walkthrough_filter_selected > .walkthrough_filter_img {
   visibility: visible !important;
+}
+
+.walkthrough_filter_toggle {
+  position: relative;
 }

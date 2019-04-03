@@ -520,8 +520,8 @@ a.scroll_indicator {
   text-align: center;
 }
 
-#flowers_section, #walkthrough_section, #visitors_info_section, #AboutUs {
-  padding: 42px 22px; 
+#flowers_section, #walkthrough_section, #visitors_info_section, #aboutUs, news_section {
+  padding: 62px 22px; 
 }
 
 section {
@@ -555,3 +555,88 @@ footer{
 }
 
 
+.header {
+  color:#fff;
+  position:absolute;
+  display:flex;
+  flex-flow: row wrap;
+  width:100%;
+  top:0;
+  left:0;
+  z-index: 100;
+  height: 62px;
+  justify-content: left;
+  text-transform: uppercase;
+  
+}
+
+.header > main_section_header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+header.fixed {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity:0;
+  visibility:hidden;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+  transform:translate(0, -200px);
+
+}
+header.fixed nav a, header.fixed .logo a{
+  color:#333;
+}
+
+header.in-view{
+  opacity:1;
+  visibility:visible;
+  transition: all 0.3s ease;
+  transform:translate(0, 0);
+}
+
+@media only screen and (max-width: 640px) {
+  header.fixed{
+    position:relative;
+  }
+}
+
+div.menu_ul {
+  display: flex;
+  width:100%;
+  height: 100%;
+  justify-content: center;
+  align-items: left;
+  
+}
+
+div.menu_ul > div {
+  padding: 6px 8px;
+  font-size: 0.88em;
+  
+  letter-spacing: 2px;
+  border-right: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 24px 0px;
+}
+
+div.menu_ul > div > a {
+  text-decoration: none;
+  color: #FFF;
+  padding: 4px;  
+  transition: all .6s ease-in-out;
+}
+div.menu_ul > div > a:visited {
+  color: #FFF !important;
+}
+
+div.menu_ul > div > a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+}
